@@ -1,5 +1,3 @@
-<?php header( 'Location: /website.html' ); ?>
-
 <html> 
 	<head>
 		<link rel = "stylesheet" href="styelsheet.css">
