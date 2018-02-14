@@ -1,0 +1,85 @@
+.menuBar > ul > li > a, .subMenu > ul > li > a , .subMenu > ul > li{
+    color:white;
+    display:inline;
+    text-transform: uppercase;
+    text-decoration:none;
+    padding: 2px;
+   
+}
+
+.nav-bar > ul > li > a {
+    color:white;
+    line-height:0;	
+    text-decoration:none;
+    font-size:20px;
+    letter-spacing: .1em;
+    text-transform: capitalize;
+    text-align:center;
+}
+
+div.subMenu {
+    text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
+    font-color:white;
+    padding:0;
+    background-image: url('toots.jpeg');
+    margin: 100px;
+    width: 100%;
+    float: left;
+    margin: 0 0 1em 0;
+    background-size:contain;
+}
+
+.header {
+    text-align:center;
+    font-family:helvetica;
+}
+
+.handles > ul > li, .handles > ul > li > a {
+    color:white;
+    display:inline;
+    text-decoration:none;
+    text-align:center;
+    padding: 40px;
+    font-family:helvetica;
+}
+
+.handles a {
+  text-decoration:none;
+}
+
+html {
+    background-image: url('buff.jpeg');
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    
+}
+
+.footer {
+  text-align:center;
+  font-size:12px;
+  background-color:white;
+  text-transform:uppercase;
+  padding: 1rem;
+  margin:100px;
+  height:20px;
+  width: 100%;
+  bottom: 0;
+  float: left;
+  margin: 0;
+  position: fixed;
+
+}
+
+.video {
+  text-align:center;
+  font-size:25px;
+  font-color:red;
+  margin:auto;
+}
+
+img {
+	background-color:transparent;
+}
+
