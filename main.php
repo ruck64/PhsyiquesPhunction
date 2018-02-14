@@ -1,4 +1,5 @@
-<html> 
+<!DOCTYPE html>
+	<html> 
 	<head>
 		<link rel = "stylesheet" href="styelsheet.css">
 		<title> PhysiquesPhunction </title>
@@ -8,7 +9,7 @@
 		<p>  </p>
 		<div class="menuBar">
 		 <ul class="menuBar">
-		  <li><a href = "/myStory.html" My Story </a></li> 
+		  <li><a href = "https://ruck64.herokuapp.com/myStory.html" My Story </a></li> 
 		  <li>Purpose of PhsyquiesPhunctoin</li>
 		  <li>Regimens/Diet</li>
 		  <li>Twitch</li>
