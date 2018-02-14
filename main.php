@@ -8,7 +8,7 @@
 		<p>  </p>
 		<div class="menuBar">
 		 <ul class="menuBar">
-		  <li>My Story </li> 
+		  <li><a href = "/myStory.html" My Story </a></li> 
 		  <li>Purpose of PhsyquiesPhunctoin</li>
 		  <li>Regimens/Diet</li>
 		  <li>Twitch</li>
