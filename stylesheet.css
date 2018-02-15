@@ -37,10 +37,9 @@ div.subMenu {
     font-family:helvetica;
 }
 
-div.img {
-	width:100px;
-	height:100px;
-	text-decoration:none;
+img.handle {
+	height: 100px;
+	width: 100px;
 }
 .handles > ul, .handles > ul > li, .handles > ul > li > a {
     color:white;
