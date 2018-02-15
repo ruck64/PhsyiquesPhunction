@@ -37,6 +37,11 @@ div.subMenu {
     font-family:helvetica;
 }
 
+div.img {
+	width:100px;
+	height:100px;
+	text-decoration:none;
+}
 .handles > ul, .handles > ul > li, .handles > ul > li > a {
     color:white;
     display:inline;
