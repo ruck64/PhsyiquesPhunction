@@ -15,6 +15,7 @@
     letter-spacing: .1em;
     text-transform: capitalize;
     text-align:center;
+	clear:both;
 }
 
 div.subMenu {
@@ -27,6 +28,7 @@ div.subMenu {
     float: left;
     margin: 0 0 1em 0;
     background-size:contain;
+	clear:both;
 }
 
 .header {
@@ -68,7 +70,8 @@ html {
   bottom: 0;
   float: left;
   margin: 0;
-  position: fixed;
+  position: relative;
+  clear:both;
 
 }
 
