@@ -51,7 +51,7 @@ ul.handles, ul.handles > li, .handles > ul > li > a, .handles > ul > li > a > im
 }
 
 html {
-    background-image: url('buff.jpeg');
+    background-image: url('buff.jpg');
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
