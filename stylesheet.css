@@ -62,6 +62,10 @@ html {
 .sideBar {
 	float: right;
 	width: 200px;
+	backgroung-color:white;
+	border-style:solid;
+	border-width:medium;
+	border-color:red;
 }
 
 .footer {
