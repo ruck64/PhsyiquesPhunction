@@ -32,7 +32,7 @@ li.subMenu {
 }
 
 a.subMenu {
-	display:block;
+	display:inline-block;
 	text-decoration:none;
 	color:white;
 }
