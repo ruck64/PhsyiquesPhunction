@@ -97,6 +97,7 @@ a.handles {
 h1.title {
 	color:white;
 	text-align:center;
+	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
 }
 
 html {
