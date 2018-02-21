@@ -30,6 +30,11 @@ li.subMenu {
 	display:inline;
 }
 
+a.subMenu {
+	text-decoration:none;
+	color:white;
+}
+
 
 p.shadow{
 	    text-shadow: 2px 0 0 white, 0 -2px 0 white, 0 2px 0 white, -2px 0 0 white;
