@@ -1,14 +1,3 @@
-.menuBar > ul > li > a, .subMenu > ul > li > a , .subMenu > ul > li{
-    text-align:justify;
-	color:white;
-    display:inline;
-    text-transform: uppercase;
-    text-decoration:none;
-    padding: 2px;
-	clear:both;
-   
-}
-
 .nav-bar > ul > li > a {
 	text-align:justify;
     color:white;
@@ -21,8 +10,14 @@
 	clear:both;
 }
 
-div.subMenu {
+div.subMenu, div.subMenu > ul, div.subMenu > ul > li, div.subMenu > ul > li > a{
 	text-align:justify;
+	padding:2px;
+	display:inline;
+	font-size:20px;
+	text-decoration:none;
+	letter-spacing:.1em;
+	text-transform:capitalize;
     width:100%;
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
     color:white;
