@@ -1,16 +1,4 @@
-.nav-bar > ul > li > a {
-	text-align:justify;
-    color:white;
-    line-height:0;	
-    text-decoration:none;
-    font-size:20px;
-    letter-spacing: .1em;
-    text-transform: capitalize;
-    text-align:center;
-	clear:both;
-}
-
-div.subMenu, div.subMenu > ul, div.subMenu > ul > li, div.subMenu > ul > li > a{
+div.subMenu, div.subMenu > ul > li > a{
 	text-align:justify;
 	padding:2px;
 	display:inline;
@@ -28,6 +16,20 @@ div.subMenu, div.subMenu > ul, div.subMenu > ul > li, div.subMenu > ul > li > a{
     background-size:contain;
 	clear:both;
 }
+ul.subMenu {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:transparent;
+	height:100%;
+	overflow:auto;
+}
+
+li.subMenu {
+	display:inline;
+}
+
 
 p.shadow{
 	    text-shadow: 2px 0 0 white, 0 -2px 0 white, 0 2px 0 white, -2px 0 0 white;
