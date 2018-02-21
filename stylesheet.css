@@ -75,7 +75,6 @@ html {
 .button , .button > a {
 	border:red;
 	color:white;
-	padding:15px 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
