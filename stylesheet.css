@@ -1,7 +1,7 @@
 div.subMenu {
 	text-align:justify;
 	padding:2px;
-	display:inline;
+	display:inline-block;
 	font-size:20px;
 	text-decoration:none;
 	letter-spacing:.1em;
@@ -28,7 +28,7 @@ ul.subMenu {
 }
 
 li.subMenu {
-	display:inline-block;
+	display:inline;
 }
 
 a.subMenu {
