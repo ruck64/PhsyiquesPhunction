@@ -10,7 +10,7 @@ div.subMenu {
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
     color:white;
     padding:0;
-    background-image: url('toots.jpeg');
+    background-color:transparent;
     float: left;
     margin: 0 0 1em 0;
     background-size:contain;
