@@ -1,5 +1,6 @@
 .menuBar > ul > li > a, .subMenu > ul > li > a , .subMenu > ul > li{
-    color:white;
+    text-align:justify;
+	color:white;
     display:inline;
     text-transform: uppercase;
     text-decoration:none;
@@ -9,6 +10,7 @@
 }
 
 .nav-bar > ul > li > a {
+	text-align:justify;
     color:white;
     line-height:0;	
     text-decoration:none;
