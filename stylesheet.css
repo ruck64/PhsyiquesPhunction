@@ -1,4 +1,4 @@
-div.subMenu, div.subMenu > ul > li > a{
+div.subMenu {
 	text-align:justify;
 	padding:2px;
 	display:inline;
