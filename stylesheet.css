@@ -17,6 +17,7 @@ div.subMenu {
 	clear:both;
 }
 ul.subMenu {
+	justify-content: space-around;
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -27,7 +28,6 @@ ul.subMenu {
 }
 
 li.subMenu {
-	text-align:justify;
 	display:inline;
 }
 
