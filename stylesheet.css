@@ -109,6 +109,14 @@ html {
     
 }
 
+p.basic {
+	font-family:helvetica;
+	font-size:20px;
+	color:white;
+	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
+}
+	
+
 .sideBar {
 	text-align:center;
 	float: right;
