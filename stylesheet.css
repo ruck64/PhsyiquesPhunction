@@ -114,6 +114,9 @@ p.basic {
 	font-size:20px;
 	color:white;
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
+	text-align:center;
+	float:center;
+	width:80%;
 }
 	
 
