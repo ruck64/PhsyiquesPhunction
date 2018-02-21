@@ -28,7 +28,7 @@ ul.subMenu {
 }
 
 li.subMenu {
-	display:inline;
+	display:inline-block;
 }
 
 a.subMenu {
