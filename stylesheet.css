@@ -41,6 +41,8 @@ a.subMenu {
 }
 
 
+
+
 p.shadow{
 	    text-shadow: 2px 0 0 white, 0 -2px 0 white, 0 2px 0 white, -2px 0 0 white;
 }
@@ -50,17 +52,46 @@ p.shadow{
     font-family:helvetica;
 }
 
-ul.handles, ul.handles > li, .handles > ul > li > a, .handles > ul > li > a > img {
+div.handles {
+	margin:20px;
+	text-align:justify;
+	padding:2px;
+	display:inline-block;
+	font-size:20px;
+	text-decoration:none;
+	letter-spacing:.1em;
+	text-transform:capitalize;
+    width:100%;
+	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
     color:white;
-    display:inline;
-    text-decoration:none;
-    text-align:center;
-    padding: 40px;
-    font-family:helvetica;
+    padding:0;
+    background-color:transparent;
+    float: left;
+    margin: 0 0 1em 0;
+    background-size:contain;
+	clear:both;
+}
+ul.handles {
+	text-align:center;
+	display:flex;
+	justify-content: space-evenly;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:transparent;
+	height:100%;
+	overflow:auto;
 }
 
-.handles a {
-  text-decoration:none;
+li.handles {
+	display:inline;
+}
+
+a.handles {
+	display:inline-block;
+	text-decoration:none;
+	color:white;
 }
 
 html {
