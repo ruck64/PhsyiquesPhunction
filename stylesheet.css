@@ -31,6 +31,7 @@ li.subMenu {
 }
 
 a.subMenu {
+	text-align:justify;
 	text-decoration:none;
 	color:white;
 }
