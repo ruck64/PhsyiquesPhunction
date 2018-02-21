@@ -94,6 +94,11 @@ a.handles {
 	color:white;
 }
 
+h1.title {
+	color:white;
+	text-align:center;
+}
+
 html {
     background-image: url('buff.jpg');
     -webkit-background-size:cover;
