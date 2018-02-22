@@ -1,6 +1,6 @@
 input[type=text] {
 	display:inline-block;
-	margin:auto;
+	margin:20px 10px;
 	width:200px;
 	padding: 12px 20px;
 	box-sizing:border-box;
