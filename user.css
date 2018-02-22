@@ -1,5 +1,5 @@
 input[type=text] {
-	width:50%;
+	width:100px;
 	padding: 12px 20px;
 	margin: 20px; auto; 20px; auto;
 	box-sizing:border-box;
@@ -10,7 +10,7 @@ input[type=text] {
 }
 
 form {
-	position:center;
+	float:center;
 	text-align:left;
 	display:block;
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
