@@ -6,7 +6,8 @@ input[type=text] {
 }
 
 div.forms {
-	position:center;
+	background-color:white;
+	float:center;
 	text-align:center;
 	display:inline-block;
 }
