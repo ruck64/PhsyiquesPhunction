@@ -7,4 +7,5 @@ input[type=text] {
 
 div.forms {
 	text-align:center;
+	display:inline-block;
 }
