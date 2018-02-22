@@ -10,5 +10,5 @@ input[type=text] {
 div.forms {
 	position:center;
 	text-align:center;
-	display:inline-block;
+	display:block;
 }
