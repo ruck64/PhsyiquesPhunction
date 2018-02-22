@@ -12,5 +12,5 @@ form {
 	display:block;
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
 	color:white;
-	
+	clear:both;
 }
