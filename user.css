@@ -11,6 +11,7 @@ input[type=text] {
 }
 
 div.forms {
+	float:center;
 	display: block;
     text-align: center;
 	width:300px;
