@@ -110,6 +110,7 @@ html {
 }
 
 .containerp {
+	margin:auto;
 	position:relative;
 	width:80%;
 }
