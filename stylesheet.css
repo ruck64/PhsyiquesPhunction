@@ -113,7 +113,6 @@ html {
 	text-align:center;
 	margin:auto;
 	position:relative;
-	width:80%;
 	height:auto;
 }
 
@@ -123,7 +122,6 @@ p.basic {
 	color:white;
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
 	text-align:center;
-	width:70%;
 	margin:10px;
 }
 	
