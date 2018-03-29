@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+			<title> Contact </title>
+		</head>
+	<body>
+	<h1 class = "title"> Here is the Name of what i want </h1>
+
+	<div class ="handles">
+	<ul class="handles">
+	<li class="handles"><a class="handles" href="twitter.com"> <img src="twitter.png" width=100px; height=100px;></a></li> 
+	<li class="handles"><a class="handles" href="snapchat.com"> <img src="snapchat.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="instagram.com"> <img src="instagram.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="twitch.com"> <img src="twitch.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="youtube.com"> <img src="youtube.png" width=100px; height=100px;></a></li>
+	</ul>
+	</div>
+	
+	<div class="subMenu"> 
+	<ul class = "subMenu">
+	<li class = "subMenu"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.html">Home</a></li>
+	<li class = "subMenu"><a class = "subMenu"  href = "myStory.html">My Story</a></li>  
+	<li class = "subMenu"><a class = "subMenu"  href = "purpose.html">Purpose of PhsyquiesPhunction</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "regimens.html">Regimens/Diet</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "contact.html">Contact</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "login.html">Sign Up/Login</a></li> 
+	</ul>
+		</div>
+		
+	</body>	
+<p class="basic"> Heres my phones number if you really wanna get buff </p>
+
+<div class = "footer">
+	This is the footer
+		</div>
+	
+	</html>
