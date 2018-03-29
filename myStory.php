@@ -4,7 +4,7 @@
       <title> MyStory </title>
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
-
+	<body>
     <h1 class = "title"> MY STORY </h1>
 
     <div class ="handles">
@@ -29,7 +29,8 @@
 	</ul>
 		</div>
 
-
+	</body>
+	
 	  <div class = "containerp">
       <p class="basic"> 
 	  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
