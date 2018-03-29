@@ -18,8 +18,7 @@ try {
       echo "connection failed: " . $e->getMessage();
       $this->logger->logFatal("The database connection failed.");
     }
-
-
+?>
 
 CREATE TABLE Users (
 	id INT (6) UNSIGNED AUTO_INCREMENT,
