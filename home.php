@@ -6,7 +6,7 @@
 		</head>
 	<body>
 	<?php 
-	//include "createtable.php";
+	include "createtable.php";
 	//include "data.php";
 ?>
 	<h1 class="title"> Link Has Come To Save The Day </h1>
