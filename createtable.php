@@ -8,23 +8,17 @@ $username = "bb2501c58a8034";
 $password = "b8fa5f57";
 
 try {
-  $conn =
+      $conn =
         new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
             $this->pass);
       $this->logger->logDebug("Established a database connection.");
       return $conn;
-    } catch (Exception $e) {
+    }
+	catch (Exception $e) {
       echo "connection failed: " . $e->getMessage();
       $this->logger->logFatal("The database connection failed.");
     }
-  }
-catch(PDOExpcetion $e)
-{
-	echo $sql . "<br>" . $e->getMessage();
-}
-$conn = null;
 
-?>
 
 
 CREATE TABLE Users (
@@ -47,3 +41,4 @@ CREATE TABLE UserInfo (
 	bodytype CHAR NOT NULL,
 	PRIMARY KEY(id)
 )
+?>
