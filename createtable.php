@@ -17,7 +17,7 @@ $password = "b8fa5f57";
       return $conn;
     } catch (Exception $e) {
       echo "connection failed: " . $e->getMessage();
-      $this->logger->logFatal("The database connection failed.");
+    //  $this->logger->logFatal("The database connection failed.");
     }
   
 ?>
