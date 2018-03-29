@@ -1,7 +1,7 @@
 <?php
 
 require_once 'KLogger.php';
-require_once 'dbconfig.php;'
+require_once 'dbconfig.php';
 
 //protected $logger = logger;
 //  public function __construct () {
