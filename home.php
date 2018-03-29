@@ -8,7 +8,7 @@
 	<?php 
 	include "createtable.php";
 	//include "data.php";
-?>
+
 	<h1 class="title"> Link Has Come To Save The Day </h1>
 	<div class ="handles">
 	<ul class="handles">
@@ -39,5 +39,5 @@
 		</div>
 	
 		
-	
+	?>
 	</html>
