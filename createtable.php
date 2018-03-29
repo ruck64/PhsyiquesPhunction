@@ -9,7 +9,7 @@ $password = "b8fa5f57";
 try {
 	$conn = new PDO("mysql:host- $servername;$DBName=myDB",$username,$password);
 	$conn->setAttribute(PDO:ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = ""CREATE DATABASE myPDO";
+	$sql = "CREATE DATABASE myPDO";
 	$conn->exec($sql);
 	echo "Database created successfully<br>";
 }
