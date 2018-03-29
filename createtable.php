@@ -12,8 +12,7 @@ $password = "b8fa5f57";
 //  }
 
     try {
-      $conn =
-        new PDO('mysql:host=servername;dbname=database','username' ,'password');
+      $conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','$username' ,'$password');
   //    $this->logger->logDebug("Established a database connection.");
       return $conn;
     } catch (Exception $e) {
