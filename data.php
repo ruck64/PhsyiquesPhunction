@@ -10,16 +10,15 @@ class Dao {
     $this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
   }
   private function getConnection () {
-    try {
-      $conn =
-        new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
-            $this->pass);
-      $this->logger->logDebug("Established a database connection.");
+	try {
+      $conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
+  //    $this->logger->logDebug("Established a database connection.");
       return $conn;
     } catch (Exception $e) {
       echo "connection failed: " . $e->getMessage();
-      $this->logger->logFatal("The database connection failed.");
+    //  $this->logger->logFatal("The database connection failed.");
     }
+  
   }
   public function getComments () {
      $conn = $this->getConnection();
