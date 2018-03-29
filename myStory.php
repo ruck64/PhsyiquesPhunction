@@ -31,7 +31,6 @@
 
 	</body>
 	
-	  <div class = "containerp">
       <p class="basic"> 
 	  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	  Morbi auctor massa quis tempor mattis. Suspendisse imperdiet pretium enim eget lobortis. 
@@ -60,7 +59,7 @@
 	  Suspendisse eros mi, laoreet vel diam nec, suscipit porta augue. Etiam ultrices fringilla auctor. 
 	  Nulla eu ligula vel nibh elementum tempus. 
 	  </p>
-	  </div>
+
 
 <div class = "footer">
 	This is the footer
