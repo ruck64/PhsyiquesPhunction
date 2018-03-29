@@ -22,13 +22,13 @@
 	
 	<div class="subMenu"> 
 	<ul class = "subMenu">
-	<li class = "subMenu"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.html">Home</a></li>
-	<li class = "subMenu"><a class = "subMenu"  href = "myStory.html">My Story</a></li>  
-	<li class = "subMenu"><a class = "subMenu"  href = "purpose.html">Purpose of PhsyquiesPhunction</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "regimens.html">Regimens/Diet</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.php">Home</a></li>
+	<li class = "subMenu"><a class = "subMenu"  href = "myStory.php">My Story</a></li>  
+	<li class = "subMenu"><a class = "subMenu"  href = "purpose.php">Purpose of PhsyquiesPhunction</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "contact.html">Contact</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "login.html">Sign Up/Login</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "login.php">Sign Up/Login</a></li> 
 	</ul>
 		</div>
 	</body>	
