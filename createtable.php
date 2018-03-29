@@ -6,18 +6,22 @@ $servername = "us-cdbr-iron-east-05.cleardb.net";
 $database = "heroku_3e6dc0754d58604";
 $username = "bb2501c58a8034";
 $password = "b8fa5f57";
-
-try {
+protected $logger;
+  public function __construct () {
+    $this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
+  }
+  private function getConnection () {
+    try {
       $conn =
         new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
             $this->pass);
       $this->logger->logDebug("Established a database connection.");
       return $conn;
-    }
-	catch (Exception $e) {
+    } catch (Exception $e) {
       echo "connection failed: " . $e->getMessage();
       $this->logger->logFatal("The database connection failed.");
     }
+  }
 ?>
 
 CREATE TABLE Users (
