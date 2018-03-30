@@ -1,5 +1,5 @@
 <?php
-
+echo "before includes";
 require_once 'KLogger.php';
 require_once 'dbconfig.php';
 
