@@ -17,7 +17,7 @@ require_once 'dbconfig.php';
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//	echo "connectoin succesful";
 			
-		$rs = $db->query('SELECT * FROM Users LIMIT 0');
+		$rs = $dbn->query('SELECT * FROM Users LIMIT 0');
 for ($i = 0; $i < $rs->columnCount(); $i++) {
     $col = $rs->getColumnMeta($i);
     $columns[] = $col['name'];
