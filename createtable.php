@@ -17,15 +17,16 @@ require_once 'dbconfig.php';
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//	echo "connectoin succesful";
 			
-		$rs = $dbn->query('SELECT * FROM Users LIMIT 0');
-for ($i = 0; $i < $rs->columnCount(); $i++) {
-    $col = $rs->getColumnMeta($i);
-    $columns[] = $col['name'];
-}
-print_r($columns);
+/*		$rs = $dbn->query('SELECT * FROM Users LIMIT 0');
+		for ($i = 0; $i < $rs->columnCount(); $i++) {
+			$col = $rs->getColumnMeta($i);
+			$columns[] = $col['name'];
+		}
+		print_r($columns);
+		*/
 			
 		$sql_users = 
-		"CREATE TABLE `Users` (
+		"CREATE TABLE IF NOT EXISTS `Users` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
 			`display_name` VARCHAR (30) NOT NULL,
 			`email` VARCHAR (50) NOT NULL,
@@ -41,14 +42,14 @@ print_r($columns);
 		print("Created $sql_users users.\n");
 	
 		$sql_usersinfo =
-		"CREATE TABLE IF DOES NOT EXIST UserInfo (
-			id INT (6) UNSIGNED AUTO_INCREMENT,
-			firstname VARCHAR (30) NOT NULL,
-			lastname VARCHAR (30) NOT NULL,
-			age INT (3) NOT NULL,
-			weight INT (3) NOT NULL,
-			bodytype CHAR NOT NULL,
-			PRIMARY KEY(id)
+		"CREATE TABLE IF DOES NOT EXIST `UserInfo` (
+			`id` INT (6) UNSIGNED AUTO_INCREMENT,
+			`firstname` VARCHAR (30) NOT NULL,
+			`lastname` VARCHAR (30) NOT NULL,
+			`age` INT (3) NOT NULL,
+			`weight` INT (3) NOT NULL,
+			`bodytype` CHAR NOT NULL,
+			PRIMARY KEY(`id`)
 		);";
 		$dbn->exec($sql_usersinfo);
 		print("Created $sql_usersinfo usersinfo.\n");
