@@ -17,6 +17,13 @@ require_once 'dbconfig.php';
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//	echo "connectoin succesful";
 			
+		$rs = $db->query('SELECT * FROM Users LIMIT 0');
+for ($i = 0; $i < $rs->columnCount(); $i++) {
+    $col = $rs->getColumnMeta($i);
+    $columns[] = $col['name'];
+}
+print_r($columns);
+			
 		$sql_users = 
 		"CREATE TABLE `Users` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
