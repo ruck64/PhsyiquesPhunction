@@ -13,8 +13,9 @@ require_once 'dbconfig.php';
 		$dsn = "mysql:host = '$host';dbname='$db'";
 		$dbn = new PDO($dsn, $username, $password);
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		echo "connectoin succesful";
 
-		$sql_create_users_tbl = 
+	/*	$sql_create_users_tbl = 
 		"CREATE TABLE IF NOT EXISTS Users (
 			id INT (6) UNSIGNED AUTO_INCREMENT,
 			display_name VARCHAR (30) NOT NULL,
@@ -57,6 +58,7 @@ require_once 'dbconfig.php';
 		
 		if($msg !='')
 			echo $msg;
+		*/
 	}
 	catch (Exception $e) {
         echo "connection failed: " . $e->getMessage();
