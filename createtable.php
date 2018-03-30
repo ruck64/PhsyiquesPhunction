@@ -7,18 +7,12 @@ require_once 'dbconfig.php';
   //  $this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
 //  }
 
-$filename = 'KLogger.php';
-
-if (file_exists($filename)) {
-    echo "The file $filename exists";
-} else {
-    echo "The file $filename does not exist";
-}
-
     try {
   //    $this->logger->logDebug("Established a database connection.");
-		$dsn = "mysql:host = '$host';dbname='$db'";
+		$dsn = "mysql:host = '$host';dbname='$db";
+		echo "gonna try to connect";
 		$dbn = new PDO($dsn, $username, $password);
+		echo "connectoin succesful";
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "connectoin succesful";
 
