@@ -10,6 +10,7 @@ echo "after includes";
 //  }
 
     try {
+		echo "in try";
   //    $this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = '$host';dbname='$db'";
 		$dbn = new PDO($dsn, $username, $password);
