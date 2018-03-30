@@ -40,6 +40,7 @@ require_once 'dbconfig.php';
 		$msg = '';
 		
 		$r = $dbh->exec(sql_create_users_tbl);
+		echo = "calling exec on dbh";
 		
 		if($r !== false){
 			
