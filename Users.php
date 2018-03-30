@@ -34,13 +34,13 @@ class Users {
     }
   
 	public function getUser ($display_name,$email,$password) {
-	  $conn $this->getConnection();
-	  $query = $conn->prepare("select * from Users");
-	  $query->setFetchMode(PDO::FETCH_ASSOC);
-	  $query->execute();
-	  $results = query->fetchAll();
-	  $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-	  return $results;
+		$conn = $this->getConnection();
+		$query = $conn->prepare("select * from Users");
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		$query->execute();
+		$results = query->fetchAll();
+		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
+		return $results;
     }
   
  }
