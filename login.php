@@ -6,6 +6,12 @@
 			<title> Login/ Sign up </title>
 		</head>
 	<body>
+	
+	<?php 
+	include "createtable.php";
+	include "comments.php";
+	?>
+	
 	<h1 class = "title"> Login/Sign up</h1>
 
 	<div class ="handles">
