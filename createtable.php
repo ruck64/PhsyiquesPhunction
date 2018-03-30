@@ -14,8 +14,8 @@ require_once 'dbconfig.php';
 		$dsn = "mysql:host = $host;dbname=$db";
 		$dbn = new PDO($dsn, $username, $password);
 
-		$sql_create_users_tbl = <<< EOSQL
-		CREATE TABLE IF NOT EXISTS Users (
+		$sql_create_users_tbl = 
+		"CREATE TABLE IF NOT EXISTS Users (
 			id INT (6) UNSIGNED AUTO_INCREMENT,
 			display_name VARCHAR (30) NOT NULL,
 			email VARCHAR (50) NOT NULL,
@@ -24,11 +24,10 @@ require_once 'dbconfig.php';
 			UNIQUE INDEX (email),
 			access INT(1),
 			reg_date TIMESTAMP
-		) ENGINE = InnoDB
-		;
+		) ENGINE = InnoDB";
 	
-		$sql_create_userinfo_tbl = <<<EOSQL
-		CREATE TABLE IF DOES NOT EXIST UserInfo (
+		$sql_create_userinfo_tbl = 
+		"CREATE TABLE IF DOES NOT EXIST UserInfo (
 			id INT NOT NULL,
 			firstname VARCHAR (30) NOT NULL,
 			lastname VARCHAR (30) NOT NULL,
@@ -36,7 +35,7 @@ require_once 'dbconfig.php';
 			weight INT (3) NOT NULL,
 			bodytype CHAR NOT NULL,
 			PRIMARY KEY(id)
-		);
+		)";
 		
 		$msg = '';
 		
@@ -58,7 +57,7 @@ require_once 'dbconfig.php';
 		
 		if($msg !='')
 			echo $msg;
-		
+	}
 	catch (Exception $e) {
         echo "connection failed: " . $e->getMessage();
     //  $this->logger->logFatal("The database connection failed.");
