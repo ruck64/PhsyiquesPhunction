@@ -9,9 +9,8 @@ require_once 'dbconfig.php';
 //  }
 
     try {
-  //    $conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
   //    $this->logger->logDebug("Established a database connection.");
-		$dsn = "mysql:host = $host;dbname=$db";
+		$dsn = "mysql:host = '$host';dbname='$db'";
 		$dbn = new PDO($dsn, $username, $password);
 
 		$sql_create_users_tbl = 
@@ -40,7 +39,6 @@ require_once 'dbconfig.php';
 		$msg = '';
 		
 		$r = $dbh->exec(sql_create_users_tbl);
-		echo "calling exec on dbh";
 		
 		if($r !== false){
 			
