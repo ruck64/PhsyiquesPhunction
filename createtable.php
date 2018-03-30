@@ -10,8 +10,8 @@ require_once 'dbconfig.php';
     try {
   //    $this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = $host;dbname=$db";
-		echo "gonna try to connect";
-		echo "host " . $host . "<br> db " . $db . "<br>";
+		echo "gonna try to connect <br>";
+		echo "host " . $host . "<br> db " . $db . "<br> username" . $username . "<br> password " . $password . "<br>;
 		$dbn = new PDO($dsn, $username, $password);
 		echo "connectoin succesful";
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
