@@ -38,6 +38,11 @@ a {
   }
 }
 
+.border {
+	background:white;
+	border:solid black 1px;
+}
+
 .form {
   background:rgba($form-bg,.9);
   padding: 40px;
