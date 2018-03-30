@@ -17,7 +17,7 @@ require_once 'dbconfig.php';
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "connectoin succesful";
 
-		$sql_create_users_tbl = 
+		$sql_users = 
 		"CREATE TABLE IF NOT EXISTS Users (
 			id INT (6) UNSIGNED AUTO_INCREMENT,
 			display_name VARCHAR (30) NOT NULL,
@@ -26,10 +26,12 @@ require_once 'dbconfig.php';
 			PRIMARY KEY (id),
 			UNIQUE INDEX (email),
 			access INT(1),
-			reg_date TIMESTAMP
-		) ENGINE = InnoDB";
+			reg_date TIMESTAMP ); ";
+			
+		$dbn->exec($sql_users);
+		print("Created $sql_users users.\n");
 	
-		$sql_create_userinfo_tbl = 
+		$sql_usersinfo =
 		"CREATE TABLE IF DOES NOT EXIST UserInfo (
 			id INT NOT NULL,
 			firstname VARCHAR (30) NOT NULL,
@@ -38,28 +40,11 @@ require_once 'dbconfig.php';
 			weight INT (3) NOT NULL,
 			bodytype CHAR NOT NULL,
 			PRIMARY KEY(id)
-		)";
+		);";
+		$dbn->exec($sql_usersinfo);
+		print("Created $sql_usersinfo usersinfo.\n");
 		
-		$msg = '';
 		
-		$r = $dbh->exec(sql_create_users_tbl);
-		
-		if($r !== false){
-			
-			$r = $dbh->exec(sql_create_userinfo_tbl);
-			
-			if($r !== false){
-				$msg = "Tables are created successfully!<br/>";
-			}else{
-				$msg = "Error creating the userinfo table.<br/>";
-			}
-			
-		}else{
-			$msg = "error in creating  user table.<br/>";
-		}
-		
-		if($msg !='')
-			echo $msg;
 		
 	}
 	catch (Exception $e) {
