@@ -1,16 +1,21 @@
 <?php
-echo "before includes";
 require_once 'KLogger.php';
 require_once 'dbconfig.php';
-echo "after includes";
 
 //protected $logger = logger;
 //  public function __construct () {
   //  $this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
 //  }
 
+$filename = 'dbconfig.php';
+
+if (file_exists($filename)) {
+    echo "The file $filename exists";
+} else {
+    echo "The file $filename does not exist";
+}
+
     try {
-		echo "in try";
   //    $this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = '$host';dbname='$db'";
 		$dbn = new PDO($dsn, $username, $password);
