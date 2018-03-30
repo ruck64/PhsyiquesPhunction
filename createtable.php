@@ -7,7 +7,7 @@ require_once 'dbconfig.php';
   //  $this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
 //  }
 
-$filename = 'dbconfig.php';
+$filename = 'KLogger.php';
 
 if (file_exists($filename)) {
     echo "The file $filename exists";
