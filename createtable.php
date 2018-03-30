@@ -9,7 +9,7 @@ require_once 'dbconfig.php';
 
     try {
   //    $this->logger->logDebug("Established a database connection.");
-		$dsn = "mysql:host = '$host';dbname='$db";
+		$dsn = "mysql:host = $host;dbname=$db";
 		echo "gonna try to connect";
 		$dbn = new PDO($dsn, $username, $password);
 		echo "connectoin succesful";
