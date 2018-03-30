@@ -42,7 +42,7 @@ require_once 'dbconfig.php';
 		print("Created $sql_users users.\n");
 	
 		$sql_usersinfo =
-		"CREATE TABLE IF DOES NOT EXIST `UserInfo` (
+		"CREATE TABLE IF NOT EXIST `UserInfo` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT,
 			`firstname` VARCHAR (30) NOT NULL,
 			`lastname` VARCHAR (30) NOT NULL,
