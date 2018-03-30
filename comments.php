@@ -1,6 +1,6 @@
 <?php
 require_once 'KLogger.php';
-require_once 'Users.php';
+//require_once 'Users.php';
 
 class Dao {
   private $host = "us-cdbr-iron-east-05.cleardb.net";
