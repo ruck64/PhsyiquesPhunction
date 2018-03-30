@@ -10,7 +10,7 @@ require_once 'dbconfig.php';
     try {
   //    $this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = $host;dbname=$db";
-		echo "gonna try to connect <br>";
+	//	echo "gonna try to connect <br>";
 	//	echo "host " . $host . "<br> db " . $db . "<br> username " . $username . "<br> password " . $password . "<br>";
 		$dbn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604', 'bb2501c58a8034', 'b8fa5f57');
 	//	echo "connectoin succesful";
@@ -52,7 +52,7 @@ require_once 'dbconfig.php';
 			PRIMARY KEY(`id`)
 		);";
 		$dbn->exec($sql_usersinfo);
-		print("Created $sql_usersinfo usersinfo.\n");
+	//	print("Created $sql_usersinfo usersinfo.\n");
 		
 		
 		
