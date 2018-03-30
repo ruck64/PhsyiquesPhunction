@@ -12,6 +12,7 @@ require_once 'dbconfig.php';
   //    $this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = '$host';dbname='$db'";
 		$dbn = new PDO($dsn, $username, $password);
+		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$sql_create_users_tbl = 
 		"CREATE TABLE IF NOT EXISTS Users (
