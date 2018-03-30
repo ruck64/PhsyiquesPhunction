@@ -2,6 +2,7 @@
 echo "before includes";
 require_once 'KLogger.php';
 require_once 'dbconfig.php';
+echo "after includes";
 
 //protected $logger = logger;
 //  public function __construct () {
