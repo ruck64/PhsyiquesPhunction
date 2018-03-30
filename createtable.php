@@ -16,14 +16,13 @@ require_once 'dbconfig.php';
 		echo "connectoin succesful";
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "connectoin succesful";
-
+			
 		$sql_users = 
-		"CREATE TABLE IF NOT EXISTS Users (
-			id INT (6) UNSIGNED AUTO_INCREMENT,
-			display_name VARCHAR (30) NOT NULL,
-			email VARCHAR (50) NOT NULL,
-			password CHAR(41) NOT NULL,
-			PRIMARY KEY (id),
+		"CREATE TABLE IF NOT EXISTS 'Users' (
+			'id' INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			'display_name' VARCHAR (30) NOT NULL,
+			'email' VARCHAR (50) NOT NULL,
+			'password' CHAR(41) NOT NULL,
 			UNIQUE INDEX (email),
 			access INT(1),
 			reg_date TIMESTAMP ); ";
@@ -33,7 +32,7 @@ require_once 'dbconfig.php';
 	
 		$sql_usersinfo =
 		"CREATE TABLE IF DOES NOT EXIST UserInfo (
-			id INT NOT NULL,
+			id INT (6) UNSIGNED AUTO_INCREMENT,
 			firstname VARCHAR (30) NOT NULL,
 			lastname VARCHAR (30) NOT NULL,
 			age INT (3) NOT NULL,
