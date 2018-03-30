@@ -18,15 +18,15 @@ require_once 'dbconfig.php';
 	//	echo "connectoin succesful";
 			
 		$sql_users = 
-		"CREATE TABLE 'Users' (
-			'id' INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
-			'display_name' VARCHAR (30) NOT NULL,
-			'email' VARCHAR (50) NOT NULL,
-			'password' CHAR(41) NOT NULL,
-			PRIMARY KEY ('id'),
-			UNIQUE INDEX (email),
-			access INT(1),
-			reg_date TIMESTAMP 
+		"CREATE TABLE `Users` (
+			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
+			`display_name` VARCHAR (30) NOT NULL,
+			`email` VARCHAR (50) NOT NULL,
+			`password` CHAR(41) NOT NULL,
+			PRIMARY KEY (`id`),
+			UNIQUE INDEX (`email`),
+			`access` INT(1),
+			`reg_date` TIMESTAMP 
 			) ";
 			
 			
