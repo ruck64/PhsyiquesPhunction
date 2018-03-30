@@ -31,9 +31,10 @@
 		</div>
 		
 	</body>	
-	<div class = "border">
+	
 	<div class="form">
-      
+    <div class = "border">  
+	
       <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
         <li class="tab"><a href="#login">Log In</a></li>
@@ -93,9 +94,9 @@
         </div>
         
       </div><!-- tab-content -->
-      
+    </div>  
 	</div> <!-- /form -->
-	</div>
+	
 <div class = "footer">
 	This is the footer
 		</div>
