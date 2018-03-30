@@ -26,7 +26,7 @@ require_once 'dbconfig.php';
 		*/
 			
 		$sql_users = 
-		"CREATE TABLE IF NOT EXISTS `Users` (
+		"CREATE TABLE IF NOT EXIST `Users` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
 			`display_name` VARCHAR (30) NOT NULL,
 			`email` VARCHAR (50) NOT NULL,
