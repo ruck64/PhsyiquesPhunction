@@ -39,7 +39,7 @@ require_once 'dbconfig.php';
 			
 			
 		$dbn->exec($sql_users);
-		print("Created $sql_users users.\n");
+	//	print("Created $sql_users users.\n");
 	
 		$sql_usersinfo =
 		"CREATE TABLE IF NOT EXISTS `UserInfo` (
