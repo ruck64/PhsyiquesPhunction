@@ -17,8 +17,8 @@ require_once 'dbconfig.php';
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//	echo "connectoin succesful";
 			
-		$sql_users = 
-		"CREATE TABLE IF NOT EXISTS 'Users' (
+		$sql_users = <<<EOSQL 
+		CREATE TABLE IF NOT EXISTS 'Users' (
 			'id' INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
 			'display_name' VARCHAR (30) NOT NULL,
 			'email' VARCHAR (50) NOT NULL,
@@ -26,7 +26,10 @@ require_once 'dbconfig.php';
 			PRIMARY KEY ('id'),
 			UNIQUE INDEX (email),
 			access INT(1),
-			reg_date TIMESTAMP ); ";
+			reg_date TIMESTAMP 
+			) ENGINE = InnoDB
+			EOSQL;
+			
 			
 		$dbn->exec($sql_users);
 		print("Created $sql_users users.\n");
