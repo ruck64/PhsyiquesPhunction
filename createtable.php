@@ -13,16 +13,17 @@ require_once 'dbconfig.php';
 		echo "gonna try to connect <br>";
 	//	echo "host " . $host . "<br> db " . $db . "<br> username " . $username . "<br> password " . $password . "<br>";
 		$dbn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604', 'bb2501c58a8034', 'b8fa5f57');
-		echo "connectoin succesful";
+	//	echo "connectoin succesful";
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		echo "connectoin succesful";
+	//	echo "connectoin succesful";
 			
 		$sql_users = 
 		"CREATE TABLE IF NOT EXISTS 'Users' (
-			'id' INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			'id' INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
 			'display_name' VARCHAR (30) NOT NULL,
 			'email' VARCHAR (50) NOT NULL,
 			'password' CHAR(41) NOT NULL,
+			PRIMARY KEY ('id'),
 			UNIQUE INDEX (email),
 			access INT(1),
 			reg_date TIMESTAMP ); ";
