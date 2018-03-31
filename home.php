@@ -5,12 +5,12 @@
 			<title>Phsyiquesphunction</title>
 		</head>
 	<body>
-	//
+	<p>
 	<?php 
 	include "createtable.php";
 	include "comments.php";
 	?>
-	//
+	</p>
 	<h1 class="title"> Link Has Come To Save The Day </h1>
 	<div class ="handles">
 	<ul class="handles">
