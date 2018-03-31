@@ -10,7 +10,7 @@
 	<?php 
 	require_once "createtable.php";
 	require_once "comments.php";
-	//include "Users.php";
+	require_once "users.php";
 	?>
 	
 	<h1 class = "title"> Login/Sign up</h1>
