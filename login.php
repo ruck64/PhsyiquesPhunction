@@ -10,8 +10,18 @@
 	<?php 
 	require_once "createtable.php";
 	require_once "comments.php";
-	require_once "users.php";
+	//require_once "users.php";
 	?>
+	
+	<?php
+$filename = 'users.php';
+
+if (file_exists($filename)) {
+    echo "The file $filename exists";
+} else {
+    echo "The file $filename does not exist";
+}
+?>
 	
 	<h1 class = "title"> Login/Sign up</h1>
 
