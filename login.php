@@ -10,7 +10,7 @@
 	<?php 
 	include "createtable.php";
 	include "comments.php";
-	include "Users.php";
+	//include "Users.php";
 	?>
 	
 	<h1 class = "title"> Login/Sign up</h1>
