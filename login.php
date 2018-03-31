@@ -10,11 +10,11 @@
 	<?php 
 	require_once "createtable.php";
 	require_once "comments.php";
-	require_once "users.php";
+	require_once "Users.php";
 	?>
 	
 	<?php
-$filename = 'users.php';
+$filename = 'Users.php';
 
 if (file_exists($filename)) {
     echo "The file $filename exists";
