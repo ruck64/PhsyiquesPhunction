@@ -8,8 +8,8 @@
 	<body>
 	
 	<?php 
-	include "createtable.php";
-	include "comments.php";
+	require_once "createtable.php";
+	require_once "comments.php";
 	//include "Users.php";
 	?>
 	
