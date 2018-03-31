@@ -10,7 +10,7 @@
 	<?php 
 	require_once "createtable.php";
 	require_once "comments.php";
-	include = "users.php";
+	// = "users.php";
 	?>
 	
 	<?php
