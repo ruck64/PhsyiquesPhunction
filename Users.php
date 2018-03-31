@@ -38,7 +38,7 @@ class Users {
 		$query = $conn->prepare("select * from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
-		$results = query->fetchAll();
+		$results = $query->fetchAll();
 		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
 		return $results;
     }
