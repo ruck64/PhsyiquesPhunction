@@ -14,7 +14,7 @@
 	$valid = true;
 	$messages = array(); 
 		
-	if(empty($display_name)) {
+	if(empty($display_name) || $display_name == "DISPLAY NAME") {
 		$messages[] = "PLEASE ENTER A DISPLAY NAME";
 		$valid = false;
 	}
