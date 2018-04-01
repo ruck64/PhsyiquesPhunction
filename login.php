@@ -6,7 +6,7 @@
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
-	require_once "hanldercreate.php";
+	require_once "handlercreate.php";
 	$Users = new Users();
 	
 	$save = $Users->saveUser();
