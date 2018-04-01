@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+
+	<?php 
+	session_start();
+	
+	require_once "createtable.php";
+	require_once "comments.php";
+	require_once "Users.php";
+	$Users = new Users();
+	
+	$save = saveUser();
+	
+	?>
+	
 	<html>
 		<head>
 			<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -6,23 +19,7 @@
 			<title> Login/ Sign up </title>
 		</head>
 	<body>
-	
-	<?php 
-	require_once "createtable.php";
-	require_once "comments.php";
-	require_once "Users.php";
-	?>
-	
-	<?php
-$filename = 'Users.php';
 
-if (file_exists($filename)) {
-    echo "The file $filename exists";
-} else {
-    echo "The file $filename does not exist";
-}
-?>
-	
 	<h1 class = "title"> Login/Sign up</h1>
 
 	<div class ="handles">
@@ -49,6 +46,28 @@ if (file_exists($filename)) {
 		
 	</body>	
 	
+	<?php
+		if (isset($_SESSION['messages'])) {
+			$sentiment = $_SESSION['sentiment'];
+			foreach($_SESSION['messages'] as $message {
+				echo "<div class = 'message $sentiment'>$message</div>";
+			}
+		}
+	?>
+	
+	<?php
+     $presets = array();
+     if (isset($_SESSION['presets'])) {
+       $presets = array_shift($_SESSION['presets']);
+     }
+     unset($_SESSION['presets']);
+     unset($_SESSION['messages']);
+     unset($_SESSION['messages']);
+    ?>
+	
+	
+		
+	
 	<div class="form">
     <div class = "border">  
 	
@@ -61,11 +80,12 @@ if (file_exists($filename)) {
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post">
+          <form action="handler.php" method="POST">
 		  
 		  <div class = "field-wrap">
 			<label>
 				Display Name<span class="req">*</span>
+				<input type ="text" size = "20" maxlength="20" name = display_name>
 			</label>
 			<input type="text"required autocomplete="on"/>
 		  </div>
