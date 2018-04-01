@@ -219,27 +219,7 @@ window.onload =function(){
 	This is the footer
 		</div>	
 		
-	</body>	
-	
-	<?php
-		if (isset($_SESSION['messages'])) {
-			$sentiment = $_SESSION['sentiment'];
-			foreach($_SESSION['messages'] as $message) {
-				echo "<div class = 'message $sentiment'>$message</div>";
-			}
-		}
-	?>
-	
-	<?php
-     $presets = array();
-     if (isset($_SESSION['presets'])) {
-       $presets = array_shift($_SESSION['presets']);
-     }
-     unset($_SESSION['presets']);
-     unset($_SESSION['messages']);
-     unset($_SESSION['messages']);
-    ?>
-	
+	</body>		
 
 	
 	</html>
