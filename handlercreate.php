@@ -42,7 +42,7 @@
 	}
 	
 	$_SESSION['sentiment'] = "good";
-	$_SESSION['messages'] = array("Account created successfully", $display_name);
+	$_SESSION['messages'] = array($display_name);
 	
 	$Users->saveUser($display_name, $email, $password);
 	
