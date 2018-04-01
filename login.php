@@ -84,9 +84,9 @@
 		  
 		  <div class = "field-wrap">
 			<label>
-				Display Name<span class="req">*</span>
+				<input type="text"required autocomplete="on" value: Dsize = "20" maxlength="20" name = display_name/>
 			</label>
-			<input type="text"required autocomplete="on" size = "20" maxlength="20" name = display_name/>
+
 		  </div>
 
           <div class="field-wrap">
