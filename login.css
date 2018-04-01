@@ -1,6 +1,6 @@
 #subscribe, 
 #login{
-	position: absolute;
+	position: relative;
 	top: 0px;
 	width: 88%;	
 	padding: 18px 6% 60px 6%;
@@ -18,6 +18,7 @@
 
 /**** general text styling ****/
 #wrapper h1{
+	
 	font-size: 48px;
 	color: rgb(6, 106, 117);
 	padding: 2px 0 10px 0;
