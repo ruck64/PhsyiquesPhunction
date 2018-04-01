@@ -6,7 +6,6 @@
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
-	//require_once "handlercreate.php";
 	$Users = new Users();
 	
 	$save = $Users->saveUser();
@@ -67,7 +66,7 @@
 
   <div class="cont_centrar">
   <div class="cont_login">
-    <form action="handler.php" method="POST" >
+    <form action="handlercreate.php" method="POST" >
     <div class="cont_tabs_login">
       <ul class='ul_tabs'>
         <li class="active"><a href="#" onclick="sign_in()">SIGN IN</a>
