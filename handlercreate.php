@@ -5,7 +5,7 @@
 	require_once 'comments.php';
 	$Users = new Users();
 	
-	$display_name = $_POST["name"];
+	$display_name = $_POST["display_name"];
 	$email = $_POST["email"];
 	$password = $_POST["password"];
 	
