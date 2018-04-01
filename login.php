@@ -12,6 +12,25 @@
 	
 	?>
 	
+	<?php
+		if (isset($_SESSION['messages'])) {
+			$sentiment = $_SESSION['sentiment'];
+			foreach($_SESSION['messages'] as $message) {
+				echo "<div class = 'message $sentiment'>$message</div>";
+			}
+		}
+	?>
+	
+	<?php
+     $presets = array();
+     if (isset($_SESSION['presets'])) {
+       $presets = array_shift($_SESSION['presets']);
+     }
+     unset($_SESSION['presets']);
+     unset($_SESSION['messages']);
+     unset($_SESSION['messages']);
+    ?>
+	
 	<html>
 		<head>
 			<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -47,7 +66,7 @@
 
   <div class="cont_centrar">
   <div class="cont_login">
-    <form action="">
+    <form action="handler.php" method="POST" >
     <div class="cont_tabs_login">
       <ul class='ul_tabs'>
         <li class="active"><a href="#" onclick="sign_in()">SIGN IN</a>
@@ -58,7 +77,7 @@
       </ul>
       </div>
   <div class="cont_text_inputs">
-      <input type="text" class="input_form_sign " placeholder="NAME" name="name_us" />
+      <input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" class="input_form_sign " placeholder="DISPLAY NAME" id = "display_name" name="display_name" />
     
     <input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="emauil_us" />
 
