@@ -78,7 +78,7 @@
       </ul>
       </div>
   <div class="cont_text_inputs">
-      <input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" class="input_form_sign " placeholder="DISPLAY NAME" id = "display_name" name="display_name" />
+     <!-- <input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" class="input_form_sign " placeholder="DISPLAY NAME" id = "display_name" name="display_name" /> -->
     
     <input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="emauil_us" />
 
