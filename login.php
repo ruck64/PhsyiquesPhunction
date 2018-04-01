@@ -61,7 +61,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "login.php">Sign Up/Login</a></li> 
 	</ul>
-		
+		'
 <div class="cont_principal">
 
   <div class="cont_centrar">
@@ -87,7 +87,7 @@
     <a href="#" class="link_forgot_pass d_block" >Forgot Password ?</a>    
       </div>
 <div class="cont_btn">
-     <button class="btn_sign">SIGN IN</button>
+     <button class="btn_sign" type="submit" value="Submit">SIGN IN</button>
       
       </div>
       
