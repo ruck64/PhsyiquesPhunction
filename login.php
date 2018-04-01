@@ -8,7 +8,7 @@
 	require_once "Users.php";
 	$Users = new Users();
 	
-	$save = saveUser();
+	$save = $Users->saveUser();
 	
 	?>
 	
