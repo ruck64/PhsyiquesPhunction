@@ -33,7 +33,7 @@ class Users {
 		$query->execute();
     }
   
-	public function getUser ($display_name,$email,$password) {
+	public function getDisplay_Name ($display_name,$email,$password) {
 		$conn = $this->getConnection();
 		$query = $conn->prepare("select * from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
