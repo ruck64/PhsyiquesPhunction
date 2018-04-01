@@ -44,7 +44,7 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	
-	$Users->saveUsers($display_name, $email, $password);
+	$Users->saveUser($display_name, $email, $password);
 	
 	header("Location: login.php");
 	exit;
