@@ -66,10 +66,6 @@
    <input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pass_us" />
     
     <a href="#" class="link_forgot_pass d_block" >Forgot Password ?</a>    
-<div class="terms_and_cons d_none">
-    <p><input type="checkbox" name="terms_and_cons" /> <label for="terms_and_cons">Accept  Terms and Conditions.</label></p>
-  
-    </div>
       </div>
 <div class="cont_btn">
      <button class="btn_sign">SIGN IN</button>
