@@ -28,7 +28,7 @@ require_once 'dbconfig.php';
 			
 			
 		$db->exec($sql_users);
-		print("Created $sql_users.\n");
+		print("Created users.\n");
 	
 		$sql_usersinfo =
 		"CREATE TABLE IF NOT EXISTS `UserInfo` (
@@ -41,7 +41,7 @@ require_once 'dbconfig.php';
 			PRIMARY KEY(`id`)
 		);";
 		$db->exec($sql_usersinfo);
-		print("Created $sql_usersinfo usersinfo.\n");
+		print("Created usersinfo.\n");
 		
 		
 		
