@@ -19,6 +19,35 @@
 	?>
 	
 	<?php
+		$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
+		$sql = "SELECT * FROM Users";
+		$query = $db->prepare( $sql );
+		$query->execute();
+		$results = $query->fetchAll( PDO::FETCH_ASSOC );
+	?>
+ <table class="table">
+   <tr>
+     <th>ID</th>
+     <th>Display Name</th>
+     <th>email</th>
+     <th>Password</th>
+   </tr>
+   <?php foreach( $results as $row ){
+   echo "<tr><td>";
+     echo $row['id'];
+     echo "</td><td>";
+     echo $row['display_name'];
+     echo "</td><td>";
+     echo $row['email'];
+     echo "</td><td>";
+     echo $row['password'];
+     echo "</td><td>";
+   echo "</tr>";
+   }
+ ?>
+ </table>
+	
+	<?php
      $presets = array();
      if (isset($_SESSION['presets'])) {
        $presets = array_shift($_SESSION['presets']);
