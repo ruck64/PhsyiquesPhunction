@@ -12,11 +12,8 @@ require_once 'dbconfig.php';
 	public function createTable() {
     try {
 		$this->logger->logDebug("Established a database connection.");
-		$dsn = "mysql:host = $host;dbname=$db";
-		echo "gonna try to connect <br>";
-		echo "host " . $host . "<br> db " . $db . "<br> username " . $username . "<br> password " . $password . "<br>";
-		$dbn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604', 'bb2501c58a8034', 'b8fa5f57');
-		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604', 'bb2501c58a8034', 'b8fa5f57');
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql_users = 
 		"CREATE TABLE IF NOT EXISTS `Users` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -30,8 +27,8 @@ require_once 'dbconfig.php';
 			) ";
 			
 			
-		$dbn->exec($sql_users);
-		print("Created $sql_users users.\n");
+		$db->exec($sql_users);
+		print("Created $sql_users.\n");
 	
 		$sql_usersinfo =
 		"CREATE TABLE IF NOT EXISTS `UserInfo` (
@@ -43,13 +40,13 @@ require_once 'dbconfig.php';
 			`bodytype` CHAR NOT NULL,
 			PRIMARY KEY(`id`)
 		);";
-		$dbn->exec($sql_usersinfo);
+		$db->exec($sql_usersinfo);
 		print("Created $sql_usersinfo usersinfo.\n");
 		
 		
 		
 	}
-	catch (Exception $e) {
+	catch (PDOException $e) {
         echo "connection failed: " . $e->getMessage();
       $this->logger->logFatal("The database connection failed.");
 	}
