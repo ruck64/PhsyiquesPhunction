@@ -13,8 +13,8 @@ class Users {
 	
 	private function getConnection () {
 		try {
-		require_once "dbconfig.php"
-		$conn = new PDO('mysql:host=$host;dbname=db',$username ,$password);
+		require_once "dbconfig.php";
+		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
 		$this->logger->logDebug("Established a database connection.");
 		return $conn;
 		} catch (Exception $e) {
