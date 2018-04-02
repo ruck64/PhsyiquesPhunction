@@ -20,12 +20,11 @@
 	
 	<?php
 		try {
-		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
-		echo "connection successful ";
+		$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
 		} catch (Exception $e) {
 		echo "connection failed: " . $e->getMessage();
 		}
-		echo "made it here ";
+		
 		$sql = "SELECT * FROM Users";
 		echo "made it past initial sql decl ";
 		$query = $db->prepare( $sql );
