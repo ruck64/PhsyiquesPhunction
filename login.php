@@ -24,18 +24,16 @@
 		} catch (Exception $e) {
 		echo "connection failed: " . $e->getMessage();
 		}
-		
 		$sql = "SELECT * FROM Users";
-		echo "made it past initial sql decl ";
 		$query = $db->prepare( $sql );
-		echo "after query";
 		$query->execute();
-		echo "made it here2";
 		$results = $query->fetchAll( PDO::FETCH_ASSOC );
+		foreach( $results as $row ){
+			print_r( $row );
+		}
 	?>
 	
 	<?php
-	echo "made it to next functoin";
      $presets = array();
      if (isset($_SESSION['presets'])) {
        $presets = array_shift($_SESSION['presets']);
