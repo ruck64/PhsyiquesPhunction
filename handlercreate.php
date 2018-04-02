@@ -45,8 +45,6 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	$_SESSION['display_name'] = array($display_name);
-	
-			<?php 
 
   foreach ($_POST as $key => $value) {
   echo '<p>'.$key.'</p>';
@@ -59,7 +57,6 @@
 
 } 
 
- ?>
 	
 	$Users->saveUser($display_name, $email, $password);
 	
