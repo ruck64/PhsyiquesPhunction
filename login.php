@@ -25,6 +25,10 @@
 				echo "<div class = 'message' $sentiment'>$display_name</div>";
 			}
 		}
+		
+		foreach($_POST as $key => $value) {
+  echo "POST parameter '$key' has '$value'";
+}
 	?>
 	
 	<?php
