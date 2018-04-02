@@ -46,6 +46,21 @@
 	$_SESSION['messages'] = array("Account created successfully");
 	$_SESSION['display_name'] = array($display_name);
 	
+			<?php 
+
+  foreach ($_POST as $key => $value) {
+  echo '<p>'.$key.'</p>';
+  foreach($value as $k => $v)
+  {
+  echo '<p>'.$k.'</p>';
+  echo '<p>'.$v.'</p>';
+  echo '<hr />';
+  }
+
+} 
+
+ ?>
+	
 	$Users->saveUser($display_name, $email, $password);
 	
 	header("Location: login.php");

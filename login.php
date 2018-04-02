@@ -37,21 +37,6 @@
      unset($_SESSION['messages']);
     ?>
 	
-			<?php 
-
-  foreach ($_POST as $key => $value) {
-  echo '<p>'.$key.'</p>';
-  foreach($value as $k => $v)
-  {
-  echo '<p>'.$k.'</p>';
-  echo '<p>'.$v.'</p>';
-  echo '<hr />';
-  }
-
-} 
-
- ?>
-	
 	<html>
 		<head>
 			<link rel="stylesheet" type="text/css" href="stylesheet.css">
