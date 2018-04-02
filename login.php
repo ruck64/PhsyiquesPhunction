@@ -25,7 +25,6 @@
      }
      unset($_SESSION['presets']);
      unset($_SESSION['messages']);
-     unset($_SESSION['messages']);
     ?>
 	
 	<html>
