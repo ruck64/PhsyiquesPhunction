@@ -59,10 +59,8 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "login.php">Sign Up/Login</a></li> 
 	</ul>
 	
-	<?php 
-	echo ("htmlspecialchars($user[display_name])");
-	?>
-		
+	<?php echo $_POST['display_name']; ?>
+	
 	<div class="cont_principal">
 
 		<div class="cont_centrar">
