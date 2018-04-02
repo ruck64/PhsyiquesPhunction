@@ -53,9 +53,9 @@ class Users {
 		return $results;
     }
 	
-		public function getDisplay_Name () {
+		public function getPasswrod () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select display_name from Users");
+		$query = $conn->prepare("select password from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
