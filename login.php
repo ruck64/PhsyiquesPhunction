@@ -35,7 +35,7 @@
 			}
 		}
 		else {
-			echo "no valid";
+			echo "<div class = 'message' $sentiment'>no valid</div>";
 		}
 	?>
 	
