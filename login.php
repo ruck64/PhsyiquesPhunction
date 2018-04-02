@@ -26,6 +26,7 @@
 		} catch (Exception $e) {
 		echo "connection failed: " . $e->getMessage();
 		}
+		echo "made it here";
 		$sql = "SELECT * FROM Users";
 		$query = $db->prepare( $sql );
 		$query->execute();
