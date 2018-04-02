@@ -61,6 +61,7 @@
 	
 	<?php 
 	echo ("htmlspecialchars($user[display_name]");
+	?>
 		
 	<div class="cont_principal">
 
