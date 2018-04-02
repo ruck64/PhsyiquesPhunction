@@ -61,11 +61,11 @@
 
 	<div class ="handles">
 	<ul class="handles">
-	<li class="handles"><a class="handles" href="twitter.com"> <img src="twitter.png" width=100px; height=100px;></a></li> 
-	<li class="handles"><a class="handles" href="snapchat.com"> <img src="snapchat.png" width=100px; height=100px;></a></li>
-	<li class="handles"><a class="handles" href="instagram.com"> <img src="instagram.png" width=100px; height=100px;></a></li>
-	<li class="handles"><a class="handles" href="twitch.com"> <img src="twitch.png" width=100px; height=100px;></a></li>
-	<li class="handles"><a class="handles" href="youtube.com"> <img src="youtube.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="htt[s://www.twitter.com"> <img src="twitter.png" width=100px; height=100px;></a></li> 
+	<li class="handles"><a class="handles" href="https://www.snapchat.com"> <img src="snapchat.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="https://www.instagram.com/"> <img src="instagram.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="https://www.twitch.com"> <img src="twitch.png" width=100px; height=100px;></a></li>
+	<li class="handles"><a class="handles" href="https://www.youtube.com"> <img src="youtube.png" width=100px; height=100px;></a></li>
 	</ul>
 	</div>
 	
