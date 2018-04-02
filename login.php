@@ -30,7 +30,7 @@
 		<?php
 		if (isset($_SESSION['valid'])) {
 			$sentiment = $_SESSION['sentiment'];
-			foreach($_SESSION['valid'] as $display_name) {
+			foreach($_SESSION['valid'] as $valid) {
 				echo "<div class = 'message' $sentiment'>$valid</div>";
 			}
 		}
