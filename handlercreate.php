@@ -53,7 +53,7 @@
 	
 	$Users->saveUser($display_name, $email, $password);
 	
-	header("Location: login.php");
+	header("Location: userpage.php");
 	exit;
 	
 	
