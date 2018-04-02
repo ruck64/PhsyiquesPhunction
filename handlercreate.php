@@ -11,6 +11,8 @@
 	
 	$_SESSION['presets'] = array($_POST);
 	$_SESSION['display_name'] = array($_POST);
+	$_SESSION['email'] = array($_POST);
+	$_SESSION['password'] = array($_POST);
 	
 	$valid = true;
 	$messages = array(); 
@@ -35,7 +37,7 @@
 		$valid = false;
 	}
 	
-	if (!valid) {
+	if (!$valid) {
 		$_SESSION['sentiment'] = "bad";
 		$_SESSION['messages'] = $messages;
 		header("Location: login.php");
@@ -44,18 +46,6 @@
 	
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
-	$_SESSION['display_name'] = array($display_name);
-
-  foreach ($_POST as $key => $value) {
-  echo '<p>'.$key.'</p>';
-  foreach($value as $k => $v)
-  {
-  echo '<p>'.$k.'</p>';
-  echo '<p>'.$v.'</p>';
-  echo '<hr />';
-  }
-
-} 
 
 	
 	$Users->saveUser($display_name, $email, $password);
