@@ -27,6 +27,7 @@
 		}
 		echo "made it here ";
 		$sql = "SELECT * FROM Users";
+		echo "made it past initial sql decl ";
 		$query = $db->prepare( $sql );
 		echo "after query";
 		$query->execute();
