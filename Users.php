@@ -12,8 +12,9 @@ class Users {
     }
 	
 	private function getConnection () {
+		require_once 'dbconfig.php';
 		try {
-		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
+		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
 		$this->logger->logDebug("Established a database connection.");
 		return $conn;
 		} catch (Exception $e) {
@@ -33,12 +34,32 @@ class Users {
 		$query->execute();
     }
   
-	public function getDisplay_Name ($display_name,$email,$password) {
+	public function getDisplay_Name () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select * from Users");
+		$query = $conn->prepare("select display_name from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
-		$results = $query->fetchAll();
+		$results = $query->fetch();
+		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
+		return $results;
+    }
+	
+		public function getEmail () {
+		$conn = $this->getConnection();
+		$query = $conn->prepare("select email from Users");
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		$query->execute();
+		$results = $query->fetch();
+		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
+		return $results;
+    }
+	
+		public function getDisplay_Name () {
+		$conn = $this->getConnection();
+		$query = $conn->prepare("select display_name from Users");
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		$query->execute();
+		$results = $query->fetch();
 		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
 		return $results;
     }

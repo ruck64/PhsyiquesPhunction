@@ -1,6 +1,5 @@
 <?php
 require_once 'KLogger.php';
-require_once 'dbconfig.php';
 
 	class createTable {
 
@@ -11,8 +10,9 @@ require_once 'dbconfig.php';
 
 	public function createTable() {
     try {
+		require_once 'dbconfig.php';
 		$this->logger->logDebug("Established a database connection.");
-		$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604', 'bb2501c58a8034', 'b8fa5f57');
+		$db = new PDO('mysql:host=$host;dbname=$db', $username, $password);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql_users = 
 		"CREATE TABLE IF NOT EXISTS `Users` (
