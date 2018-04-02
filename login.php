@@ -31,7 +31,7 @@
 		$results = $query->fetchAll( PDO::FETCH_ASSOC );
 		$dbnumbers = $db->prepare('SELECT * FROM ' . $Users . '');
 		$dbnumbers->execute();
-		$count = $dbnumbers->ColumnCount();
+		$count = $dbnumbers->RowCount();
 		if ($count == 0) {
 			$dbnum = "0";
 		} else {
