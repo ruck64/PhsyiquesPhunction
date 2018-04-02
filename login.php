@@ -17,12 +17,7 @@
 			}
 		}
 	?>
-	
-	<?php 
-	$Table = new createTable();
-	$Table->createTable();
-	?>
-		
+
 	<?php
 	$Users = 'Users';
 		try {
