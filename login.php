@@ -24,6 +24,7 @@
 	?>
 		
 	<?php
+	$Users = 'Users';
 		try {
 		$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
 		} catch (Exception $e) {
@@ -33,7 +34,7 @@
 		$query = $db->prepare( $sql );
 		$query->execute();
 		$results = $query->fetchAll( PDO::FETCH_ASSOC );
-		$dbnumbers = $db->prepare('SELECT * FROM '.$Users.'');
+		$dbnumbers = $db->prepare('SELECT * FROM ' . $Users . '');
 		$dbnumbers->execute();
 		$count = $dbnumbers->ColumnCount();
 		if ($count == 0) {
