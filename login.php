@@ -19,7 +19,8 @@
 	?>
 	
 	<?php 
-	createtable();
+	$Table = new createTable();
+	$Table->createTable();
 	?>
 		
 	<?php
