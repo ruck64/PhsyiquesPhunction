@@ -10,7 +10,7 @@
 	$password = $_POST['password'];
 	
 	$_SESSION['presets'] = array($_POST);
-	
+	echo ("dispaly name " . $display_name);
 	$valid = true;
 	$messages = array(); 
 		
