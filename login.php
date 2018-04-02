@@ -33,6 +33,7 @@
 	?>
 	
 	<?php
+	echo "made it to next functoin";
      $presets = array();
      if (isset($_SESSION['presets'])) {
        $presets = array_shift($_SESSION['presets']);
