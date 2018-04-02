@@ -11,11 +11,12 @@
 	
 	$_SESSION['presets'] = array($_POST);
 	$_SESSION['display_name'] = array($_POST);
+	$_SESSION['valid'] = array($_POST);
 	
 	$valid = true;
 	$messages = array(); 
 		
-	if(empty($display_name) || $display_name == "DISPLAY NAME") {
+	if(empty($display_name)) {
 		$messages[] = "PLEASE ENTER A DISPLAY NAME";
 		$valid = false;
 	}
@@ -45,6 +46,7 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	$_SESSION['display_name'] = array($display_name);
+	$_SESSION['valid'] = array($valid);
 	
 	$Users->saveUser($display_name, $email, $password);
 	
