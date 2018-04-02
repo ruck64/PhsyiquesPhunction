@@ -38,6 +38,7 @@
      <th>email</th>
      <th>Password</th>
    </tr>
+   
    <?php foreach( $results as $row ){
    echo "<tr><td>";
      echo $row['id'];
@@ -48,10 +49,10 @@
      echo "</td><td>";
      echo $row['password'];
      echo "</td><td>";
-   echo "</tr>";
+   echo "</td></tr>";
    }
- ?>
- </table>
+	?>
+	</table>
 	
 	<?php
      $presets = array();
