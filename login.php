@@ -18,7 +18,7 @@
 		}
 	?>
 	
-		<?php
+	<?php
 		if (isset($_SESSION['display_name'])) {
 			$sentiment = $_SESSION['sentiment'];
 			foreach($_SESSION['display_name'] as $display_name) {
