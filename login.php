@@ -34,6 +34,9 @@
 				echo "<div class = 'message' $sentiment'>$valid</div>";
 			}
 		}
+		else {
+			echo "no valid";
+		}
 	?>
 	
 	<?php
