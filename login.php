@@ -27,6 +27,15 @@
 		}
 	?>
 	
+		<?php
+		if (isset($_SESSION['valid'])) {
+			$sentiment = $_SESSION['sentiment'];
+			foreach($_SESSION['valid'] as $display_name) {
+				echo "<div class = 'message' $sentiment'>$valid</div>";
+			}
+		}
+	?>
+	
 	<?php
      $presets = array();
      if (isset($_SESSION['presets'])) {
