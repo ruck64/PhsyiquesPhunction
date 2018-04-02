@@ -2,29 +2,20 @@
 require_once 'KLogger.php';
 require_once 'dbconfig.php';
 
-//protected $logger = logger;
-//  public function __construct () {
-  //  $this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
-//  }
+	class createTable {
+
+	protected $logger = logger;
+	public function __construct () {
+	$this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
+	}
 
     try {
-  //    $this->logger->logDebug("Established a database connection.");
+		$this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = $host;dbname=$db";
-	//	echo "gonna try to connect <br>";
-	//	echo "host " . $host . "<br> db " . $db . "<br> username " . $username . "<br> password " . $password . "<br>";
+		echo "gonna try to connect <br>";
+		echo "host " . $host . "<br> db " . $db . "<br> username " . $username . "<br> password " . $password . "<br>";
 		$dbn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604', 'bb2501c58a8034', 'b8fa5f57');
-	//	echo "connectoin succesful";
 		$dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	//	echo "connectoin succesful";
-			
-/*		$rs = $dbn->query('SELECT * FROM Users LIMIT 0');
-		for ($i = 0; $i < $rs->columnCount(); $i++) {
-			$col = $rs->getColumnMeta($i);
-			$columns[] = $col['name'];
-		}
-		print_r($columns);
-		*/
-			
 		$sql_users = 
 		"CREATE TABLE IF NOT EXISTS `Users` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -39,7 +30,7 @@ require_once 'dbconfig.php';
 			
 			
 		$dbn->exec($sql_users);
-	//	print("Created $sql_users users.\n");
+		print("Created $sql_users users.\n");
 	
 		$sql_usersinfo =
 		"CREATE TABLE IF NOT EXISTS `UserInfo` (
@@ -52,13 +43,15 @@ require_once 'dbconfig.php';
 			PRIMARY KEY(`id`)
 		);";
 		$dbn->exec($sql_usersinfo);
-	//	print("Created $sql_usersinfo usersinfo.\n");
+		print("Created $sql_usersinfo usersinfo.\n");
 		
 		
 		
 	}
 	catch (Exception $e) {
         echo "connection failed: " . $e->getMessage();
-    //  $this->logger->logFatal("The database connection failed.");
+      $this->logger->logFatal("The database connection failed.");
+	}
+	
 	}
 ?>
