@@ -9,7 +9,7 @@ require_once 'dbconfig.php';
 	$this->logger = new KLogger('/Users/rluth/OneDrive/Documents/GitHub/Website', KLogger::DEBUG);
 	}
 
-	public function createTable {
+	public function createTable() {
     try {
 		$this->logger->logDebug("Established a database connection.");
 		$dsn = "mysql:host = $host;dbname=$db";
