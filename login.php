@@ -18,6 +18,15 @@
 		}
 	?>
 	
+		<?php
+		if (isset($_SESSION['display_name'])) {
+			$sentiment = $_SESSION['sentiment'];
+			foreach($_SESSION[''] as $display_name) {
+				echo "<div class = 'message' $sentiment'>$display_name</div>";
+			}
+		}
+	?>
+	
 	<?php
      $presets = array();
      if (isset($_SESSION['presets'])) {
