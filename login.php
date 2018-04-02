@@ -33,7 +33,7 @@
 		$query = $db->prepare( $sql );
 		$query->execute();
 		$results = $query->fetchAll( PDO::FETCH_ASSOC );
-		$dbnumbers = $db->prepare('SELECT * FROM '.$tablename.'');
+		$dbnumbers = $db->prepare('SELECT * FROM '.$Users.'');
 		$dbnumbers->execute();
 		$count = $dbnumbers->ColumnCount();
 		if ($count == 0) {
