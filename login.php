@@ -95,7 +95,7 @@
 		</div>
 	</div>
 	
-		<script src = "login.js"></script>
+		<script type = "text/javascript" src = "login.js"></script>
 		
 		<?php 
 

@@ -1,4 +1,4 @@
-	<script>
+
 		function sign_up(){
 		var inputs = document.querySelectorAll('.input_form_sign');
 		document.querySelectorAll('.ul_tabs > li')[0].className=""; 
@@ -99,5 +99,3 @@
 	document.querySelector('.cont_centrar').className = "cont_centrar cent_active";
 
 	}
-
-	</script>
