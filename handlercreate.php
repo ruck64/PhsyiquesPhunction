@@ -10,7 +10,7 @@
 	$password = $_POST['password'];
 	
 	$_SESSION['presets'] = array($_POST);
-	echo ("dispaly name " . $display_name);
+	
 	$valid = true;
 	$messages = array(); 
 		
@@ -43,6 +43,7 @@
 	
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
+	$_SESSION['display_name'] = $display_name;
 	
 	$Users->saveUser($display_name, $email, $password);
 	
