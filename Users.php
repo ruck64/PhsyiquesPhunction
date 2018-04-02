@@ -25,7 +25,7 @@ class Users {
   
     public function saveUser ($display_name, $email, $password) {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("INSERT INTO Users (display_name, email, password) VALUES (:display_name, :, :email, :password)");
+		$query = $conn->prepare("INSERT INTO Users (display_name, email, password) VALUES (:display_name, :email, :password)");
 		$query->bindParam(':display_name', $display_name);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $password);
