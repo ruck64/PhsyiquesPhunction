@@ -29,6 +29,7 @@
 		$sql = "SELECT * FROM Users";
 		$query = $db->prepare( $sql );
 		$query->execute();
+		echo "made it here2";
 		$results = $query->fetchAll( PDO::FETCH_ASSOC );
 	?>
 	
