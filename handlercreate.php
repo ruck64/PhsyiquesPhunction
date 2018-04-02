@@ -35,7 +35,7 @@
 		$valid = false;
 	}
 	
-	if($password === $confirmpassword) {
+	if($password == $confirmpassword) {
 		$messages[] = "PASSWORDS MUST MATCH";
 		$valid = false;
 	}
