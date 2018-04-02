@@ -28,15 +28,15 @@
 		$query = $db->prepare( $sql );
 		$query->execute();
 		$results = $query->fetchAll( PDO::FETCH_ASSOC );
-		    try {
-        $result = $pdo->query("SELECT 1 FROM $table LIMIT 1");
-    } catch (Exception $e) {
-        // We got an exception == table not found
-        echo " FALSE";
-    }
-
-    // Result is either boolean FALSE (no table found) or PDOStatement Object (table found)
-   echo ("result" . $result)
+		$dbnumbers = $db->prepare('SELECT * FROM '.$tablename.'');
+		$dbnumbers->execute();
+		$count = $dbnumbers->rowCount();
+		if ($count == 0) {
+			$dbnum = "0";
+		} else {
+		$dbnum = $count;
+		}
+		echo $dbnum;
 	?>
 	
 	<?php
