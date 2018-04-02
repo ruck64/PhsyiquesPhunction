@@ -21,7 +21,7 @@
 		<?php
 		if (isset($_SESSION['display_name'])) {
 			$sentiment = $_SESSION['sentiment'];
-			foreach($_SESSION[''] as $display_name) {
+			foreach($_SESSION['display_name'] as $display_name) {
 				echo "<div class = 'message' $sentiment'>$display_name</div>";
 			}
 		}
