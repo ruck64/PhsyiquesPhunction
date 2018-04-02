@@ -8,11 +8,9 @@
 	$display_name = $_POST['display_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
+	$confirmpassword = $_POST['confirmpassword'];
 	
 	$_SESSION['presets'] = array($_POST);
-	$_SESSION['display_name'] = array($_POST);
-	$_SESSION['email'] = array($_POST);
-	$_SESSION['password'] = array($_POST);
 	
 	$valid = true;
 	$messages = array(); 
@@ -34,6 +32,11 @@
 	
 	if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,50}$/', $password)) {
 		$messages[] = "Password must contain at least one: number,symbol,and letter. Password must also be at least 8 characters long and no more than 50.";
+		$valid = false;
+	}
+	
+	if($password === $confirmpassword) {
+		$messages[] = "PASSWORDS MUST MATCH";
 		$valid = false;
 	}
 	

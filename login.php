@@ -19,19 +19,6 @@
 	?>
 	
 	<?php
-		if (isset($_SESSION['display_name'])) {
-			$sentiment = $_SESSION['sentiment'];
-			foreach($_SESSION['display_name'] as $display_name) {
-				echo "<div class = 'message' $sentiment'>$display_name</div>";
-			}
-		}
-		
-		foreach($_POST as $key => $value) {
-  echo "POST parameter '$key' has '$value'";
-}
-	?>
-	
-	<?php
      $presets = array();
      if (isset($_SESSION['presets'])) {
        $presets = array_shift($_SESSION['presets']);
@@ -87,9 +74,9 @@
 					</div>
 					<div class="cont_text_inputs">
 						<input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" class="input_form_sign " placeholder="DISPLAY NAME" id = "display_name" name="display_name" />
-						<input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="emauil_us" />
-						<input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />  
-						<input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pass_us" /><a href="#" class="link_forgot_pass d_block" >Forgot Password ?</a>    
+						<input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>"type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" id = "email" name="email"/>
+						<input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" id = "password" name="password" />  
+						<input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" id = "confirmpassword" name="confirmpassword" /><a href="#" class="link_forgot_pass d_block" >Forgot Password ?</a>    
 					</div>
 					<div class="cont_btn">
 						<button class="btn_sign" type="submit" value="Submit">SIGN IN</button>
