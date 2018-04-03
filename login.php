@@ -83,8 +83,8 @@
 	<div class = "main">
 		<div id="wrapper">
 			<div class="form_div">
-				<p class="form_label" actoin = "handlerlogin.php" method = "POST" enctype = "multipart/form-data">LOGIN FORM</p>
-				<form method="post" action="">
+				<p class="form_label">LOGIN FORM</p>
+				<form method="post"  action = "handlerlogin.php" method = "POST" enctype = "multipart/form-data">
 					<p><input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" placeholder="Enter Email" id = "email" name = "email"></p>
 					<p><input type="password" placeholder="Password" id = "password" name = "password"></p>
 					<p><input type="submit" value="LOGIN"></p>
@@ -94,8 +94,8 @@
 			<br>
 			<br>
 			<div class="form_div">
-				<p class="form_label" action = "handlercreate.php" method = "POST" enctype = "multipart/form-data">SIGNUP FORM</p>
-				<form method="post" action="">
+				<p class="form_label">SIGNUP FORM</p>
+				<form method="post" action = "handlercreate.php" method = "POST" enctype = "multipart/form-data">
 					<p><input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" placeholder="Enter Display Name" id = "display_name" name = "display_name"></p>
 					<p><input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" placeholder="Enter Email" id = "email" name = "email"></p>
 					<p><input type="password" placeholder="**********" id = "password" name = "password"></p>
