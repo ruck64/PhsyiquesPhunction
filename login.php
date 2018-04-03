@@ -34,7 +34,7 @@
 			<title> Login/ Sign up </title>
 		</head>
 	<body>
-	<div id = "page">
+
 	<h1 class = "title"> Login/Sign up</h1>
 
 	<div class ="handles">
@@ -57,7 +57,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "login.php">Sign Up/Login</a></li> 
 	</ul>
-	</div>
+	</div
 	
 	<div class = "main">
 		<div id="wrapperform">
@@ -86,9 +86,8 @@
 		</div>
 	</div>
 		<!--<script type = "text/javascript" src = "login.js"></script>-->
-	</div>
 	
-	<div id = "footer">
+	<div class = "footer">
 		This is the footer
 	</div>	
 		
