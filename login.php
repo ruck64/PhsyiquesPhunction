@@ -59,7 +59,7 @@
 	</ul>
 	
 	<div class = "main">
-		<div id="wrapper">
+		<div id="wrapperform">
 			<div class="form_div">
 				<p class="form_label">LOGIN FORM</p>
 				<form method="post"  action = "handlerlogin.php" method = "POST" enctype = "multipart/form-data">
