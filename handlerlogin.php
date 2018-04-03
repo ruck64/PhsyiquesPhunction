@@ -33,16 +33,16 @@
 	
 	if(!isset($error)){
 		//no error
-		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");
+		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
 
 		if($sthandler->rowCount() > 0){
-			$messages[] = "Email or password incorrect";
+			$messages[] = "Email is incorrect";
 			$valid = false;
 		}
 		
-		$sthandler = $conn->prepare("SELECT password FROM Users WHERE password = :password");
+		$sthandler = $conn->prepare("SELECT password FROM users WHERE password = :password");
 		$sthandler->bindParam(':password', $password);	
 		$sthandler->execute();
 		
