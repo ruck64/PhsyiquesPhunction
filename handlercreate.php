@@ -5,13 +5,15 @@
 	require_once 'comments.php';
 	$Users = new Users();
 
-	try {
-	require_once "dbconfig.php";
-	$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-	$this->logger->logDebug("Established a database connection.");
-	} catch (Exception $e) {
-	echo "connection failed: " . $e->getMessage();
-	$this->logger->logFatal("The database connection failed.");
+	$con = new PDO( 'mysql:host=$host;dbname=$db';$username,$password);
+	$query = $con->prepare( "SELECT `email` FROM `tbl_name` WHERE `email` = ?" );
+	$query->bindValue( 1, $email );
+	$query->execute();
+	if( $query->rowCount() > 0 ) { # If rows are found for query
+		echo "Email found!";
+	}
+	else {
+     echo "Email not found!";
 	}
 	
 	$display_name = $_POST['display_name'];
