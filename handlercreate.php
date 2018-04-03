@@ -3,6 +3,7 @@
 	session_start();
 	require_once 'Users.php';
 	require_once 'comments.php';
+	require_once 'dbconfig.php';
 	$Users = new Users();
 
 	$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
