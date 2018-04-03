@@ -38,6 +38,7 @@
 		$sthandler->execute();
 
 		if($sthandler->rowCount() > 0){
+			$message[] = $sthandler;
 			$messages[] = "Email is incorrect";
 			$valid = false;
 		}
@@ -47,12 +48,8 @@
 		$sthandler->execute();
 		
 		if($sthandler->rowCount() > 0){
+			$message[] = $sthandler;
 			$messages[] = "Incorrect password";
-			$valid = false;
-		}
-		
-		if(empty($sthandler)) {
-			$messages[] =  "Please enter a password";
 			$valid = false;
 		}
 		
