@@ -48,12 +48,7 @@
 		$valid = false;
 	}
 	
-	if (!$valid) {
-		$_SESSION['sentiment'] = "bad";
-		$_SESSION['messages'] = $messages;
-		header("Location: login.php");
-		exit;
-	}
+
 	
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
@@ -68,7 +63,7 @@
 			$messages[] = "Email already exists";
 			$valid = false;
 		}
-		
+
 		$sthandler = $conn->prepare("SELECT display_name FROM users WHERE display_name = :display_name");
 		$sthandler->bindParam(':display_name', $display_name);	
 		$sthandler->execute();

@@ -70,9 +70,9 @@
 	</div>
 	
 	<div class="subMenu"> 
-	<ul class = "subMenu">
-	<li class = "subMenu"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.php">Home</a></li>
-	<li class = "subMenu"><a class = "subMenu"  href = "myStory.php">My Story</a></li>  
+		<ul class = "subMenu">
+			<li class = "subMenu"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.php">Home</a></li>
+			<li class = "subMenu"><a class = "subMenu"  href = "myStory.php">My Story</a></li>  
 	<li class = "subMenu"><a class = "subMenu"  href = "purpose.php">Purpose of PhsyquiesPhunction</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
@@ -80,34 +80,33 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "login.php">Sign Up/Login</a></li> 
 	</ul>
 	
-	<?php echo $_POST['display_name']; ?>
-	
-	<div class="cont_principal">
-
-		<div class="cont_centrar">
-			<div class="cont_login">
-				<form action="handlercreate.php" method="POST" enctype="multipart/form-data" >
-					<div class="cont_tabs_login">
-						<ul class='ul_tabs'>
-							<li class="active"><a href="#" onclick="sign_in()">SIGN IN</a><span class="linea_bajo_nom"></span></li>
-							<li><a href="#up" onclick="sign_up()">SIGN UP</a><span class="linea_bajo_nom"></span></li>
-						</ul>
-					</div>
-					<div class="cont_text_inputs">
-						<input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" class="input_form_sign " placeholder="DISPLAY NAME" id = "display_name" name="display_name" />
-						<input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>"type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" id = "email" name="email"/>
-						<input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" id = "password" name="password" />  
-						<input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" id = "confirmpassword" name="confirmpassword" /><a href="#" class="link_forgot_pass d_block" >Forgot Password ?</a>    
-					</div>
-					<div class="cont_btn">
-						<button class="btn_sign" type="submit" value="Submit">SIGN IN</button>
-					</div>
+	<div class = "main">
+		<div id="wrapper">
+			<div class="form_div">
+				<p class="form_label" actoin = "handlerlogin.php" method = "POST" enctype = "multipart/form-data">LOGIN FORM</p>
+				<form method="post" action="">
+					<p><input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" placeholder="Enter Email" id = "email" name = "email"></p>
+					<p><input type="password" placeholder="Password" id = "password" name = "password"></p>
+					<p><input type="submit" value="LOGIN"></p>
 				</form>
 			</div>
+			<br>
+			<br>
+			<br>
+			<div class="form_div">
+				<p class="form_label" action = "handlercreate.php" method = "POST" enctype = "multipart/form-data">SIGNUP FORM</p>
+				<form method="post" action="">
+					<p><input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" placeholder="Enter Display Name" id = "display_name" name = "display_name"></p>
+					<p><input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" placeholder="Enter Email" id = "email" name = "email"></p>
+					<p><input type="password" placeholder="**********" id = "password" name = "password"></p>
+					<p><input type="password" placeholder="Confirm Password" id = "confirmpassword" name = "confirmpassword"></p>
+					<p><input type="submit" value="SIGNUP"></p>
+				</form>
+			</div>
+
 		</div>
 	</div>
-	
-		<script type = "text/javascript" src = "login.js"></script>
+		<!--<script type = "text/javascript" src = "login.js"></script>-->
 	
 	<div class = "footer">
 		This is the footer
