@@ -33,7 +33,7 @@
 	
 	if(!isset($error)){
 		//no error
-		$sthandler = $conn->prepare("SELECT * FROM users WHERE email = :email");
+		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
 
@@ -42,7 +42,7 @@
 			$valid = false;
 		}
 		
-		$sthandler = $conn->prepare("SELECT * FROM users WHERE password = :password");
+		$sthandler = $conn->prepare("SELECT password FROM users WHERE password = :password");
 		$sthandler->bindParam(':password', $password);	
 		$sthandler->execute();
 		
