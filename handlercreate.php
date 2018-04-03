@@ -5,19 +5,23 @@
 	require_once 'comments.php';
 	require_once 'dbconfig.php';
 	$Users = new Users();
-
-	require_once "dbconfig.php";
-	$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-	$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = `display_name`" );
-	$query->bindValue( 1, $email );
-	$query->execute();
-	if( $query->rowCount() > 0 ) { # If rows are found for query
-		echo "Email found!";
-	}
-	else {
-     echo "Email not found!";
-	}
 	
+	try {  
+		require_once "dbconfig.php";
+		$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
+		$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = `display_name`" );
+		$query->bindValue( 1, $email );
+		$query->execute();
+		if( $query->rowCount() > 0 ) { # If rows are found for query
+			echo "Email found!";
+		}
+		else {
+			echo "Email not found!";
+		}
+	} catch (Exception $e) {
+		echo "connection failed: " . $e->getMessage();
+	}
+
 	$display_name = $_POST['display_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
