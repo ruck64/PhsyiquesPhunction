@@ -57,6 +57,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "login.php">Sign Up/Login</a></li> 
 	</ul>
+	</div>
 	
 	<div class = "main">
 		<div id="wrapperform">
