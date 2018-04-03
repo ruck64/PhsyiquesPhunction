@@ -13,7 +13,6 @@
 		exit($e->getMessage());
 	}
 	
-	echo "running handlerlogin.php";
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	
@@ -40,12 +39,22 @@
 			$valid = false;
 		}
 		
+		if(empty($sthandler)) {
+			$messages[] = "Please enter an email";
+			$valid = false;
+		}
+		
 		$sthandler = $conn->prepare("SELECT password FROM Users WHERE password = :password");
 		$sthandler->bindParam(':password', $password);	
 		$sthandler->execute();
 		
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Incorrect password";
+			$valid = false;
+		}
+		
+		if(empty($sthandler)) {
+			$messages[] =  "Please enter a password";
 			$valid = false;
 		}
 		
