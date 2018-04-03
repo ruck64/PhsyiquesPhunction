@@ -106,7 +106,8 @@ font-size:30px;
 .form_div
 {
 width:60%;
-margin-left:20%;
+margin-left:auto;
+margin-right:auto;
 }
 .form_div input[type="text"],input[type="password"]
 {
