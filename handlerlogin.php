@@ -28,8 +28,6 @@
 		exit;
 	}
 	
-	if(!isset($error)){
-		//no error
 		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
@@ -53,7 +51,6 @@
 		$_SESSION['messages'] = $messages;
 		header("Location: login.php");
 		exit;
-	}
 	}
 	
 	header("Location: userpage.php");
