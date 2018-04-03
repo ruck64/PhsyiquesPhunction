@@ -26,7 +26,11 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.html">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.html">Contact</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "login.html">Sign Up/Login</a></li> 
+	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="logout.php">logout</a>
+		<?php }else{ ?>
+		<a class="subMenu" href="login.php">Sign Up/login</a>
+		<?php } ?>
+	</li> 
 	</ul>
 		</div>
       <h2> This is my page. Not yours </h2>
