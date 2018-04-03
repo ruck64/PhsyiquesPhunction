@@ -6,7 +6,7 @@
 	require_once 'dbconfig.php';
 	$Users = new Users();
 
-	$con = getConnection();
+	$con = $Users->getConnection();
 	$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = `display_name`" );
 	$query->bindValue( 1, $email );
 	$query->execute();
