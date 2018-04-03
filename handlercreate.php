@@ -60,8 +60,8 @@
 	
 	 if(!isset($error)){
 		//no error
-		$sthandler = $conn->prepare("SELECT display_name FROM users WHERE display_name = :dispaly_name");
-		$sthandler->bindParam(':display_name', $display_name);	
+		$sthandler = $conn->prepare("SELECT email FROM users WHERE display_name = :email");
+		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
 
 		if($sthandler->rowCount() > 0){
