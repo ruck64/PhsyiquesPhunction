@@ -159,9 +159,9 @@ img {
 }
 
 .footer {
-  position: relative;
+  position: fixed;
   right: 0;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   padding: 1rem;
   background-color: #efefef;
