@@ -158,12 +158,27 @@ img {
 	background-color:transparent;
 }
 
-.footer {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
+* {
+	margin:0;
 }
+html,body {
+	height:100%;
+}
+
+#page {
+	min-height:100%;
+	margin-bottom: -100px;
+	position:relative;
+}
+
+#page:after {
+	content:"";
+	display:block;
+}
+
+#footer, #page:after {
+	heigh:100px;
+}
+
+
+	

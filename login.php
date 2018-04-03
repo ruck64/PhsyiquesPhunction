@@ -34,7 +34,7 @@
 			<title> Login/ Sign up </title>
 		</head>
 	<body>
-
+	<div id = "page">
 	<h1 class = "title"> Login/Sign up</h1>
 
 	<div class ="handles">
@@ -86,8 +86,9 @@
 		</div>
 	</div>
 		<!--<script type = "text/javascript" src = "login.js"></script>-->
+	<.div>
 	
-	<div class = "footer">
+	<div id = "footer">
 		This is the footer
 	</div>	
 		
