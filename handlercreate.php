@@ -6,8 +6,8 @@
 	require_once 'dbconfig.php';
 	$Users = new Users();
 
-	$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-	$query = $con->prepare( "SELECT `email` FROM `tbl_name` WHERE `email` = ?" );
+	$con = getConnection();
+	$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = `display_name`" );
 	$query->bindValue( 1, $email );
 	$query->execute();
 	if( $query->rowCount() > 0 ) { # If rows are found for query
