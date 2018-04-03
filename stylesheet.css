@@ -101,7 +101,6 @@ h1.title {
 }
 
 html {
-	height:100%;
     background-image: url('buff.jpg');
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -159,19 +158,12 @@ img {
 	background-color:transparent;
 }
 
-* {
-    margin: 0;
-}
-body {
-    height: 100%;
-}
-.wrapper {
-	background-color:black;
-    min-height: 100%;
-    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
-    height: 100%;
-    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-.footer, .push {
-    height: 155px; /* .push must be the same height as .footer */
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
