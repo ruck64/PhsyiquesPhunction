@@ -166,6 +166,7 @@ body {
     height: 100%;
 }
 .wrapper {
+	background-color:black;
     min-height: 100%;
     height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
     height: 100%;
