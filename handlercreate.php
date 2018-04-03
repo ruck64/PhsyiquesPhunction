@@ -10,6 +10,19 @@
 	$password = $_POST['password'];
 	$confirmpassword = $_POST['confirmpassword'];
 	
+	private function getConnection () {
+		try {
+		require_once "dbconfig.php";
+		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
+		$this->logger->logDebug("Established a database connection.");
+		return $conn;
+		} catch (Exception $e) {
+		echo "connection failed: " . $e->getMessage();
+		$this->logger->logFatal("The database connection failed.");
+		}
+  
+    }
+	
 	$_SESSION['presets'] = array($_POST);
 	
 	$valid = true;
