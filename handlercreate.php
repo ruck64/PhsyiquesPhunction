@@ -49,12 +49,18 @@
 	
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
-
 	
+	$sthandler = $handler->prepare("SELECT username FROM users WHERE username = :name");
+	$sthandler->bindParam(':name', $username);
+	$sthandler->execute();
+
+	if($sthandler->rowCount() > 0){
+    echo "exists! cannot insert";
+	} else { 
 	$Users->saveUser($display_name, $email, $password);
 	
 	header("Location: userpage.php");
 	exit;
-	
+	}
 	
 	
