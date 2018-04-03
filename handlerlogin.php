@@ -37,16 +37,17 @@
 	//	$sthandler->bindParam(':email', $email);	
 		//$sthandler->execute();
 
-		$query = $conn->query("SELECT COUNT(*) FROM login WHERE username=:username AND password=:password");
-		$query->bindValue(':username', $username, PDO::PARAM_STR);
-		$query->bindValue(':password', $password, PDO::PARAM_STR);
-		$query->execute();
-    // Check the number of rows that match the SELECT statement 
-    if($query->fetchColumn() == 0) {
-        echo "No records found";
-		$messages[] = "Password and email do not match or do not exist";
-		$valid = false;
-	}
+		
+		 $query = $conn->prepare("SELECT password FROM login WHERE username=?");
+		$query->execute(array($_POST['username']));
+		if($query->fetchColumn() === $_POST['password']) //better to hash it
+		{
+			// starts the session created if login info is correct
+			session_start();
+			$_SESSION['username'] = $_POST['username'];
+			header ("Location:login.php");
+			exit;
+		}
 		
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Email is incorrect";
