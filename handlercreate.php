@@ -6,7 +6,8 @@
 	require_once 'dbconfig.php';
 	$Users = new Users();
 
-	$con = $Users->getConnection();
+	require_once "dbconfig.php";
+	$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
 	$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = `display_name`" );
 	$query->bindValue( 1, $email );
 	$query->execute();
