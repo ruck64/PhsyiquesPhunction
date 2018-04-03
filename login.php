@@ -19,54 +19,6 @@
 	?>
 
 	<?php
-	$Users = 'Users';
-		try {
-		$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
-		} catch (Exception $e) {
-		echo "connection failed: " . $e->getMessage();
-		}
-		$sql = "SELECT * FROM Users";
-		$query = $db->prepare( $sql );
-		$query->execute();
-		$results = $query->fetchAll( PDO::FETCH_ASSOC );
-		$dbnumbers = $db->prepare('SELECT * FROM ' . $Users . '');
-		$dbnumbers->execute();
-		$count = $dbnumbers->RowCount();
-		if ($count == 0) {
-			$dbnum = "0";
-		} else {
-		$dbnum = $count;
-		}
-		echo $dbnum;
-		    $sql = "SELECT * FROM users";
-    $query = $db->prepare( $sql );
-    $query->execute();
-    $results = $query->fetchAll( PDO::FETCH_ASSOC );
-
-?>
- <table>
-   <tr>
-     <th>ID</th>
-     <th>Username</th>
-     <th>Pssword</th>
-     <th>Email</th>
-   </tr>
-   <?php foreach( $results as $row ){
-   echo "<tr><td>";
-     echo $row['id'];
-     echo "</td><td>";
-     echo $row['display_name'];
-     echo "</td><td>";
-     echo $row['password'];
-     echo "</td><td>";
-     echo $row['email'];
-     echo "</td>";
-   echo "</tr>";
-   }
- ?>
- </table>
-	
-	<?php
      $presets = array();
      if (isset($_SESSION['presets'])) {
        $presets = array_shift($_SESSION['presets']);
