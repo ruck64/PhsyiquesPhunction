@@ -128,7 +128,7 @@
 				<form method="post" action = "handlercreate.php" method = "POST" enctype = "multipart/form-data">
 					<p><input value = "<?php echo isset($presets['display_name']) ? $presets['display_name'] : ''; ?>" type="text" placeholder="Enter Display Name" id = "display_name" name = "display_name"></p>
 					<p><input value = "<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" placeholder="Enter Email" id = "email" name = "email"></p>
-					<p><input type="password" placeholder="**********" id = "password" name = "password"></p>
+					<p><input type="password" placeholder="Password" id = "password" name = "password"></p>
 					<p><input type="password" placeholder="Confirm Password" id = "confirmpassword" name = "confirmpassword"></p>
 					<p><input type="submit" value="SIGNUP"></p>
 				</form>

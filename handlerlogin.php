@@ -33,18 +33,26 @@
 	
 	if(!isset($error)){
 		//no error
-		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
-		$sthandler->bindParam(':email', $email);	
-		$sthandler->execute();
+//		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
+	//	$sthandler->bindParam(':email', $email);	
+		//$sthandler->execute();
 
+		$query = $conn->query("SELECT COUNT(*) FROM login WHERE username=:username AND password=:password");
+		$query->bindValue(':username', $username, PDO::PARAM_STR);
+		$query->bindValue(':password', $password, PDO::PARAM_STR);
+		$query->execute();
+    // Check the number of rows that match the SELECT statement 
+    if($query->fetchColumn() == 0) {
+        echo "No records found";
+     }else{
+            //CODE FOR Success 
+            //Etc
+    }
+		
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Email is incorrect";
 			$valid = false;
 		}
-		
-		$sthandler = $conn->prepare("SELECT password FROM users WHERE password = :password");
-		$sthandler->bindParam(':password', $password);	
-		$sthandler->execute();
 		
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Incorrect password";
