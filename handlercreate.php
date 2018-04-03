@@ -8,7 +8,7 @@
 	
 	try {
 		require "dbconfig.php";
-		$conn = new PDO('mysql:host=$host;dbname=$db',$username,$password);
+		$db = new PDO('mysql:host=" . $host . ";dbname=$db', $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $e){
 		exit($e->getMessage());
