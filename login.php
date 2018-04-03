@@ -38,6 +38,14 @@
 		$dbnum = $count;
 		}
 		echo $dbnum;
+		    $sql = "SELECT * FROM users";
+    $query = $db->prepare( $sql );
+    $query->execute();
+    $results = $query->fetchAll();
+
+    foreach( $results as $row ){
+      print_r( $row );
+    }
 	?>
 	
 	<?php
