@@ -58,18 +58,35 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	
-	 if(!isset($error)){
+	if(!isset($error)){
 		//no error
-		$sthandler = $conn->prepare("SELECT email FROM users WHERE display_name = :email");
+		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
 
 		if($sthandler->rowCount() > 0){
-			echo "exists! cannot insert";
+			$messages[] = "Email already exists";
+			$valid = false;
 		}
-		else { 
-			$Users->saveUser($display_name, $email, $password);
+		
+		$sthandler = $conn->prepare("SELECT display_name FROM users WHERE display_name = :display_name");
+		$sthandler->bindParam(':display_name', $display_name);	
+		$sthandler->execute();
+		
+		if($sthandler->rowCount() > 0){
+			$messages[] = "Display Name already exists. Please choose another one";
+			$valid = false;
 		}
+		
+	if (!$valid) {
+		$_SESSION['sentiment'] = "bad";
+		$_SESSION['messages'] = $messages;
+		header("Location: login.php");
+		exit;
 	}
+	}
+			
+	$Users->saveUser($display_name, $email, $password);
+	
 	header("Location: userpage.php");
 	exit;
