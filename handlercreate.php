@@ -50,7 +50,7 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	
-	$sthandler = $handler->prepare("SELECT username FROM users WHERE username = :name");
+	$sthandler = $handler->prepare("SELECT display_name FROM users WHERE display_name = :display_name");
 	$sthandler->bindParam(':name', $username);
 	$sthandler->execute();
 
