@@ -12,7 +12,7 @@ require_once 'KLogger.php';
 		require_once "dbconfig.php";
     try {
 		$this->logger->logDebug("Established a database connection.");
-		$db = new PDO('mysql:host=" . $host ;dbname=$db', $username, $password);
+		$db = new PDO('mysql:host=$host;dbname=$db', $username, $password);
 		echo "connected";
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql_users = 
