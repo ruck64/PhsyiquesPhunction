@@ -45,7 +45,8 @@
 			// starts the session created if login info is correct
 			session_start();
 			$_SESSION['display_name'] = $_POST['display_name'];
-			header ("Location:login.php");
+			$messages[] = "login successful";
+			header ("Location:userpage.php");
 			exit;
 		}
 		else {
