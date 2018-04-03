@@ -48,15 +48,9 @@
 			header ("Location:login.php");
 			exit;
 		}
-		
-		if($sthandler->rowCount() > 0){
-			$messages[] = "Email is incorrect";
+		else {
 			$valid = false;
-		}
-		
-		if($sthandler->rowCount() > 0){
-			$messages[] = "Incorrect password";
-			$valid = false;
+			$messages[] = "Email and Password do not match or do not exist";
 		}
 	}
 	if (!$valid) {
