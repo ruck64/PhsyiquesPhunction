@@ -5,7 +5,7 @@
 	require_once 'comments.php';
 	$Users = new Users();
 
-	$con = new PDO( 'mysql:host=$host;dbname=$db';$username,$password);
+	$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
 	$query = $con->prepare( "SELECT `email` FROM `tbl_name` WHERE `email` = ?" );
 	$query->bindValue( 1, $email );
 	$query->execute();
