@@ -20,13 +20,6 @@
 	
 	$valid = true;
 	$messages = array(); 
-		
-	if (!$valid) {
-		$_SESSION['sentiment'] = "bad";
-		$_SESSION['messages'] = $messages;
-		header("Location: login.php");
-		exit;
-	}
 	
 	if(!isset($error)){
 		//no error
@@ -65,6 +58,11 @@
 		exit;
 	}
 	}
+	
+		if(!isset($error)){ $messages[] = "didnt work";
+		header("Locatoin: login.php");
+		exit;
+		}
 	
 	header("Location: userpage.php");
 	exit;
