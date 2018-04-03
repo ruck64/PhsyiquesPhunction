@@ -38,13 +38,13 @@
 		//$sthandler->execute();
 
 		
-		 $query = $conn->prepare("SELECT password FROM login WHERE username=?");
-		$query->execute(array($_POST['username']));
+		 $query = $conn->prepare("SELECT password FROM users WHERE display_name=?");
+		$query->execute(array($_POST['display_name']));
 		if($query->fetchColumn() === $_POST['password']) //better to hash it
 		{
 			// starts the session created if login info is correct
 			session_start();
-			$_SESSION['username'] = $_POST['username'];
+			$_SESSION['display_name'] = $_POST['display_name'];
 			header ("Location:login.php");
 			exit;
 		}
