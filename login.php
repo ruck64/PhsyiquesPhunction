@@ -57,7 +57,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
 	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="link" href="logout.php" style="text-decoration:none;font color:white">logout</a>
 		<?php }else{ ?>
-		<a class="link" href="login.php" style="text-decoration:none">Sign Up/login</a>
+		<a class="link" href="login.php" style="text-decoration:none font color:white">Sign Up/login</a>
 		<?php } ?>
 	</li> 
 	</ul>
