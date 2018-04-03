@@ -55,7 +55,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
-	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="link" href="logout.php" style="text-decoration:none" color = "white">logout</a>
+	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="link" href="logout.php" style="text-decoration:none;font color:white">logout</a>
 		<?php }else{ ?>
 		<a class="link" href="login.php" style="text-decoration:none">Sign Up/login</a>
 		<?php } ?>
