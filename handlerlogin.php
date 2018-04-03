@@ -28,12 +28,14 @@
 		exit;
 	}
 	
+	if(!isset($error)){
+		//no error
 		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
 
 		if($sthandler->rowCount() > 0){
-			$messages[] = "Incorrect email or password";
+			$messages[] = "Email or password incorrect";
 			$valid = false;
 		}
 		
@@ -42,7 +44,7 @@
 		$sthandler->execute();
 		
 		if($sthandler->rowCount() > 0){
-			$messages[] = "Incorrect email or password";
+			$messages[] = "Incorrect password";
 			$valid = false;
 		}
 		
@@ -51,6 +53,7 @@
 		$_SESSION['messages'] = $messages;
 		header("Location: login.php");
 		exit;
+	}
 	}
 	
 	header("Location: userpage.php");
