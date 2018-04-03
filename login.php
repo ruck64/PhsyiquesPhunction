@@ -58,16 +58,11 @@
    echo "<tr><td>";
      echo $row['id'];
      echo "</td><td>";
-     echo $row['username'];
+     echo $row['display_name'];
      echo "</td><td>";
      echo $row['password'];
      echo "</td><td>";
      echo $row['first_name'];
-     echo "</td><td>";
-     echo $row['surname'];
-     echo "</td><td>";
-     echo $row['address'];
-     echo "</td><td>";
      echo $row['email'];
      echo "</td>";
    echo "</tr>";
