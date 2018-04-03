@@ -9,7 +9,8 @@
 	try {  
 		require_once "dbconfig.php";
 		$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-		$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = `display_name`" );
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = :display_name" );
 		$query->bindValue( 1, $email );
 		$query->execute();
 		if( $query->rowCount() > 0 ) { # If rows are found for query
