@@ -59,7 +59,6 @@
      echo "</td><td>";
      echo $row['password'];
      echo "</td><td>";
-     echo $row['first_name'];
      echo $row['email'];
      echo "</td>";
    echo "</tr>";
