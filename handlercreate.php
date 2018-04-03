@@ -6,23 +6,13 @@
 	require_once 'dbconfig.php';
 	$Users = new Users();
 	
-	try {  
-		require_once "dbconfig.php";
-		$con = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$query = $con->prepare( "SELECT `display_name` FROM `Users WHERE `display_name` = :display_name" );
-		$query->bindValue( 1, $email );
-		$query->execute();
-		if( $query->rowCount() > 0 ) { # If rows are found for query
-			echo "Email found!";
-		}
-		else {
-			echo "Email not found!";
-		}
-	} catch (Exception $e) {
-		echo "connection failed: " . $e->getMessage();
-	}
-
+try {
+	require_once "dbconfig.php"
+    $handler = new PDO('mysql:host=$host;dbname=$db',$username,$password);
+    $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e){
+    exit($e->getMessage());
+}
 	$display_name = $_POST['display_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
@@ -68,15 +58,19 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	
-	$sthandler = $db->prepare("SELECT display_name FROM users WHERE display_name = :display_name");
-	$sthandler->bindParam(':name', $username);
-	$sthandler->execute();
+	if(!isset($error)){
+		//no error
+		$sthandler = $handler->prepare("SELECT display_name FROM users WHERE display_name = :dispaly_name");
+		$sthandler->bindParam(':display_name', $display_name);	
+		$sthandler->execute();
 
-	if($sthandler->rowCount() > 0){
-    echo "exists! cannot insert";
-	} else { 
-	$Users->saveUser($display_name, $email, $password);
-	
+		if($sthandler->rowCount() > 0){
+			echo "exists! cannot insert";
+		}
+		else {
+			$Users->saveUser($display_name, $email, $password);
+		}
+	}
 	header("Location: userpage.php");
 	exit;
 	}
