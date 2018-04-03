@@ -4,21 +4,21 @@
 	require_once 'Users.php';
 	require_once 'comments.php';
 	$Users = new Users();
+
+		try {
+		require_once "dbconfig.php";
+		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
+		$this->logger->logDebug("Established a database connection.");
+		return $conn;
+		} catch (Exception $e) {
+		echo "connection failed: " . $e->getMessage();
+		$this->logger->logFatal("The database connection failed.");
+		}
 	
 	$display_name = $_POST['display_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$confirmpassword = $_POST['confirmpassword'];
-	
-	try {
-	require_once "dbconfig.php";
-	$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-	$this->logger->logDebug("Established a database connection.");
-	return $conn;
-	} catch (Exception $e) {
-	echo "connection failed: " . $e->getMessage();
-	$this->logger->logFatal("The database connection failed.");
-	}
 	
 	$_SESSION['presets'] = array($_POST);
 	
