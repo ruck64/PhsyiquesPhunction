@@ -58,11 +58,8 @@
 		exit;
 	}
 	}
-	
-		if(!isset($error)){ $messages[] = "didnt work";
-		header("Locatoin: login.php");
-		exit;
-		}
+		$messages[]="it worked";
+		$_SESSION['messages'] = $messages;
 	
 	header("Location: userpage.php");
 	exit;
