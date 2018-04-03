@@ -44,7 +44,7 @@
     $results = $query->fetchAll( PDO::FETCH_ASSOC );
 
 ?>
- <table class="table">
+ <table>
    <tr>
      <th>ID</th>
      <th>Username</th>
