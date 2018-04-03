@@ -44,10 +44,9 @@
     // Check the number of rows that match the SELECT statement 
     if($query->fetchColumn() == 0) {
         echo "No records found";
-     }else{
-            //CODE FOR Success 
-            //Etc
-    }
+		$messages[] = "Password and email do not match or do not exist";
+		$valid = false;
+	}
 		
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Email is incorrect";
@@ -58,14 +57,14 @@
 			$messages[] = "Incorrect password";
 			$valid = false;
 		}
-		
+	}
 	if (!$valid) {
 		$_SESSION['sentiment'] = "bad";
 		$_SESSION['messages'] = $messages;
 		header("Location: login.php");
 		exit;
 	}
-	}
+	
 		$messages[]="it worked";
 		$_SESSION['messages'] = $messages;
 	
