@@ -15,6 +15,7 @@ class Users {
 		try {
 		require_once "dbconfig.php";
 		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$this->logger->logDebug("Established a database connection.");
 		return $conn;
 		} catch (Exception $e) {
@@ -26,12 +27,12 @@ class Users {
   
     public function saveUser ($display_name, $email, $password) {
 		$conn = $this->getConnection();
-		//$query = $conn->prepare("INSERT INTO Users (display_name, email, password) VALUES (:display_name, :email, :password)");
-		//$query->bindParam(':display_name', $display_name);
-		//$query->bindParam(':email', $email);
-		//$query->bindParam(':password', $password);
+		$query = $conn->prepare("INSERT INTO Users (display_name, email, password) VALUES (:display_name, :email, :password)");
+		$query->bindParam(':display_name', $display_name);
+		$query->bindParam(':email', $email);
+		$query->bindParam(':password', $password);
 		$this->logger->logDebug(__FUNCTION__ . " display_name=[{$display_name}] email=[{$email}] password[{$password}]");
-		//$query->execute();
+		$query->execute();
     }
   
 	public function getDisplay_Name () {
