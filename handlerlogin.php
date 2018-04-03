@@ -13,6 +13,7 @@
 		exit($e->getMessage());
 	}
 	
+	echo "running handlerlogin.php";
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	
