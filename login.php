@@ -86,7 +86,7 @@
 		</div>
 	</div>
 		<!--<script type = "text/javascript" src = "login.js"></script>-->
-	<.div>
+	</div>
 	
 	<div id = "footer">
 		This is the footer
