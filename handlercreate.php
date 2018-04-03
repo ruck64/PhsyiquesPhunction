@@ -5,15 +5,14 @@
 	require_once 'comments.php';
 	$Users = new Users();
 
-		try {
-		require_once "dbconfig.php";
-		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
-		$this->logger->logDebug("Established a database connection.");
-		return $conn;
-		} catch (Exception $e) {
-		echo "connection failed: " . $e->getMessage();
-		$this->logger->logFatal("The database connection failed.");
-		}
+	try {
+	require_once "dbconfig.php";
+	$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
+	$this->logger->logDebug("Established a database connection.");
+	} catch (Exception $e) {
+	echo "connection failed: " . $e->getMessage();
+	$this->logger->logFatal("The database connection failed.");
+	}
 	
 	$display_name = $_POST['display_name'];
 	$email = $_POST['email'];
