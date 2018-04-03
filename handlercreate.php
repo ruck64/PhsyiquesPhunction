@@ -48,6 +48,11 @@
 		$valid = false;
 	}
 	
+	if(empty($password)) {
+		$messages[] = "Please enter a password";
+		$valid = false;
+	}
+	
 
 	
 	$_SESSION['sentiment'] = "good";

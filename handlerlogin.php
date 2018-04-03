@@ -21,6 +21,16 @@
 	$valid = true;
 	$messages = array(); 
 	
+	if(empty($email)) {
+		$messages[] = "Please enter a display name";
+		$valid = false;
+	}
+	
+	if(empty($password)) {
+		$messages[] = "Please enter a password";
+		$valid = false;
+	}
+	
 	if(!isset($error)){
 		//no error
 		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");
@@ -29,11 +39,6 @@
 
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Email or password incorrect";
-			$valid = false;
-		}
-		
-		if(empty($sthandler)) {
-			$messages[] = "Please enter an email";
 			$valid = false;
 		}
 		
