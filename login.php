@@ -10,6 +10,19 @@
 	?>
 	
 	<?php
+			try {
+		require_once "dbconfig.php";
+		$conn = new PDO('mysql:host=$host;dbname=$db',$username ,$password);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$this->logger->logDebug("Established a database connection.");
+		return $conn;
+		} catch (Exception $e) {
+		echo "connection failed: " . $e->getMessage();
+		$this->logger->logFatal("The database connection failed.");
+		}
+?>
+	
+	<?php
 		if (isset($_SESSION['messages'])) {
 			$sentiment = $_SESSION['sentiment'];
 			foreach($_SESSION['messages'] as $message) {
