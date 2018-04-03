@@ -5,14 +5,14 @@
 	require_once 'comments.php';
 	$Users = new Users();
 	
-	/*try {
+	try {
 		require "dbconfig.php";
-		$conn = new PDO('mysql:host=$host;dbname=$db',$username,$password);
+		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $e){
 		exit($e->getMessage());
 	}
-	*/
+	
 	$display_name = $_POST['display_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
@@ -58,7 +58,7 @@
 	$_SESSION['sentiment'] = "good";
 	$_SESSION['messages'] = array("Account created successfully");
 	
-	/* if(!isset($error)){
+	 if(!isset($error)){
 		//no error
 		$sthandler = $conn->prepare("SELECT display_name FROM users WHERE display_name = :dispaly_name");
 		$sthandler->bindParam(':display_name', $display_name);	
@@ -67,9 +67,9 @@
 		if($sthandler->rowCount() > 0){
 			echo "exists! cannot insert";
 		}
-		else { */
+		else { 
 			$Users->saveUser($display_name, $email, $password);
-//		}
-//	}
+		}
+	}
 	header("Location: userpage.php");
 	exit;
