@@ -43,10 +43,37 @@
     $query->execute();
     $results = $query->fetchAll( PDO::FETCH_ASSOC );
 
-    foreach( $results as $row ){
-      print_r( $row );
-    }
-	?>
+?>
+ <table class="table">
+   <tr>
+     <th>ID</th>
+     <th>Username</th>
+     <th>Pssword</th>
+     <th>First Name</th>
+     <th>Surname</th>
+     <th>Address</th>
+     <th>Email</th>
+   </tr>
+   <?php foreach( $results as $row ){
+   echo "<tr><td>";
+     echo $row['id'];
+     echo "</td><td>";
+     echo $row['username'];
+     echo "</td><td>";
+     echo $row['password'];
+     echo "</td><td>";
+     echo $row['first_name'];
+     echo "</td><td>";
+     echo $row['surname'];
+     echo "</td><td>";
+     echo $row['address'];
+     echo "</td><td>";
+     echo $row['email'];
+     echo "</td>";
+   echo "</tr>";
+   }
+ ?>
+ </table>
 	
 	<?php
      $presets = array();
