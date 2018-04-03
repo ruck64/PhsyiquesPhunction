@@ -49,9 +49,6 @@
      <th>ID</th>
      <th>Username</th>
      <th>Pssword</th>
-     <th>First Name</th>
-     <th>Surname</th>
-     <th>Address</th>
      <th>Email</th>
    </tr>
    <?php foreach( $results as $row ){
