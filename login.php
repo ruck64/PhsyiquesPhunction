@@ -2,11 +2,20 @@
 
 	<?php 
 	session_start();
+	if(isset($_SESSION['id'])) {
+		header("Location:userpage.php");
+	}
+	else {
+		header("Location:login.php");
+	}
 	
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
 	
+	
+	$email=$_POST['email'];
+	$password=$_POST['password'];
 	?>
 	
 	<?php
@@ -55,9 +64,9 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
-	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="logout.php">logout</a>
+	<li class = "subMenu"><?php if(!isset($_SESSION['id'])){ ?><a class="subMenu" href="logout.php">logout</a>
 		<?php }else{ ?>
-		<a class="subMenu" href="login.php">Sign Up/login</a>
+		<a class="subMenu" href="login.php">Sign up/login</a>
 		<?php } ?>
 	</li> 
 	</ul>
