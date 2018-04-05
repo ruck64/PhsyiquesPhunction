@@ -12,10 +12,6 @@
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
-	
-	
-	$email=$_POST['email'];
-	$password=$_POST['password'];
 	?>
 	
 	<?php
