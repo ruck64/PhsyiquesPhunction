@@ -46,7 +46,6 @@
 			session_start();
 			$_SESSION['display_name'] = $_POST['display_name'];
 			$messages[] = "login successful";
-			header ("Location:userpage.php");
 			exit;
 		}
 		else {
@@ -57,7 +56,6 @@
 	if (!$valid) {
 		$_SESSION['sentiment'] = "bad";
 		$_SESSION['messages'] = $messages;
-		header("Location: login.php");
 		exit;
 	}
 	
