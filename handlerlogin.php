@@ -52,6 +52,7 @@
 			$valid = false;
 			$messages[] = "Email and Password do not match or do not exist";
 			header("Location: userpage.php");
+			exit;
 		}
 	}
 	if (!$valid) {
