@@ -1,7 +1,8 @@
 <?php 
 	session_start();
-	if(isset($_SESSION['id'])) {
+	if(!isset($_SESSION['id'])) {
 		header("Location:userpage.php");
+		echo "logged in";
 	}
 	else {
 		header("Location:login.php");
@@ -36,7 +37,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.html">Contact</a></li> 
-	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="logout.php">logout</a>
+	<li class = "subMenu"><?php if(!isset($_SESSION['id'])){ ?><a class="subMenu" href="logout.php">logout</a>
 	<li class = "subMenu"><a class = "subMenu" href="userpage.php">Your Profile</a>
 		<?php }else{ ?>
 		<a class="subMenu" href="login.php">Sign Up/Login</a>
