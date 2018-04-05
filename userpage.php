@@ -5,7 +5,7 @@
 		echo "logged in";
 	}
 	else {
-		echo "logged out";
+		header("Location:login.php");
 	}
 ?>
 
