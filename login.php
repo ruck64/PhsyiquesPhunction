@@ -3,14 +3,14 @@
 	<?php 
 	session_start();
 	
-	if(isset($_SESSION['display_name'])) {
+/*	if(isset($_SESSION['display_name'])) {
 		header("Location:userpage.php");
 		echo "logged in";
 	}
 	else {
 		echo"logged out";
 	}
-	
+*/	
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
