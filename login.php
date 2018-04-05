@@ -3,7 +3,13 @@
 	<?php 
 	session_start();
 	
-	if($_SESSION['id']==1)
+	if(isset($_SESSION['id'])) {
+		header("Location:userpage.php");
+		echo "logged in";
+	}
+	else {
+		echo"logged out";
+	}
 	
 	require_once "createtable.php";
 	require_once "comments.php";
