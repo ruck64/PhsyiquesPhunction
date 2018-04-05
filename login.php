@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 	<?php 
+	session_start();
 	
 	require_once "createtable.php";
 	require_once "comments.php";
