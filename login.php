@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 
 	<?php 
-	session_start();
-	if(isset($_SESSION['id'])) {
-		header("Location:userpage.php");
-	}
-	else {
-		header("Location:login.php");
-	}
 	
 	require_once "createtable.php";
 	require_once "comments.php";
