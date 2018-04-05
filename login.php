@@ -3,6 +3,8 @@
 	<?php 
 	session_start();
 	
+	if($_SESSION['id']==1)
+	
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
