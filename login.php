@@ -3,7 +3,7 @@
 	<?php 
 	session_start();
 	
-	if(isset($_SESSION['id'])) {
+	if(isset($_SESSION['display_name'])) {
 		header("Location:userpage.php");
 		echo "logged in";
 	}
