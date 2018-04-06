@@ -2,10 +2,12 @@
 	session_start();
 	if(isset($_SESSION['display_name'])) {
 		header("Location:userpage.php");
+		exit;
 		echo "logged in";
 	}
 	else {
 		header("Location:login.php");
+		exit;
 		
 	}
 	
