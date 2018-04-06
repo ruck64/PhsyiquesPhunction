@@ -9,6 +9,7 @@
 	}else {
 		echo "Cookie name is set";
 		echo "Value is: " . $_COOKIE['display_name'];
+	}
 ?>
 
 <!DOCTYPE html>
