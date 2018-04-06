@@ -3,13 +3,6 @@
 	
 	require_once "comments.php";
 	require_once "Users.php";
-	
-	if (!isset($_Cookie['display_name'])) {
-		echo "Cookie name is not set";
-	}else {
-		echo "Cookie name is set";
-		echo "Value is: " . $_COOKIE['display_name'];
-	}
 ?>
 
 <!DOCTYPE html>
