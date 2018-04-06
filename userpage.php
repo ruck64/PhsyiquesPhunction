@@ -4,7 +4,6 @@
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
-	require_once "handlerlogin.php"
 ?>
 
 <!DOCTYPE html>
