@@ -42,6 +42,9 @@
 	</ul>
 		</div>
       <h2> This is my page. Not yours </h2>
+	  <?php
+	  echo "<b> display name: </b>$_SESSION['display_name']<br />";
+	  ?>
 
 	  
 	  <div class ="sideBar">
