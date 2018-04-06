@@ -4,7 +4,7 @@
 	require_once "comments.php";
 	require_once "Users.php";
 	
-	if (!isset($_Cookie['display_name'])
+	if (!isset($_Cookie['display_name']))
 		echo "Cookie name is not set";
 	}else {
 		echo "Cookie name is set";
