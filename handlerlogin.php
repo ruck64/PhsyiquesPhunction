@@ -35,32 +35,20 @@
 		
 		$query = $conn->prepare("SELECT password FROM users WHERE email=?");
 		$query->execute(array($_POST['email']));
-		if($query->fetchColumn() === $_POST['password']) //better to hash it
+		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
 		{
-			// starts the session created if login info is correct
-			session_start();
-			$_SESSION['display_name'] = $_POST['display_name'];
+			$display =  $conn->prepare("SELECT display_name FROM users WHERE email=?");
+			$display->execute(array($_POST['display_name']));
+			$_SESSION['display_name'] = $display->fetchColumn();
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
 			exit;
 		}
 		else {
-			$valid = false;
-			$messages[] = "Email and Password do not match or do not exist";
-			header("Location: login.php");
-			exit;
-		}
-	}
-	if (!$valid) {
 		$_SESSION['sentiment'] = "bad";
 		$_SESSION['messages'] = $messages;
 		header("Location:login.php");
 		exit;
+		}
 	}
-	
-		$messages[]="it worked";
-		$_SESSION['messages'] = $messages;
-		header("Location:userpage.php");
-	
-	exit;
