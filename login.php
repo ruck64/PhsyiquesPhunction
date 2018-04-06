@@ -97,7 +97,6 @@
 
 		</div>
 	</div>
-		<!--<script type = "text/javascript" src = "login.js"></script>-->
 	
 	<div class = "footer">
 		This is the footer
