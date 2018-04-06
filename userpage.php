@@ -43,7 +43,7 @@
 		</div>
       <h2> This is my page. Not yours </h2>
 
-	   <b>display name</b><?php $_SESSION['display_name'];?><br />
+	   <b>session status</b><?php $_SESSION['is_open'];?><br />
 
 	  
 	  <div class ="sideBar">
