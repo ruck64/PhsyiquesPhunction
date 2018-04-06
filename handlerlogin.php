@@ -51,7 +51,7 @@
 		else {
 			$valid = false;
 			$messages[] = "Email and Password do not match or do not exist";
-			header("Location: userpage.php");
+			header("Location: login.php");
 			
 		}
 	}
@@ -64,5 +64,6 @@
 	
 		$messages[]="it worked";
 		$_SESSION['messages'] = $messages;
+		header("Location:userpage.php");
 	
 	exit;
