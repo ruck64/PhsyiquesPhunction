@@ -40,6 +40,7 @@
 			// starts the session created if login info is correct
 			session_start();
 			$_SESSION['display_name'] = $_POST['display_name'];
+			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
 			exit;

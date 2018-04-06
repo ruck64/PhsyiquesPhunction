@@ -3,35 +3,23 @@
 	<?php 
 	session_start();
 	
-/*	if(isset($_SESSION['display_name'])) {
-		header("Location:userpage.php");
-		echo "logged in";
-	}
-	else {
-		echo"logged out";
-	}
-*/	
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
-	?>
-	
-	<?php
-		if (isset($_SESSION['messages'])) {
-			$sentiment = $_SESSION['sentiment'];
-			foreach($_SESSION['messages'] as $message) {
-				echo "<div class = 'message $sentiment'>$message</div>";
-			}
-		}
-	?>
 
-	<?php
-     $presets = array();
-     if (isset($_SESSION['presets'])) {
+	if (isset($_SESSION['messages'])) {
+		$sentiment = $_SESSION['sentiment'];
+		foreach($_SESSION['messages'] as $message) {
+			echo "<div class = 'message $sentiment'>$message</div>";
+		}
+	}
+  
+	$presets = array();
+    if (isset($_SESSION['presets'])) {
        $presets = array_shift($_SESSION['presets']);
-     }
-     unset($_SESSION['presets']);
-     unset($_SESSION['messages']);
+    }
+    unset($_SESSION['presets']);
+    unset($_SESSION['messages']);
     ?>
 	
 	<html>
