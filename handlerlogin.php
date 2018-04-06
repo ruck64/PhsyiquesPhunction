@@ -32,13 +32,8 @@
 	}
 	
 	if(!isset($error)){
-		//no error
-//		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
-	//	$sthandler->bindParam(':email', $email);	
-		//$sthandler->execute();
-
 		
-		 $query = $conn->prepare("SELECT password FROM users WHERE email=?");
+		$query = $conn->prepare("SELECT password FROM users WHERE email=?");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $_POST['password']) //better to hash it
 		{
@@ -46,13 +41,14 @@
 			session_start();
 			$_SESSION['display_name'] = $_POST['display_name'];
 			$messages[] = "login successful";
+			header("Location:userpage.php");
 			exit;
 		}
 		else {
 			$valid = false;
 			$messages[] = "Email and Password do not match or do not exist";
 			header("Location: login.php");
-			
+			exit;
 		}
 	}
 	if (!$valid) {
