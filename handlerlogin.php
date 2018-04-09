@@ -38,8 +38,9 @@
 		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
 		{
 			$display =  $conn->prepare("SELECT display_name FROM users WHERE email=?");
-			$display->execute(array($_POST['display_name']));
-			$_SESSION['display_name'] = $display->fetchColumn();
+			$display->exceute();
+			$getId = $display->fetch(PDO::FETCH_ASSOC);
+			$_SESSION['id'] = $getId;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
