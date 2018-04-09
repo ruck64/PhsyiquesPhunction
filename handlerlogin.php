@@ -39,8 +39,7 @@
 		{
 			$display =  $conn->prepare("SELECT display_name FROM users WHERE email=?");
 			$display->execute();
-			$getId = $display->fetch(PDO::FETCH_ASSOC);
-			$_SESSION['id'] = $getId;
+			$_SESSION['display_name'] = $display->fetchColumn();
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
