@@ -42,7 +42,12 @@
 	</li> 
 	</ul>
 		</div>
-      <h2> This is my page. Not yours </h2>
+      <?php
+    session_start();
+    echo "<h3> PHP List All Session Variables</h3>";
+    foreach ($_SESSION as $key=>$val)
+    echo $key." ".$val."<br/>";
+?>
 
 	   <b>session status</b><?php $_SESSION['is_open'];?><br />
 

@@ -37,7 +37,7 @@
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
 		{		
-			$_SESSION["display_name"] = $email;
+			$_SESSION["email"] = $email;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
