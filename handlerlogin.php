@@ -41,7 +41,7 @@
 			$getId->execute(array(':email' => $email));
 			$id = $getId->fetchAll(PDO::FETCH_COLUMN,0);
 			$_SESSION['id'] = $id;
-			echo print_r($id ."<---");
+			echo print_r($id ,1);
 			exit;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
