@@ -40,7 +40,7 @@
 			$id = $conn->prepare("SELECT id FROM users Where email=?");
 			$id->execute(array($_POST['email']));
 			$id->fetchColumn;
-			$_SESSION["id"] = $id;
+			$_SESSION['id'] = $id;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
