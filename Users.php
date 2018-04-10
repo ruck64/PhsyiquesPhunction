@@ -1,7 +1,8 @@
 <?php
 
-require_once 'KLogger.php';
-require_once 'comments.php';
+	session_start();
+	require_once 'KLogger.php';
+	require_once 'comments.php';
 
 class Users {
 	
@@ -31,6 +32,8 @@ class Users {
 		$query->bindParam(':display_name', $display_name);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $password);
+		$_SESSION['display_name'] = $display_name;
+		$_SESSION['email'] = $email;
 		$this->logger->logDebug(__FUNCTION__ . " display_name=[{$display_name}] email=[{$email}] password[{$password}]");
 		$query->execute();
     }
