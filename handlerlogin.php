@@ -38,7 +38,7 @@
 		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
 		{		
 			$getId = $conn->prepare("SELECT id FROM users Where email=:email");
-			$getId->execute(array(':email' => $email);
+			$getId->execute(array(':email' => $email));
 			$id = $getId->fetchAll(PDO::FETCH_COLUMN,0);
 			$_SESSION['id'] = $id;
 			echo print_r($id ."<---");
