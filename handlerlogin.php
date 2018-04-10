@@ -37,9 +37,10 @@
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
 		{		
-			$id = $conn->prepare("SELECT id FROM users Where email=?");
-			$id->execute(array($_POST['email']));
-			$id->fetchColumn;
+			$getId = $conn->prepare("SELECT id FROM users Where email=?");
+			$getId->execute(array($_POST['email']));
+			$getId->fetchColumn;
+			$id = bind_result($getId);
 			$_SESSION['id'] = $id;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
