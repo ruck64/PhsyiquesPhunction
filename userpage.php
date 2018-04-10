@@ -41,11 +41,7 @@
 	</li> 
 	</ul>
 		</div>
-      <?php
-    echo "<h3> PHP List All Session Variables</h3>";
-    foreach ($_SESSION as $key=>$val)
-    echo $key." ".$val."<br/>";
-?>
+<?php echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'; ?>
 
 	   <b>session status</b><?php $_SESSION['is_open'];?><br />
 
