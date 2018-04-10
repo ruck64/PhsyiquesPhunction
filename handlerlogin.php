@@ -40,6 +40,8 @@
 			$getId = $conn->prepare("SELECT id FROM users Where email=?");
 			$getId->execute(array($_POST['id']));
 			$id = $getId->fetchColumn();
+			echo "POOP";
+			exit;
 			$_SESSION['id'] = $id;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
