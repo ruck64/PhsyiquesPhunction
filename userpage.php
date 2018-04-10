@@ -43,7 +43,7 @@
 		</div>
 <?php echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'; ?>
 
-	   <b>session status</b><?php $_SESSION['id'];?><br />
+	    <b>session status</b><?php echo $_SESSION['id'];?><br />
 
 	  
 	  <div class ="sideBar">
