@@ -39,7 +39,7 @@
 		{		
 			$getId = $conn->prepare("SELECT id FROM users Where email=:email");
 			$getId->execute(array(':email' => $email));
-			$user = $getId->fetchAll(PDO::FETCH_ASSOC);
+			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
 			echo "session id " . $_SESSION['id'];
 			exit;
