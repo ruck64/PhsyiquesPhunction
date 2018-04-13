@@ -39,10 +39,9 @@
 		{		
 			$getId = $conn->prepare("SELECT id FROM users Where email=:email");
 			$getId->execute(array(':email' => $email));
-			$id = $getId->fetchAll(PDO::FETCH_COLUMN,0);
-			$_SESSION['id'] = $id;
-			$display_name = $getId->fetchAll(PDO::FETCH_COLUMN,2);
-			$_SESSION['display_name'] = $display_name;
+			$user = $getId->fetchAll(PDO::FETCH_ASSOC);
+			$_SESSION['id'] = $user['id'];;
+			$_SESSION['display_name'] = $user['display_name'];
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
