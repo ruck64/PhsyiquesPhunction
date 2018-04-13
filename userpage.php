@@ -38,7 +38,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "contact.">Contact</a></li> 
-	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="userpage.php">Your Page</a>
+	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?> <a class="subMenu" href="userpage.php">Your Page</a>
 	<li class = "subMenu"><a class = "subMenu" href="logout.php">Logout</a>
 		<?php }else{ ?>
 		<a class="subMenu" href="login.php">Sign Up/Login</a>
@@ -48,10 +48,10 @@
 
 	  
 	  <div class ="sideBar">
-	  <p class="shadow ">Welcome <?php echo $_SESSION['display_name'] ?></p>
+	  <p class="shadow ">Welcome User</p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></a></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></a></p>
-	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</a></p>
+	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"></a></p>
 	  </div>
 
 	  <div class = "footer">
