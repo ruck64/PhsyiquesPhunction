@@ -42,12 +42,6 @@
 			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
 			$_SESSION['display_name'] = $user['display_name'];
-			echo "id: " . $_SESSION['id'];
-			
-
-			
-			echo "display name: " . $_SESSION['display_name'];
-			exit;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");
