@@ -44,7 +44,7 @@
 			$_SESSION['display_name'] = $user['display_name'];
 			echo "id: " . $_SESSION['id'];
 			
-			while($row = $user)) {
+			while($row = $user){
 	echo "<tr>";
 	foreach($row as $value) {
 		echo "<td>{$value}</td>";
