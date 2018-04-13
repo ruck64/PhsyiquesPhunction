@@ -53,11 +53,6 @@
 		$valid = false;
 	}
 	
-
-	
-	$_SESSION['sentiment'] = "good";
-	$_SESSION['messages'] = array("Account created successfully");
-	
 	if(!isset($error)){
 		//no error
 		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
@@ -84,9 +79,11 @@
 		header("Location: login.php");
 		exit;
 	}
-	}
+	
+	else {
 			
 	$Users->saveUser($display_name, $email, $password);
 	
 	header("Location: userpage.php");
 	exit;
+	}
