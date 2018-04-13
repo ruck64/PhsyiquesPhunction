@@ -125,6 +125,21 @@ p.basic {
 	text-align:center;
 	margin:10px;
 }
+
+#parent_div_1, #parent_div_2 {
+	position:relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin-right: 10px;
+  float: left;
+  text-align:left;
+}
+.child_div_1 {
+	text-align:right;
+  float: left;
+  margin-right: 5px;
+}
 	
 
 .sideBar {
