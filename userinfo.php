@@ -50,9 +50,9 @@
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 
       <div id='parent_div_1'>
-		<p class="child_div_1"> Name: </p>
-		<p class="child_div_1"> Age: </p>
-		<p class="child_div_1"> Weight: </p>
+		<p class="child_div_1"> Name: </p><br>
+		<p class="child_div_1"> Age: </p><br>
+		<p class="child_div_1"> Weight: </p><br>
 		<p class="child_div_1"> Body Type: </p>
 	  
 	  <div class ="sideBar">
