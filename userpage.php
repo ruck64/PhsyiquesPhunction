@@ -37,7 +37,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "purpose.php">Purpose of PhsyquiesPhunction</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "contact.">Contahpct</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "contact.">Contact</a></li> 
 	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="userpage.php">Your Page</a>
 	<li class = "subMenu"><a class = "subMenu" href="logout.php">Logout</a>
 		<?php }else{ ?>
@@ -45,14 +45,10 @@
 		<?php } ?>
 	</li> 
 	</ul>
-		</div>
-<?php echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'; ?>
-
-	    <b>session status</b><?php echo $_SESSION['id'];?><br />
 
 	  
 	  <div class ="sideBar">
-	  <p class="shadow ">Welcome User</p>
+	  <p class="shadow ">Welcome <?php echo $_SESSION['id'] ?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
