@@ -41,8 +41,8 @@
 			$getId->execute(array(':email' => $email));
 			$id = $getId->fetchAll(PDO::FETCH_COLUMN,0);
 			$_SESSION['id'] = $id;
-			echo print_r($id ,1);
-			exit;
+			$display_name = $getId->fetchAll(PDO::FETCH_COLUMN,1);
+			$_SESSION['display_name'] = $display_name;
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
 			header("Location:userpage.php");

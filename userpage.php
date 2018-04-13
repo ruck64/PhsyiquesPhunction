@@ -3,6 +3,11 @@
 	
 	require_once "comments.php";
 	require_once "Users.php";
+
+	if(!isset($_SESSION['id'])) {
+		header("Location:login.php");
+		exit;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +37,9 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "purpose.php">Purpose of PhsyquiesPhunction</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "contact.html">Contact</a></li> 
-	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="logout.php">logout</a>
-	<li class = "subMenu"><a class = "subMenu" href="userpage.php">Your Profile</a>
+	<li class = "subMenu"><a class = "subMenu"  href = "contact.">Contahpct</a></li> 
+	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="userpage.php">Your Page</a>
+	<li class = "subMenu"><a class = "subMenu" href="logout.php">Logout</a>
 		<?php }else{ ?>
 		<a class="subMenu" href="login.php">Sign Up/Login</a>
 		<?php } ?>
@@ -48,9 +53,9 @@
 	  
 	  <div class ="sideBar">
 	  <p class="shadow ">Welcome User</p>
-	  <p class ="button"> <a href = "userinfo.html"><input type="button" value="User Info"></p>
-	  <p class ="button"> <a href = "userpics.html"><input type="button" value="Your pics"></p>
-	  <p class ="button"> <a href = "editinfo.html"><input type="button" value="Edit Your Info"</p>
+	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
+	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
+	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
 	  </div>
 
 	  <div class = "footer">
