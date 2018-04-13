@@ -41,7 +41,7 @@
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetchAll(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
-			echo $_SESSION['id'];
+			echo "session id " . $_SESSION['id'];
 			exit;
 			$_SESSION['display_name'] = $user['display_name'];
 			setcookie("display_name","display_name");
