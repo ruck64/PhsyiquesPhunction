@@ -55,11 +55,11 @@
 		<p class="child_div_1"> Weight: </p>
 		<p class="child_div_1"> Body Type: </p>
 	  
-	  <div id = 'parent_div_2'>
-		<p class="shadow">Welcome User</p>
-		<p class ="child_div_1"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
-		<p class ="child_div_1"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
-		<p class ="child_div_1"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
+	  <div class ="sideBar">
+	  <p class="shadow">Welcome User</p>
+	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
+	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
+	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
 	  </div>
 
 	  <div class = "footer">
