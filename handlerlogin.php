@@ -43,6 +43,15 @@
 			$_SESSION['id'] = $user['id'];
 			$_SESSION['display_name'] = $user['display_name'];
 			echo "id: " . $_SESSION['id'];
+			
+			while($row = $user)) {
+	echo "<tr>";
+	foreach($row as $value) {
+		echo "<td>{$value}</td>";
+	}
+	echo "</tr>";
+}
+			
 			echo "display name: " . $_SESSION['display_name'];
 			exit;
 			setcookie("display_name","display_name");
