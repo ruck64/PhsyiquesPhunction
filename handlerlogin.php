@@ -40,7 +40,7 @@
 			$getId = $conn->prepare("SELECT id FROM users Where email=:email");
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetchAll(PDO::FETCH_ASSOC);
-			$_SESSION['id'] = $user['id'];;
+			$_SESSION['id'] = $user['id'];
 			$_SESSION['display_name'] = $user['display_name'];
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
