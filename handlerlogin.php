@@ -50,7 +50,7 @@
 		else {
 		$_SESSION['sentiment'] = "bad";
 		$_SESSION['messages'] = $messages;
-		header("Location:login.php");
+//		header("Location:login.php");
 		exit;
 		}
 	}
