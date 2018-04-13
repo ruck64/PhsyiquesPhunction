@@ -49,21 +49,22 @@
 
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 
-      <div id='parent_div_1'>
+    <div id='parent_div_1'>
 		<p class="child_div_1"> Name: </p><br>
 		<p class="child_div_1"> Age: </p><br>
 		<p class="child_div_1"> Weight: </p><br>
 		<p class="child_div_1"> Body Type: </p>
-	  
-	  <div class ="sideBar">
+	</div>
+	
+	<div class ="sideBar">
 	  <p class="shadow">Welcome User</p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
-	  </div>
+	</div>
 
-	  <div class = "footer">
+	<div class = "footer">
 	This is the footer
-		</div>
+	</div>
 	  
   </html>
