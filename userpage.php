@@ -48,7 +48,7 @@
 
 	  
 	  <div class ="sideBar">
-	  <p class="shadow ">Welcome User</p>
+	  <p class="shadow" style="color:black;">Welcome<?php echo $_SESSION['display_name']?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></a></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></a></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"></a></p>
