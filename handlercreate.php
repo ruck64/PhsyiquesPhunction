@@ -79,7 +79,8 @@
 		header("Location: login.php");
 		exit;
 	}
-	
+	}
+			
 	$Users->saveUser($display_name, $email, $password);
 	
 	header("Location: userpage.php");
