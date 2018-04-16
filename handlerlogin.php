@@ -42,10 +42,14 @@
 	
 	if(!isset($error) && $valid)
 	{
+		echo "before prepare";
+		exit;
 		$query = $conn->prepare("SELECT password FROM Users WHERE email=?");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
+		echo "after prepare";
+		exit;
 			$getId = $conn->prepare("SELECT * FROM Users Where email=:email");
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetch(PDO::FETCH_ASSOC);

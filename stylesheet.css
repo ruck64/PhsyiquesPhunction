@@ -40,7 +40,7 @@ a.subMenu {
 	color:white;
 }
 
-a:active.subMenu {
+.active {
 	background-color:black;
 }
 	

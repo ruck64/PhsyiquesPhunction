@@ -54,7 +54,7 @@
 	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?><a class="subMenu" href="userpage.php">Your Page</a>
 	<li class = "subMenu"><a class = "subMenu" href="logout.php">Logout</a>
 		<?php }else{ ?>
-		<a class="subMenu" href="login.php">Sign Up/Login</a>
+		<a class="subMenu active" href="login.php">Sign Up/Login</a>
 		<?php } ?>
 	</li>
 	</ul>
