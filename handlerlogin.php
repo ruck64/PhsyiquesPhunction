@@ -32,7 +32,15 @@
 		$valid = false;
 	}
 	
-	if(!isset($error))
+	$query = $conn->prepare( "SELECT email FROM user WHERE email = ?");
+	$query->bindValue( 1, $email );
+	$query->execute();
+	if(!$query->rowCount() > 0){
+		$messages[] = "Email does not exist";
+		$valid = false;
+	}
+	
+	if(!isset($error) && $valid)
 	{
 		$query = $conn->prepare("SELECT password FROM user WHERE email=?");
 		$query->execute(array($_POST['email']));
