@@ -31,7 +31,7 @@
 		$messages[] = "Please enter a password";
 		$valid = false;
 	}
-	
+	echo "before chekcing email";
 	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
 	$query->bindValue( 1, $email );
 	$query->execute();
