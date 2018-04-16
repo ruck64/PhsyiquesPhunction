@@ -31,7 +31,7 @@ class Users {
 		$salt = '1basket69';
 		$password = $salt . $password;
 		$password = md5($password);
-		$query = $conn->prepare("INSERT INTO User (display_name, email, password,salt) VALUES (:display_name, :email, :password,:salt)");
+		$query = $conn->prepare("INSERT INTO Users (display_name, email, password,salt) VALUES (:display_name, :email, :password,:salt)");
 		$query->bindParam(':display_name', $display_name);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $password);
@@ -44,7 +44,7 @@ class Users {
   
 	public function getDisplay_Name () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select display_name from User");
+		$query = $conn->prepare("select display_name from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
@@ -54,7 +54,7 @@ class Users {
 	
 		public function getEmail () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select email from User");
+		$query = $conn->prepare("select email from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
@@ -64,7 +64,7 @@ class Users {
 	
 		public function getPasswrod () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select password from User");
+		$query = $conn->prepare("select password from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();

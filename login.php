@@ -3,10 +3,6 @@
 	<?php 
 	session_start();
 	
-			$db = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
-		echo "connected";
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
 	require_once "createtable.php";
 	require_once "comments.php";
 	require_once "Users.php";
@@ -24,17 +20,6 @@
     }
     unset($_SESSION['presets']);
     unset($_SESSION['messages']);
-	
-	$dbnumbers = $db->prepare('SELECT * FROM user');
-	$dbnumbers->execute();
-	$count = $dbnumbers->rowCount();
-	if ($count == 0) {
-		$dbnum = "0";
-		echo "Exists";
-	} else {
-		$dbnum = $count;
-		echo "doesnt exist";
-	}
     ?>
 	
 	<html>

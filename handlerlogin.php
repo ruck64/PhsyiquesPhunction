@@ -32,7 +32,7 @@
 		$valid = false;
 	}
 	
-	$query = $conn->prepare( "SELECT email FROM user WHERE email = ?");
+	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
 	$query->bindValue( 1, $email );
 	$query->execute();
 	if(!$query->rowCount() > 0){
@@ -42,7 +42,7 @@
 	
 	if(!isset($error) && $valid)
 	{
-		$query = $conn->prepare("SELECT password FROM user WHERE email=?");
+		$query = $conn->prepare("SELECT password FROM Users WHERE email=?");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
