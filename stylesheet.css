@@ -34,7 +34,7 @@ li.subMenu {
 	display:inline;
 }
 
-a.subMenu {
+a.subMenu , a:active.subMenu{
 	display:inline-block;
 	text-decoration:none;
 	color:white;
