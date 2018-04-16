@@ -53,8 +53,7 @@
 			$_SESSION['sentiment'] = "bad";
 			$_SESSION['messages'] = $messages;
 			$_SESSION['messages'] = $password;
-			echo $password;
-			echo $salt;
+			echo $_POST['password'];
 		//	header("Location: login.php");
 			exit;
 		}
