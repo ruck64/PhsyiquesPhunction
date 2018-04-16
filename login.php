@@ -25,7 +25,7 @@
     unset($_SESSION['presets']);
     unset($_SESSION['messages']);
 	
-	$dbnumbers = $db->prepare('SELECT * FROM 'user'');
+	$dbnumbers = $db->prepare('SELECT * FROM user');
 	$dbnumbers->execute();
 	$count = $dbnumbers->rowCount();
 	if ($count == 0) {
