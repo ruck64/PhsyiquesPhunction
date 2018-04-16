@@ -50,7 +50,6 @@ require_once 'KLogger.php';
 	}
 	catch (PDOException $e) {
         echo "connection failed: " . $e->getMessage();
-      $this->logger->logFatal("The database connection failed.");
 	}
 	}
 	}

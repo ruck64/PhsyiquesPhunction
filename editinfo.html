@@ -1,9 +1,18 @@
+<?php 
+	session_start();
+	
+		if(!isset($_SESSION['id'])) {
+		header("Location:login.php");
+		exit;
+?>
+
 <!DOCTYPE html>
   <html>
     <head>
       <title> Edit Info </title>
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
+	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     </head>
 
     <h1 class = "title"> Edit Info </h1>

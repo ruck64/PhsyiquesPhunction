@@ -26,6 +26,7 @@
 		<head>
 			<link rel="stylesheet" type="text/css" href="stylesheet.css">
 			<link rel= "stylesheet" type  = "text/css" href = "login.css">
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 			<title> Login/ Sign up </title>
 		</head>
 	<body>

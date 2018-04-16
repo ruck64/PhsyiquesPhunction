@@ -16,6 +16,7 @@
       <title> User </title>
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
+	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     </head>
 
     <h1 class = "title"> User Info </h1>

@@ -6,6 +6,8 @@
 	<html>
 		<head>
 			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+			
 			<title>Phsyiquesphunction</title>
 		</head>
 	<body>
@@ -43,11 +45,21 @@
 	</ul>
 		</div>
 	</body>	
-<p align="center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/4WgT9gy4zQA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </p>
+	<p align="center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/4WgT9gy4zQA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </p>
 	
 		<div class = "footer">
-	This is the footer
-		</div>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes_classic.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes.min.js"></script>
+
+	<div class="social-likes">
+		<div class="facebook" title="Share link on Facebook">Facebook</div>
+		<div class="twitter" title="Share link on Twitter">Twitter</div>
+		<div class="plusone" title="Share link on Google+">Google+</div>
+	</div>
+	
+	</div>
 	
 		
 	
