@@ -44,7 +44,6 @@
 	{
 		$query = $conn->prepare("SELECT password FROM Users WHERE email=?");
 		$query->execute(array($_POST['email']));
-		echo $valid;
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
 		echo "after prepare";
@@ -60,6 +59,7 @@
 			exit;
 		}
 	}
+	echo "didnt hit header";
 		if (!$valid) 
 		{
 			$_SESSION['sentiment'] = "bad";
