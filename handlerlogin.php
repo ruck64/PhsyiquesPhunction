@@ -22,11 +22,12 @@
 	$valid = true;
 	$messages = array(); 
 	
+	echo "enail " . $email;
 	if(empty($email)) {
 		$messages[] = "Please enter a display name";
 		$valid = false;
 	}
-	
+	echo "password" . $password;
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
 		$valid = false;
@@ -43,11 +44,11 @@
 	
 	if(!isset($error) && $valid)
 	{
-		$query = $conn->prepare("SELECT password FROM Users WHERE email=?");
+		$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
-			$getId = $conn->prepare("SELECT * FROM Users Where email=:email");
+			$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
