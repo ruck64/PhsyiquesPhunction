@@ -62,6 +62,8 @@
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Email already exists";
 			$valid = false;
+			echo "doesnt exist";
+			exit;
 		}
 
 		$sthandler = $conn->prepare("SELECT display_name FROM Users WHERE display_name = :display_name");
@@ -71,6 +73,8 @@
 		if($sthandler->rowCount() > 0){
 			$messages[] = "Display Name already exists. Please choose another one";
 			$valid = false;
+			echo "display name doesnt exist";
+			exit;
 		}
 		
 	if (!$valid) {
