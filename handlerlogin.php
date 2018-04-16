@@ -54,6 +54,7 @@
 			$_SESSION['messages'] = $messages;
 			$_SESSION['messages'] = $password;
 			echo $password;
+			echo $salt;
 		//	header("Location: login.php");
 			exit;
 		}
