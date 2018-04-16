@@ -21,21 +21,21 @@
 	
 	$valid = true;
 	$messages = array(); 
-	
-	echo "enail " . $email;
+
 	if(empty($email)) {
 		$messages[] = "Please enter a display name";
 		$valid = false;
 	}
-	echo "password" . $password;
+
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
 		$valid = false;
 	}
-	echo "before chekcing email";
+
 	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
 	$query->bindValue( 1, $email );
 	$query->execute();
+	echo "after checking email";
 	if(!$query->rowCount() > 0){
 		$messages[] = "Email does not exist";
 		echo "row count" . rowCount();
