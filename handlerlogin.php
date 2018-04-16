@@ -52,7 +52,7 @@
 		{
 			$_SESSION['sentiment'] = "bad";
 			$_SESSION['messages'] = $messages;
-			echo $password;
+			$_SESSION['messages'] = $password;
 			header("Location: login.php");
 			exit;
 		}
