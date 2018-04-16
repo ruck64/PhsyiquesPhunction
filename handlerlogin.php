@@ -44,7 +44,7 @@
 	{
 		$query = $conn->prepare("SELECT password FROM Users WHERE email=?");
 		$query->execute(array($_POST['email']));
-		echo "just after ecev";
+		echo $valid;
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
 		echo "after prepare";
