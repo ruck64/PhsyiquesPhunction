@@ -28,6 +28,9 @@
 	
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
+		<?php
+			echo $password;
+			?>
 		$valid = false;
 	}
 	
