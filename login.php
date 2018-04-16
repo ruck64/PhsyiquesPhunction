@@ -30,8 +30,10 @@
 	$count = $dbnumbers->rowCount();
 	if ($count == 0) {
 		$dbnum = "0";
+		echo "Exists";
 	} else {
 		$dbnum = $count;
+		echo "doesnt exist";
 	}
     ?>
 	
