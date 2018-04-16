@@ -33,6 +33,7 @@
 	}
 	
 	$query = $conn->prepare( "SELECT email FROM user WHERE email = ?");
+	$query->bindValue( 1, $email );
 	$query->execute();
 	if(!$query->rowCount() > 0){
 		$messages[] = "Email does not exist";
