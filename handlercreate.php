@@ -55,7 +55,7 @@
 	
 	if(!isset($error)){
 		//no error
-		$sthandler = $conn->prepare("SELECT email FROM users WHERE email = :email");
+		$sthandler = $conn->prepare("SELECT email FROM user WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
 		$sthandler->execute();
 
@@ -64,7 +64,7 @@
 			$valid = false;
 		}
 
-		$sthandler = $conn->prepare("SELECT display_name FROM users WHERE display_name = :display_name");
+		$sthandler = $conn->prepare("SELECT display_name FROM user WHERE display_name = :display_name");
 		$sthandler->bindParam(':display_name', $display_name);	
 		$sthandler->execute();
 		

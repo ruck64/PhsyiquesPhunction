@@ -17,11 +17,12 @@ require_once 'KLogger.php';
 		echo "connected";
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql_users = 
-		"CREATE TABLE IF NOT EXISTS `Users` (
+		"CREATE TABLE IF NOT EXISTS `User` (
 			`id` INT (6) UNSIGNED AUTO_INCREMENT NOT NULL,
 			`display_name` VARCHAR (30) NOT NULL,
 			`email` VARCHAR (50) NOT NULL,
 			`password` CHAR(41) NOT NULL,
+			`salt` VARCHAR(8) NOT NULL,
 			PRIMARY KEY (`id`),
 			UNIQUE INDEX (`email`),
 			`access` INT(1),

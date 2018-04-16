@@ -28,10 +28,14 @@ class Users {
   
     public function saveUser ($display_name, $email, $password) {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("INSERT INTO Users (display_name, email, password) VALUES (:display_name, :email, :password)");
+		$salt = '1basket69';
+		$password = $salt . $password;
+		$password = md5($password);
+		$query = $conn->prepare("INSERT INTO User (display_name, email, password,salt) VALUES (:display_name, :email, :password,:salt)");
 		$query->bindParam(':display_name', $display_name);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $password);
+		$query->bindParam('salt',$salt);
 		$_SESSION['display_name'] = $display_name;
 		$_SESSION['email'] = $email;
 		$this->logger->logDebug(__FUNCTION__ . " display_name=[{$display_name}] email=[{$email}] password[{$password}]");
@@ -40,7 +44,7 @@ class Users {
   
 	public function getDisplay_Name () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select display_name from Users");
+		$query = $conn->prepare("select display_name from User");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
@@ -50,7 +54,7 @@ class Users {
 	
 		public function getEmail () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select email from Users");
+		$query = $conn->prepare("select email from User");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
@@ -60,7 +64,7 @@ class Users {
 	
 		public function getPasswrod () {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("select password from Users");
+		$query = $conn->prepare("select password from User");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();

@@ -14,7 +14,8 @@
 	
 	$salt = '1basket69';
 	$email = htmlspecialchars($_POST['email']);
-	$password = password_hash(md5($salt. $_POST['password']));
+	$password = $salt. $_POST['password']);
+	$password = md5($password);
 	
 	$_SESSION['presets'] = array($_POST);
 	
@@ -33,11 +34,11 @@
 	
 	if(!isset($error))
 	{
-		$query = $conn->prepare("SELECT password FROM users WHERE email=?");
+		$query = $conn->prepare("SELECT password FROM user WHERE email=?");
 		$query->execute(array($_POST['email']));
-		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
+		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
-			$getId = $conn->prepare("SELECT * FROM users Where email=:email");
+			$getId = $conn->prepare("SELECT * FROM user Where email=:email");
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
@@ -53,7 +54,7 @@
 			$_SESSION['sentiment'] = "bad";
 			$_SESSION['messages'] = $messages;
 			$_SESSION['messages'] = $password;
-			echo $_POST['password'];
+			echo 
 		//	header("Location: login.php");
 			exit;
 		}
