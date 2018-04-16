@@ -14,7 +14,7 @@
 	
 	$salt = '1basket69';
 	$email = htmlspecialchars($_POST['email']);
-	$password = md5($salt. $_POST['password']);
+	$password = password_hash(md5($salt. $_POST['password']));
 	
 	$_SESSION['presets'] = array($_POST);
 	
@@ -31,8 +31,8 @@
 		$valid = false;
 	}
 	
-	if(!isset($error)){
-		
+	if(!isset($error))
+	{
 		$query = $conn->prepare("SELECT password FROM users WHERE email=?");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $_POST['password'] && $valid) //better to hash it
@@ -47,10 +47,13 @@
 			header("Location:userpage.php");
 			exit;
 		}
-		else {
-		$_SESSION['sentiment'] = "bad";
-		$_SESSION['messages'] = $messages;
-		header("Location:login.php");
-		exit;
-		}
 	}
+		if (!$valid) 
+		{
+			$_SESSION['sentiment'] = "bad";
+			$_SESSION['messages'] = $messages;
+			header("Location: login.php");
+			exit;
+		}
+	
+}

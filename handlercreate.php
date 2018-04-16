@@ -15,7 +15,7 @@
 	
 	$display_name = htmlspecialchars($_POST['display_name']);
 	$email = $_POST['email'];
-	$password = password_hash(md5($salt. $_POST['password']));
+	$password = password_hash(md5($salt . $_POST['password']));
 	$confirmpassword = $_POST['confirmpassword'];
 	
 	$_SESSION['presets'] = array($_POST);
