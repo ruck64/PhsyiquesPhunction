@@ -28,9 +28,6 @@
 	
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
-		<?php
-			echo $password;
-			?>
 		$valid = false;
 	}
 	
@@ -55,6 +52,7 @@
 		{
 			$_SESSION['sentiment'] = "bad";
 			$_SESSION['messages'] = $messages;
+			echo $password;
 			header("Location: login.php");
 			exit;
 		}
