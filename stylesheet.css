@@ -34,14 +34,14 @@ li.subMenu {
 	display:inline;
 }
 
-a.subMenu , a:active.subMenu{
+a.subMenu {
 	display:inline-block;
 	text-decoration:none;
 	color:white;
 }
 
-a:active {
-	background-color:red;
+a:active.subMenu {
+	background-color:black;
 }
 	
 
