@@ -46,7 +46,7 @@
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
-			$getId = $conn->prepare("SELECT * FROM user Where email=:email");
+			$getId = $conn->prepare("SELECT * FROM Users Where email=:email");
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
