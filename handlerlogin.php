@@ -14,6 +14,7 @@
 	
 	$salt = '1basket69';
 	$email = htmlspecialchars($_POST['email']);
+	$password = $_POST['password'];
 	
 	$_SESSION['presets'] = array($_POST);
 	
