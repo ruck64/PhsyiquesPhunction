@@ -54,6 +54,7 @@
 		$valid = false;
 		exit;
 	}
+	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = hash('sha256',$password);
 	
