@@ -36,32 +36,55 @@
 	</body>
 	
       <p class="basic"> 
-	  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-	  Morbi auctor massa quis tempor mattis. Suspendisse imperdiet pretium enim eget lobortis. 
-	  Cras velit neque, lacinia sit amet purus eget, porttitor finibus libero.
-	  Sed consequat quam at enim pretium imperdiet. Duis et lacus eleifend, rhoncus massa ac, fermentum lectus. 
-	  Suspendisse nec nulla vel ipsum sollicitudin imperdiet sed at arcu. Nulla at interdum risus.
-	  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-	  Etiam eu molestie ex. Nam id mauris non sem commodo blandit dapibus eget tellus.
-	  Aenean tellus augue, pulvinar nec felis a, ornare consequat augue. 
-	  Donec scelerisque, enim vitae malesuada malesuada, mauris lorem tempus libero, porta pellentesque sapien magna ac elit.
-	  Maecenas purus ante, iaculis et sodales eget, feugiat viverra mi.
-	  Etiam mattis mattis risus, eget gravida lacus iaculis sit amet.
-	  Maecenas nec mi faucibus, dictum leo sit amet, porta eros.
-	  Duis in lacinia dolor. Integer eget tristique est. In sagittis lectus dolor, eu semper ligula dictum ut.
-	  Sed non lacinia magna. Duis ante justo, placerat id accumsan ac, tempor sit amet augue. 
-	  Integer porta rhoncus finibus. Fusce ullamcorper urna eget felis commodo semper.
-	  Etiam suscipit aliquam ante, vel pretium ligula blandit ac. 
-	  Vivamus auctor volutpat eros, in sodales enim congue et. Pellentesque nec tortor felis. Cras id efficitur leo. 
-	  Nulla vulputate nulla sed sem dapibus aliquam. Aenean mi arcu, dignissim in neque et, laoreet facilisis nisl.
-	  Donec hendrerit nisi sit amet nulla maximus, in tincidunt ipsum aliquam.
-	  Fusce risus risus, efficitur venenatis urna et, rhoncus laoreet magna. Cras accumsan mollis quam.
-	  Integer venenatis orci mi. Quisque eget eros eget justo pellentesque iaculis. Vivamus id neque non tellus porttitor lacinia. Phasellus pulvinar quis nibh a suscipit. Donec eget sem et metus mollis sodales. Nam efficitur libero neque, non congue tortor porta a.
-	  In hac habitasse platea dictumst. Mauris sit amet elit accumsan, luctus neque ut, eleifend orci. Morbi blandit sagittis posuere. Nunc sit amet sollicitudin urna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum tempus ex ac massa faucibus, non mollis sapien suscipit. Phasellus non tellus a enim aliquet placerat nec ut tortor. Morbi vestibulum euismod elit, sed commodo ipsum malesuada at. Etiam sit amet ultrices ipsum, id lobortis purus.
-	  Vestibulum vel nulla id nibh gravida efficitur. Cras congue blandit hendrerit. Nulla sed semper ex.
-	  Suspendisse tincidunt elit eu nisi gravida euismod. Nulla facilisi. Mauris dapibus in lorem id fringilla.
-	  Suspendisse eros mi, laoreet vel diam nec, suscipit porta augue. Etiam ultrices fringilla auctor. 
-	  Nulla eu ligula vel nibh elementum tempus. 
+
+	<br><br>Now this is a story all about how
+	<br>My life got flipped-turned upside down
+	<br>And I'd like to take a minute
+	<br>Just sit right there
+	<br>I'll tell you how I became the prince of a town called Bel-Air
+
+	<br><br>In west Philadelphia born and raised
+	<br>On the playground was where I spent most of my days
+	<br>Chillin' out maxin' relaxin' all cool
+	<br>And all shooting some b-ball outside of the school
+	<br>When a couple of guys who were up to no good
+	<br>Started making trouble in my neighborhood
+	<br>I got in one little fight and my mom got scared
+	<br>She said, "You're movin' with your auntie and uncle in Bel-Air."
+
+	<br><br>I begged and pleaded with her day after day
+	<br>But she packed my suitcase and sent me on my way
+	<br>She gave me a kiss and then she gave me my ticket.
+	<br>I put my Walkman on and said, "I might as well kick it."
+
+	<br><br>First class, yo, this is bad
+	<br>Drinking orange juice out of a champagne glass.
+	<br>Is this what the people of Bel-Air living like?
+	<br>Hmm, this might be alright.
+
+	<br><br>But wait I hear they're prissy, bourgeois, all that
+	<br>Is this the type of place that they just send this cool cat?
+	<br>I don't think so
+	<br>I'll see when I get there
+	<br>I hope they're prepared for the prince of Bel-Air
+	
+	<br><br>Well, the plane landed and when I came out
+	<br>There was a dude who looked like a cop standing there with my name out
+	<br>I ain't trying to get arrested yet
+	<br>I just got here	
+	<br>I sprang with the quickness like lightning, disappeared
+
+	<br>I whistled for a cab and when it came near
+	<br>The license plate said "Fresh" and it had dice in the mirror
+	<br>If anything I could say that this cab was rare
+	<br>But I thought, "Nah, forget it."
+	<br>– "Yo, home to Bel-Air."
+
+	<br><br>I pulled up to the house about 7 or 8
+	<br>And I yelled to the cabbie, "Yo home smell ya later."
+	<br>I looked at my kingdom
+	<br>I was finally there
+	<br>To sit on my throne as the Prince of Bel-Air 
 	  </p>
 
 
