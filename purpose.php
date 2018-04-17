@@ -34,7 +34,7 @@
 		</div>
 		
 	</body>	
-<p class="basic">  <img src ="funny.jpg" alt = "funny hahaahha" class = "center">
+<p class="basic">  <img src ="funny.jpg" alt = "funny hahaahha" class = "center" width = 348px; height = 390px;>
 
 </p>
 	<div class = "footer">
