@@ -40,11 +40,14 @@
 		$messages[] = "Email does not exist";
 		$valid = false;
 	}
-	echo "valid " . $valid;
+
+	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
+	$query->execute(array($_POST['email']));
+	echo "query " . $query;
+	
 	if(!isset($error) && $valid)
 	{
-		$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
-		$query->execute(array($_POST['email']));
+
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
 			$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
