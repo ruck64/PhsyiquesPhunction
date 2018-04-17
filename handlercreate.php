@@ -79,6 +79,8 @@
 			$valid = false;
 		}
 		
+		header("Location:userpage.php");
+		
 	if (!$valid) {
 		$_SESSION['sentiment'] = "bad";
 		$_SESSION['messages'] = $messages;
