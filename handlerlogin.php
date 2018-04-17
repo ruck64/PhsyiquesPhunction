@@ -12,7 +12,6 @@
 		exit($e->getMessage());
 	}
 	
-	$salt = '1basket69';
 	$email = htmlspecialchars($_POST['email']);
 	$password = $_POST['password'];
 	
@@ -44,6 +43,7 @@
 	$query->execute(array($_POST['email']));
 	$passcheck = $query->fetchColumn();
 	
+	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = hash('sha256',$password);
 	
