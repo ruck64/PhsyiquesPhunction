@@ -44,25 +44,25 @@
 	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 	$query->execute(array($_POST['email']));
 	$passcheck = $query->fetchColumn();
-	echo "passcheck " . $passcheck;
+	
+	if(!$passcheck === $password) {
+		$valid = false;
+	}
 	
 	if(!isset($error) && $valid)
 	{
-
-		if($query->fetchColumn() === $password && $valid) //better to hash it
-		{		
-			$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
-			$getId->execute(array(':email' => $email));
-			$user = $getId->fetch(PDO::FETCH_ASSOC);
-			$_SESSION['id'] = $user['id'];
-			$_SESSION['display_name'] = $user['display_name'];
-			setcookie("display_name","display_name");
-			$messages[] = "login successful";
-			echo "sending to userpage";
-			header("Location:userpage.php");
-			exit;
-		}
+		$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
+		$getId->execute(array(':email' => $email));
+		$user = $getId->fetch(PDO::FETCH_ASSOC);
+		$_SESSION['id'] = $user['id'];
+		$_SESSION['display_name'] = $user['display_name'];
+		setcookie("display_name","display_name");
+		$messages[] = "login successful";
+		echo "sending to userpage";
+		header("Location:userpage.php");
+		exit;
 	}
+	
 
 		if (!$valid) 
 		{
