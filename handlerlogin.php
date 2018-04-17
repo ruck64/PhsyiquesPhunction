@@ -52,6 +52,9 @@
 		$valid = false;
 	}
 	
+	echo "passcheck" . $passcheck;
+	echo "password" . $password;
+	
 	if(!isset($error) && $valid)
 	{
 		$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
