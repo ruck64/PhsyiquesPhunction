@@ -50,6 +50,7 @@
 	
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
+		echo "password ." $password;
 		$valid = false;
 	}
 	
