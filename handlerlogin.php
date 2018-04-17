@@ -48,6 +48,7 @@
 		$valid = false;
 		echo "email " . $email;
 		echo "password " . $password;
+		exit;
 	}
 	
 	
