@@ -52,8 +52,8 @@
 		$valid = false;
 	}
 
-		echo "password " . $password;
-		echo "passcheck" . $passcheck;
+		echo "<br>password " . $password;
+		echo "<br>passcheck" . $passcheck;
 		exit;
 	
 	
