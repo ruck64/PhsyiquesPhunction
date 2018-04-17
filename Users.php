@@ -35,7 +35,6 @@ class Users {
 		$query->bindParam(':display_name', $display_name);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $password);
-		$query->bindParam('salt',$salt);
 		$_SESSION['display_name'] = $display_name;
 		$_SESSION['email'] = $email;
 		$this->logger->logDebug(__FUNCTION__ . " display_name=[{$display_name}] email=[{$email}] password[{$password}]");
@@ -62,7 +61,7 @@ class Users {
 		return $results;
     }
 	
-		public function getPasswrod () {
+		public function getPassword () {
 		$conn = $this->getConnection();
 		$query = $conn->prepare("select password from Users");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
