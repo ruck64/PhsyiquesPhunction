@@ -50,6 +50,7 @@
 	}
 			echo "email " . $email;
 		echo "password " . $password;
+		echo "passcheck" . $passcheck;
 		exit;
 	
 	
