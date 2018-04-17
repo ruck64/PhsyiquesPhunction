@@ -37,11 +37,11 @@ li.subMenu {
 a.subMenu {
 	display:inline-block;
 	text-decoration:none;
-	color:white;
+	color:black;
 }
 
 .active {
-	background-color:green;
+	background-color:white;
 }
 	
 
