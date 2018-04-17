@@ -59,7 +59,7 @@
 	$password = md5($password);
 	
 	if(!isset($error)){
-		echo "no errors " . $!isset($error);
+		echo "no errors " . !isset($error);
 		//no error
 		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
