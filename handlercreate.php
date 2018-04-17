@@ -53,6 +53,9 @@
 		$valid = false;
 	}
 	
+	$password = $salt. $_POST['password'];
+	$password = md5($password);
+	
 	if(!isset($error)){
 		//no error
 		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");

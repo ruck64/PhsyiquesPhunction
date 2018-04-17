@@ -14,8 +14,6 @@
 	
 	$salt = '1basket69';
 	$email = htmlspecialchars($_POST['email']);
-	$password = $salt. $_POST['password'];
-	$password = md5($password);
 	
 	$_SESSION['presets'] = array($_POST);
 	
@@ -49,6 +47,8 @@
 		$messages[] = "Password and email do not match";
 		$valid = false;
 	}
+	
+	
 	
 	if(!isset($error) && $valid)
 	{
