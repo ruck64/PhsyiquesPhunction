@@ -40,7 +40,7 @@
 		$messages[] = "Email does not exist";
 		$valid = false;
 	}
-	
+	echo "valid " . $valid;
 	if(!isset($error) && $valid)
 	{
 		$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
@@ -48,7 +48,6 @@
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
 			$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
-			echo "after connectoin";
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
@@ -60,14 +59,13 @@
 			exit;
 		}
 	}
-	echo "didnt hit header";
+
 		if (!$valid) 
 		{
 			$_SESSION['sentiment'] = "bad";
 			$_SESSION['messages'] = $messages;
 			$_SESSION['messages'] = $password;
-			echo 
-		//	header("Location: login.php");
+			header("Location: login.php");
 			exit;
 		}
 	
