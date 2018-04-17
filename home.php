@@ -30,7 +30,7 @@
 	
 	<div class="subMenu"> 
 	<ul class = "subMenu">
-	<li class = "subMenu"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.php">Home</a></li>
+	<li class = "subMenu active"><a class = "subMenu"  href = "https://ruck64.herokuapp.com/home.php">Home</a></li>
 	<li class = "subMenu"><a class = "subMenu"  href = "myStory.php">My Story</a></li>  
 	<li class = "subMenu"><a class = "subMenu"  href = "purpose.php">Purpose of PhsyquiesPhunction</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
