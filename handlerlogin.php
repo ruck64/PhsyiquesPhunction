@@ -52,11 +52,6 @@
 		$messages[] = "Password and email do not match";
 		$valid = false;
 	}
-		echo "<br>salt " . $salt;
-		echo "<br>password " . $password;
-		echo "<br>passcheck" . $passcheck;
-		exit;
-	
 	
 	if(!isset($error) && $valid)
 	{
