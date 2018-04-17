@@ -45,7 +45,7 @@
 	$passcheck = $query->fetchColumn();
 	
 	$password = $salt . $_POST['password'];
-	$password = md5($password);
+	$password = hash('sha256',$password);
 	
 	if(!$passcheck == $password) {
 		$messages[] = "Password and email do not match";

@@ -54,9 +54,8 @@
 		$valid = false;
 		exit;
 	}
-	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
-	$password = md5($password);
+	$password = hash('sha256',$password);
 	
 	if(!isset($error)){
 		echo "no errors " . !isset($error);
