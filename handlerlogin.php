@@ -46,6 +46,7 @@
 	$passcheck = $query->fetchColumn();
 	
 	if(!$passcheck === $password) {
+		$messages[] = "Password and email do not match";
 		$valid = false;
 	}
 	
