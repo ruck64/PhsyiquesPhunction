@@ -25,11 +25,15 @@
 	if(empty($email)) {
 		$messages[] = "Please enter a display name";
 		$valid = false;
+		echo "no email";
+		exit;
 	}
 
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
 		$valid = false;
+		echo "no password";
+		exit;
 	}
 
 	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
@@ -40,10 +44,13 @@
 		$messages[] = "Email does not exist";
 		echo "row count" . rowCount();
 		$valid = false;
+		exit;
 	}
 	
 	if(!isset($error) && $valid)
 	{
+		echo "checking info";
+		exit;
 		$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $password && $valid) //better to hash it
