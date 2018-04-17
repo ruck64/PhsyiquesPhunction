@@ -69,7 +69,6 @@
 		{
 			$_SESSION['sentiment'] = "bad";
 			$_SESSION['messages'] = $messages;
-			$_SESSION['messages'] = $password;
 			header("Location: login.php");
 			exit;
 		}
