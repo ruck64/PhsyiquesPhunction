@@ -50,8 +50,9 @@
 	
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
-		echo "password ." $password;
+		echo "password " . $password;
 		$valid = false;
+		exit;
 	}
 	
 	$password = $salt. $_POST['password'];
