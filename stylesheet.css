@@ -8,8 +8,8 @@ div.subMenu {
 	letter-spacing:.1em;
 	text-transform:capitalize;
     width:100%;
-	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
-    color:white;
+	/*text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;*/
+    color:black;
     padding:0;
     background-color:transparent;
     float: left;
