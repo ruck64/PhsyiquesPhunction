@@ -46,12 +46,13 @@
 	echo "<br>oringla passwor " . $password;
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
-	$password = hash('sha256',$password);
+	$password = md5($password);
 	
 	if(!$passcheck == $password) {
 		$messages[] = "Password and email do not match";
 		$valid = false;
 	}
+		echo "<br>salt " . $salt;
 		echo "<br>password " . $password;
 		echo "<br>passcheck" . $passcheck;
 		exit;
