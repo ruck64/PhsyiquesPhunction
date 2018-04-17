@@ -31,7 +31,7 @@ class Users {
 		$salt = '1basket69';
 		$password = $salt . $password;
 		$password = md5($password);
-		$query = $conn->prepare("INSERT INTO Users (display_name, email, password,salt) VALUES (:display_name, :email, :password,:salt)");
+		$query = $conn->prepare("INSERT INTO Users (display_name, email, password) VALUES (:display_name, :email, :password)");
 		$query->bindParam(':display_name', $display_name);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $password);
