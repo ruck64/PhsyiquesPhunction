@@ -25,15 +25,11 @@
 	if(empty($email)) {
 		$messages[] = "Please enter a display name";
 		$valid = false;
-		echo "no email";
-		exit;
 	}
 
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
 		$valid = false;
-		echo "no password";
-		exit;
 	}
 
 	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
@@ -42,26 +38,24 @@
 	echo "after checking email";
 	if(!$query->rowCount() > 0){
 		$messages[] = "Email does not exist";
-		echo "row count" . rowCount();
 		$valid = false;
-		exit;
 	}
 	
 	if(!isset($error) && $valid)
 	{
-		echo "checking info";
-		exit;
 		$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 		$query->execute(array($_POST['email']));
 		if($query->fetchColumn() === $password && $valid) //better to hash it
 		{		
 			$getId = $conn->prepare("SELECT * FROM Users Where email='email'");
+			echo "after connectoin";
 			$getId->execute(array(':email' => $email));
 			$user = $getId->fetch(PDO::FETCH_ASSOC);
 			$_SESSION['id'] = $user['id'];
 			$_SESSION['display_name'] = $user['display_name'];
 			setcookie("display_name","display_name");
 			$messages[] = "login successful";
+			echo "sending to userpage";
 			header("Location:userpage.php");
 			exit;
 		}
