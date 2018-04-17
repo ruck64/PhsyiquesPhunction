@@ -106,6 +106,7 @@ h1.title {
 }
 
 html {
+	height:100%;
     background-image: url('buff.jpg');
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -128,7 +129,8 @@ p.basic {
 	width:70%;
 	text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
 	text-align:center;
-	margin:10px;
+	margin:auto;
+	height:
 }
 
 .infowrapper {
