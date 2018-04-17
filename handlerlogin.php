@@ -51,7 +51,7 @@
 		$messages[] = "Password and email do not match";
 		$valid = false;
 	}
-
+		echo ",br>original password " . $password;
 		echo "<br>password " . $password;
 		echo "<br>passcheck" . $passcheck;
 		exit;
