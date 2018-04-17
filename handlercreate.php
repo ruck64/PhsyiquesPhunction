@@ -79,6 +79,7 @@
 		}
 		
 		header("Location:userpage.php");
+	}
 		
 	if (!$valid) {
 		$_SESSION['sentiment'] = "bad";
@@ -86,7 +87,7 @@
 		header("Location: login.php");
 		exit;
 	}
-	}
+	
 			
 	$Users->saveUser($display_name, $email, $password);
 	
