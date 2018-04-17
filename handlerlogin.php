@@ -54,6 +54,7 @@
 	
 	echo "passcheck" . $passcheck;
 	echo "password" . $password;
+	exit;
 	
 	if(!isset($error) && $valid)
 	{
