@@ -44,6 +44,7 @@
 	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 	$query->execute(array($_POST['email']));
 	$passcheck = $query->fetchColumn();
+	echo "passcheck " . $passcheck;
 	
 	if(!isset($error) && $valid)
 	{
