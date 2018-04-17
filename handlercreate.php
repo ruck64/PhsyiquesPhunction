@@ -79,7 +79,6 @@
 			$valid = false;
 		}
 		
-		header("Location:userpage.php");
 	}
 		
 	if (!$valid) {
