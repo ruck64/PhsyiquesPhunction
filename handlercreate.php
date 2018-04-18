@@ -57,9 +57,10 @@
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = md5($password);
+	echo "password " . $password;
+	exit;
 	
 	if(!isset($error)){
-		echo "no errors " . !isset($error);
 		//no error
 		$sthandler = $conn->prepare("SELECT email FROM Users WHERE email = :email");
 		$sthandler->bindParam(':email', $email);	
