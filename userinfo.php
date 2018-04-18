@@ -75,7 +75,7 @@
 			<ul>
 				<li>Age</li>
 					<ul>
-						<li>form 3</li>
+						<li><input value = "<?php echo isset($presets['age']) ? $presets['age'] : ''; ?>" type="text" placeholder="Enter Your Age" id = "age" name = "age"></li>
 					</ul>
 				</li>
 			</ul>
@@ -84,7 +84,7 @@
 			<ul>
 				<li>Weight</li>
 					<ul>
-						<li>form 3</li>
+						<li><input value = "<?php echo isset($presets['weight']) ? $presets['weight'] : ''; ?>" type="text" placeholder="Enter Your Weight" id = "weight" name = "weight"></li>
 					</ul>
 				</li>
 			</ul>
@@ -93,8 +93,14 @@
 			<ul>
 				<li>Body Type</li>
 					<ul>
-						<li>form 3</li>
+						<li><select  name ="bodytype">
+							<option value ="Ectomorph">Ectomorph</option>
+							<option value ="Endomorg">Endomorph</option>
+							<option value ="Mesomorph">Mesomorph</option>
+							</select>
+						</li>
 					</ul>
+					<p class="submit"><input type="submit" value="Submit"></p>
 				</li>
 			</ul>
 		</li>
@@ -103,7 +109,7 @@
 	<div class ="sideBar">
 	  <p>Welcome <?php echo $_SESSION['display_name'] ?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
-	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
+	  <p class ="button"> <a href = "userpics.php"><input type="button" value="To Do"></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
 	</div>
 
