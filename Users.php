@@ -88,6 +88,8 @@ class Users {
 			$query = $conn->prepare("SELECT firstname FROM UserInfo WHERE id = '$id'");
 			$query->execute(array($id));
 			$firstname = $query->fetch();
+			echo "firstname " . $firstname;
+			exit;
 			return $firstname;
 		}
  }
