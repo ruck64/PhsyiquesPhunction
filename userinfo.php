@@ -4,7 +4,10 @@
 	require_once 'Users.php';
 	$Users = new Users();
 	
-	
+		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$this->logger->logDebug("Established a database connection.");
+		return $conn;
 	
 		if(!isset($_SESSION['id'])) {
 		header("Location:login.php");
@@ -13,7 +16,7 @@
 		
 		echo "original id " . $_SESSION['id'];
 		echo "really in userinfo.php";
-		$getUser = $db->prepare("SELECT * FROM UserInfo");
+		$getUser = $conn->prepare("SELECT * FROM UserInfo");
 		$getUser->execute();
 		$users = $getUsers->fetchAll();?>
 		
