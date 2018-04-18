@@ -17,26 +17,10 @@
 		}
 		
 		echo "original id " . $_SESSION['id'];
-		$getUser = $conn->prepare("SELECT * FROM UserInfo");
+		$getUser = $conn->prepare("SELECT id FROM UserInfo");
 		$getUser->execute();
-		$users = $getUser->fetchAll();
-		?>
-		
-
-<table>
-    <tr>
-      <th>id</th>
-      <th>firstname</th>
-    </tr>
-<?php foreach ($users as $user) { ?>
-<tr>
-   <td><?php echo $users['id'] ?></td>
-   <td><?php echo $users['firstname'] ?></td>
-</tr>
-<?php } ?>
-</table>
-
-<?php		
+		$users = $getUser->fetch();
+		echo " new id " . $users;
 		//$firstname = $Users->getFirstName($_SESSION['id']);
 ?>
 
