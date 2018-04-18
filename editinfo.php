@@ -13,14 +13,14 @@
 ?>
   <html>
     <head>
-      <title> User </title>
+      <title> Edit Your Info </title>
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
 	  <link rel = "stylesheet" type= "text/css" href = "info.css">
 	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     </head>
 
-    <h1 class = "title"> User Info </h1>
+    <h1 class = "title"> Edit Your Info </h1>
 
  	<div class ="handles">
 	<ul class="handles">
@@ -93,7 +93,7 @@
 			<ul>
 				<li>Body Type</li>
 					<ul>
-						<li><class = "submit" select  name ="bodytype">
+						<li><select  name ="bodytype">
 							<option value ="Ectomorph">Ectomorph</option>
 							<option value ="Endomorg">Endomorph</option>
 							<option value ="Mesomorph">Mesomorph</option>

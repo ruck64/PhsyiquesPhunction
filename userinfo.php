@@ -44,7 +44,7 @@
 		</ul>
 	</div>
 
-    <h1 class = "basic"> Edit Your Information </h1>
+    <h1 class = "basic">Your Information </h1>
 	
 	  
 	<div class ="sideBar">
