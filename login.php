@@ -7,12 +7,14 @@
 	require_once "comments.php";
 	require_once "Users.php";
 
-	if (isset($_SESSION['messages'])) {
-		$sentiment = $_SESSION['sentiment'];
-		foreach($_SESSION['messages'] as $message) {
-			echo "<div class = 'message $sentiment'>$message</div>";
+	if (isset($_SESSION['message'])) { ?>
+		<div id="message"><?php
+		foreach ($_SESSION['message'] as $message) {
+			echo "<span id='close'>X</span><div>" . $message . "</div>";
 		}
-	}
+		unset($_SESSION['message']); ?>
+		</div>
+	<?php } ?>
 	
 		try {
 		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');

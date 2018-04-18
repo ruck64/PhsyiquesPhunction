@@ -167,6 +167,21 @@ p.basic {
 	margin-top:30px;
 }
 
+#close {
+  float: right;
+  font-family: Helvetica; 
+  position: relative;
+  bottom: 5px;
+  left: 8px;
+}
+
+#message {
+  background-color:#CC0000; 
+  color: white;
+  padding: 8px 15px;
+  width: 300px;
+}
+
 .button , .button > a {
 	border:red;
 	color:white;
