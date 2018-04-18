@@ -40,15 +40,12 @@
 	}
 
 	$query = $conn->prepare("SELECT * FROM Users WHERE email='$email'");
-	$passcheck = $query->fetch(PDO::FETCH_ASSOC);
-	echo "passcheck " . $passcheck['password'];
-	exit;
-	
+	$passcheck = $query->fetchColumn();
 	
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = md5($password);
-	echo "passcheck " . $passcheck . "<br>";
+	echo "email " . $email . "<br>";
 	
 	if(!$passcheck == $password) {
 		$messages[] = "Password and email do not match";
