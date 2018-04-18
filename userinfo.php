@@ -11,6 +11,25 @@
 		exit;
 		}
 		
+		echo "original id " . $_SESSION['id'];
+		$getUser = $db->prepare("SELECT * FROM UserInfo");
+		$getUser->execute();
+		$users = $getUsers->fetchAll();
+
+<table>
+    <tr>
+      <th>id</th>
+      <th>firstname</th>
+    </tr>
+<?php foreach ($users as $user) { ?>
+<tr>
+   <td><?php echo $users['id'] ?></td>
+   <td><?php echo $users['firstname'] ?></td>
+</tr>
+<?php } ?>
+</table>
+
+		
 		$firstname = $Users->getFirstName($_SESSION['id']);
 ?>
 
