@@ -52,28 +52,46 @@
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 
 	<ul class="list">
-    <li>
-        <ul>
-            <li>main item 1</li>
-
-                <ul>
-                    <li>form 1</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <ul>
-            <li>main item2</li>
-                <ul>
-                    <li>form 2</li>
-                </ul>
-            </li>
-        </ul>
+	<form method="post" action = "handlerinfo.php" method = "POST" enctype = "multipart/form-data">
+		<li>
+			<ul>
+				<li></li>
+					<ul>
+						<li><input value = "<?php echo isset($presets['firstname']) ? $presets['firstname'] : ''; ?>" type="text" placeholder="Enter First Name" id = "firstname" name = "firstname"></li>
+					</ul>
+				</li>
+			</ul>
 		</li>
 		<li>
 			<ul>
-				<li>main item3</li>
+				<li>Last Name</li>
+					<ul>
+						<li><input value = "<?php echo isset($presets['lastname']) ? $presets['lastname'] : ''; ?>" type="text" placeholder="Enter Last Name" id = "lastname" name = "lastname"></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Age</li>
+					<ul>
+						<li>form 3</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Weight</li>
+					<ul>
+						<li>form 3</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Body Type</li>
 					<ul>
 						<li>form 3</li>
 					</ul>
@@ -83,7 +101,7 @@
 	</ul>
 	
 	<div class ="sideBar">
-	  <p class="shadow">Welcome <?php echo $_SESSION['display_name'] ?></p>
+	  <p>Welcome <?php echo $_SESSION['display_name'] ?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
