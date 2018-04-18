@@ -9,7 +9,7 @@
 		exit;
 		}
 		
-		$firstname = getFirstName($_SESSION['id']);
+		$firstname = $this->getFirstName($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>
