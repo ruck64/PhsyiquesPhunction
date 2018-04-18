@@ -89,6 +89,7 @@ class Users {
 			$query->execute(array($id));
 			$firstname = $query->fetch();
 			echo "firstname " . $firstname;
+			echo "id " . $id;
 			exit;
 			return $firstname;
 		}
