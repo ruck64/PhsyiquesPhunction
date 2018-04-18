@@ -32,20 +32,22 @@
 
 	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
 	$query->bindValue( 1, $email );
-	$query->execute();
+	$emailcheck = $query->fetchColumn();
+	echo "emailcheck " . $emailcheck;
+	exit;
 	
 	if(!$query->rowCount() > 0){
 		$messages[] = "Email does not exist";
 		$valid = false;
 	}
 
-	$query = $conn->prepare("SELECT * FROM Users WHERE email='$email'");
+	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 	$passcheck = $query->fetchColumn();
 	
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = md5($password);
-	echo "email " . $email . "<br>";
+
 	
 	if(!$passcheck == $password) {
 		$messages[] = "Password and email do not match";
