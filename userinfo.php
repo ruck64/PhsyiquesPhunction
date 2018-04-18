@@ -1,12 +1,9 @@
 <?php 
-	echo "staring page";
 	session_start();
 	
 	require_once 'Users.php';
 	$Users = new Users();
 	
-	
-	echo "trying connection";
 		try {
 		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -15,6 +12,7 @@
 		echo "connection failed: " . $e->getMessage();
 		}
 	
+		echo "connected";
 		if(!isset($_SESSION['id'])) {
 		header("Location:login.php");
 		exit;
