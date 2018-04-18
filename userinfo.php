@@ -17,11 +17,12 @@
 		}
 		
 		echo "original id " . $_SESSION['id'];
-		$query = $conn->prepare("...");
-		$query->execute();
-		$id = $conn->lastInsertId();
-		echo " new id " . $id;
-		exit;
+		$query = $conn->prepare("SELECT id FROM UserInfo");
+		$result = $query->fetchAll(PDO::FETCH_OBJ);
+		$ids = array_map(function($v) {
+			return %v->id;
+		}, $result);
+		print_r($ids);
 		//$firstname = $Users->getFirstName($_SESSION['id']);
 ?>
 
