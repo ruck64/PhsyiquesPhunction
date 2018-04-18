@@ -93,14 +93,14 @@
 			<ul>
 				<li>Body Type</li>
 					<ul>
-						<li><select  name ="bodytype">
+						<li><class = "submit" select  name ="bodytype">
 							<option value ="Ectomorph">Ectomorph</option>
 							<option value ="Endomorg">Endomorph</option>
 							<option value ="Mesomorph">Mesomorph</option>
 							</select>
 						</li>
 					</ul>
-					<p class="submit"><class = "submit" input type="submit" value="Submit"></p>
+					<p class="submit"><input type="submit" value="Submit"></p>
 				</li>
 			</ul>
 		</li>
