@@ -16,6 +16,7 @@
       <title> User </title>
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
+	  <link rel = "stylesheet" type= "text/css" href = "info.css">
 	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     </head>
 
@@ -50,22 +51,80 @@
 
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 
-    <div id='parent_div_1'>
-		<p class="child_div_1"> Name: </p><br>
-		<p class="child_div_1"> Age: </p><br>
-		<p class="child_div_1"> Weight: </p><br>
-		<p class="child_div_1"> Body Type: </p>
-	</div>
+	<ul class="list">
+    <li>
+        <ul>
+            <li>main item 1</li>
+            <li>main item 1</li>
+            <li>main item 1</li>
+            <li>main item 1
+                <ul>
+                    <li>Sub Item 1</li>
+                    <li>Sub Item 1</li>
+                    <li>Sub Item 1 </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>main item2</li>
+            <li>main item2</li>
+            <li>main item2
+                <ul>
+                    <li>Sub Item 2</li>
+                    <li>Sub Item 2 </li>
+                    <li>Sub Item 2</li>
+                </ul>
+            </li>
+        </ul>
+		</li>
+		<li>
+			<ul>
+				<li>main item3</li>
+				<li>main item3</li>
+				<li>main item3
+					<ul>
+						<li>Sub Item 3</li>
+						<li>Sub Item 3 </li>
+						<li>Sub Item 3</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>main item4</li>
+				<li>main item4</li>
+				<li>main item4
+					<ul>
+						<li>Sub Item 4</li>
+						<li>Sub Item 4 </li>
+						<li>Sub Item 4</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
 	
 	<div class ="sideBar">
-	  <p class="shadow">Welcome User</p>
+	  <p class="shadow">Welcome <?php echo $_SESSION['display_name'] ?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
 	</div>
 
 	<div class = "footer">
-	This is the footer
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes_classic.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes.min.js"></script>
+
+	<div class="social-likes">
+		<div class="facebook" title="Share link on Facebook">Facebook</div>
+		<div class="twitter" title="Share link on Twitter">Twitter</div>
+		<div class="plusone" title="Share link on Google+">Google+</div>
+	</div>	
 	</div>
 	  
   </html>

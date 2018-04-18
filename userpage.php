@@ -49,14 +49,23 @@
 
 	  
 	  <div class ="sideBar">
-	  <p class="shadow" style="color:black;">Welcome<?php echo " " . $_SESSION['display_name']?></p>
+	  <p style="color:black;">Welcome<?php echo " " . $_SESSION['display_name']?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></a></p>
-	  <p class ="button"> <a href = "userpics.php"><input type="button" value="Your pics"></a></p>
+	  <p class ="button"> <a href = "userpics.php"><input type="button" value="TO DO"></a></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"></a></p>
 	  </div>
 
 	  <div class = "footer">
-	This is the footer
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes_classic.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes.min.js"></script>
+
+	<div class="social-likes">
+		<div class="facebook" title="Share link on Facebook">Facebook</div>
+		<div class="twitter" title="Share link on Twitter">Twitter</div>
+		<div class="plusone" title="Share link on Google+">Google+</div>
+	</div>	
 		</div>
 	  
   </html>
