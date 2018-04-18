@@ -1,6 +1,9 @@
 <?php 
 	session_start();
 	
+	require_once 'Users.php';
+	
+	
 		if(!isset($_SESSION['id'])) {
 		header("Location:login.php");
 		exit;
@@ -44,7 +47,58 @@
 		</ul>
 	</div>
 
-    <h1 class = "basic">Your Information </h1>
+    <h2>Your Information </h2>
+	
+		<ul class="list">
+	<form method="post" action = "handlerinfo.php" method = "POST" enctype = "multipart/form-data">
+		<li>
+			<ul>
+				<li>First Name</li>
+					<ul>
+						<li><?php echo getFirstName($_SESSION['id']) ?></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Last Name</li>
+					<ul>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Age</li>
+					<ul>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Weight</li>
+					<ul>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>Body Type</li>
+					<ul>
+						<li>form get for body
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		</form>
+	</ul>
 	
 	  
 	<div class ="sideBar">

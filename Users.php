@@ -83,5 +83,10 @@ class Users {
 			$query->execute();
 		}
 		
-  
+		public function getFirstName ($id) {
+			$conn = $this->getConnection();
+			$query = $conn->prepare("SELECT firstname FROM UserInfo WHERE id = '$id'");
+			$query->execute(array($id));
+			$firstname = $query->fetch();
+		}
  }
