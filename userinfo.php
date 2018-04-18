@@ -17,6 +17,7 @@
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
 	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+	  <link rel = "stylesheet" type= "text/css" href = "info.css">	  
     </head>
 
     <h1 class = "title"> Edit Info </h1>
