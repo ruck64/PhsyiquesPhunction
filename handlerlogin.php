@@ -50,6 +50,9 @@
 	
 	if(!$passcheck == $password) {
 		$messages[] = "Password and email do not match";
+		echo "passcheck " . $passcheck;
+		echo "password " . $password;
+		exit;
 		$valid = false;
 	}
 
