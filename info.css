@@ -1,6 +1,13 @@
 * {
-    margin:0;
+    margin-left:auto;
+	margin-right:auto;
     padding:0
+}
+
+h2{
+	font-family:'Tangerine', helvetica;
+	text-align:center;
+	display: block;
 }
 ul {
 	margin-left:auto;
