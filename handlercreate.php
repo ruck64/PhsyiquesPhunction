@@ -50,15 +50,12 @@
 	
 	if(empty($password)) {
 		$messages[] = "Please enter a password";
-		echo "password " . $password;
 		$valid = false;
-		exit;
 	}
+	
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = md5($password);
-	echo "password " . $password;
-	exit;
 	
 	if(!isset($error)){
 		//no error
