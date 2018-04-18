@@ -72,7 +72,7 @@ class Users {
     }
 	
 			
-		public function saveUserInfo ($firstname, $lastname, $age. $weight, $bodytye) {
+		public function saveUserInfo ($firstname, $lastname, $age, $weight, $bodytye) {
 			$conn = $this->getConnection();
 			$query = $conn->prepare("INSERT INTO UserInfo (firstname, lastname, age, weight, bodytype) VALUES (:firstname, :lastname, :age , :weight, :bodytype)");
 			$query->bindParam(':firstname', $firstname);
