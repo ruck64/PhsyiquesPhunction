@@ -4,9 +4,14 @@
 	require_once 'Users.php';
 	$Users = new Users();
 	
+		try {
+		require_once "dbconfig.php";
 		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $conn;
+		} catch (Exception $e) {
+		echo "connection failed: " . $e->getMessage();
+		}
 	
 		if(!isset($_SESSION['id'])) {
 		header("Location:login.php");
