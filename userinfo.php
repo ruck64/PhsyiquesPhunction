@@ -2,6 +2,8 @@
 	session_start();
 	
 	require_once 'Users.php';
+	$Users = new Users();
+	
 	
 	
 		if(!isset($_SESSION['id'])) {
@@ -9,7 +11,7 @@
 		exit;
 		}
 		
-		$firstname = $this->getFirstName($_SESSION['id']);
+		$firstname = $User->getFirstName($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>
