@@ -17,10 +17,11 @@
 		}
 		
 		echo "original id " . $_SESSION['id'];
-		$query = $conn->prepare("SELECT password FROM UserInfo");
-		$query->execute(array($_SESSION['id']));
-		$passcheck = $query->fetch();
-		echo " new id " . $passcheck;
+		$query = $conn->prepare("...");
+		$query->execute();
+		$id = $conn->lastInsertId();
+		echo " new id " . $id;
+		exit;
 		//$firstname = $Users->getFirstName($_SESSION['id']);
 ?>
 
