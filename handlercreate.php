@@ -85,12 +85,6 @@
 		header("Location: login.php");
 		exit;
 	}
-	echo "display_name " . $display_name;
-	echo "<br>email " . $email;
-	echo "<br>password " . $password;
-	exit;
-	
-	
 			
 	$Users->saveUser($display_name, $email, $password);
 	
