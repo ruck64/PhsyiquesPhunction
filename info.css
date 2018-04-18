@@ -22,11 +22,13 @@ ul.list {
     margin: 20px;
     margin-right: auto;
     display: inline-block;
+	text-align:center;
 }
 ul.list li {
     width:150px;
 }
 ul.list ul{margin-bottom:20px}
+
 ul.list ul ul {
     position:absolute;
     top:0;
