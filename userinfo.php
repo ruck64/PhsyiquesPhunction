@@ -20,7 +20,7 @@
 		$query = $conn->prepare("SELECT id FROM UserInfo");
 		$result = $query->fetchAll(PDO::FETCH_OBJ);
 		$ids = array_map(function($v) {
-			return %v->id;
+			return $v->id;
 		}, $result);
 		print_r($ids);
 		//$firstname = $Users->getFirstName($_SESSION['id']);
