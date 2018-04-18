@@ -39,28 +39,6 @@
 	<body>
 
 	<h1 class = "title"> Login/Sign up</h1>
-	
-	<?php
-	$getPlayers = $conn->prepare("SELECT * FROM Users");
-
-
-$players = $getPlayers->fetchAll();
-
-echo "<table>";
-echo "<tr><th>display_name</th><th>email</th><th>password</th></tr>";
-
-
-foreach( $players as $row) {
-    echo "<tr>";
-    echo "<td>".$row['display_name']."</td>";
-    echo "<td>".$row['email']."</td>";
-    echo "<td>".$row['password']."</td>";
-    echo "</tr>";
-}
-
-echo "</table>";
-exit;
-?>
 
 	<div class ="handles">
 	<ul class="handles">

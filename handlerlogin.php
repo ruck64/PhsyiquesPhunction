@@ -59,7 +59,7 @@
 	if(!isset($error) && $valid)
 	{
 		$getId = $conn->prepare("SELECT * FROM Users Where email='$email'");
-	//	$getId->execute(array(':email' => $email));
+		$getId->execute(array(':email' => $email));
 		$user = $getId->fetch(PDO::FETCH_ASSOC);
 		$_SESSION['id'] = $user['id'];
 		$_SESSION['display_name'] = $user['display_name'];
