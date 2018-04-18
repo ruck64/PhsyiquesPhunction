@@ -32,9 +32,7 @@
 
 	$query = $conn->prepare( "SELECT email FROM Users WHERE email = ?");
 	$query->bindValue( 1, $email );
-	$emailcheck = $query->fetchColumn();
-	echo "emailcheck " . $emailcheck;
-	exit;
+	$query->execute();
 	
 	if(!$query->rowCount() > 0){
 		$messages[] = "Email does not exist";
@@ -43,6 +41,7 @@
 
 	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 	$passcheck = $query->fetchColumn();
+	$passcheck->execute();
 	
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
