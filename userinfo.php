@@ -44,20 +44,7 @@
 	</div>
 
     <h1 class = "basic"> Edit Your Information </h1>
-		
-	<p class="basic"> Name: </p>
-	<p class="basic"> Age: </p>
-	<p class="basic"> Weight: </p>
-	<p class="basic"> Body Type: </p>
-	  
-	<div class ="forms">
-		<form class ="shadow">
-		First Name: <input type="text" name="fname"><br>
-		Last Name: <input type="text" name="lname"><br>
-		Weight: <input type="text" name="weight"><br>
-		Age: <input type="text" name="age"><br>
-		</form>
-	</div>
+	
 	  
 	<div class ="sideBar">
 	  <p class="shadow">Welcome User</p>
