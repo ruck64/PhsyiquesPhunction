@@ -40,13 +40,13 @@
 	}
 
 	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
+	$query->execute(array($_POST['email']));
 	$passcheck = $query->fetchColumn();
-	$passcheck->execute();
 	
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
 	$password = md5($password);
-
+	echo "passcheck " . $passcheck . "<br>";
 	
 	if(!$passcheck == $password) {
 		$messages[] = "Password and email do not match";
