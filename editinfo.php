@@ -108,7 +108,7 @@
 	</ul>
 	
 	<div class ="sideBar">
-	  <p>Welcome <?php echo $_SESSION['display_name'] ?></p>
+	  <p class = "shadow">Welcome <?php echo $_SESSION['display_name'] ?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
 	  <p class ="button"> <a href = "userpics.php"><input type="button" value="To Do"></p>
 	  <p class ="button"> <a href = "editinfo.php"><input type="button" value="Edit Your Info"</p>
