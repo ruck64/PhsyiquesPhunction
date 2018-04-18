@@ -13,6 +13,13 @@
 			echo "<div class = 'message $sentiment'>$message</div>";
 		}
 	}
+	
+		try {
+		$conn = new PDO('mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=heroku_3e6dc0754d58604','bb2501c58a8034' ,'b8fa5f57');
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch (PDOException $e){
+		exit($e->getMessage());
+	}
   
 	$presets = array();
     if (isset($_SESSION['presets'])) {
@@ -32,6 +39,28 @@
 	<body>
 
 	<h1 class = "title"> Login/Sign up</h1>
+	
+	<?php
+	$getPlayers = $conn->prepare("SELECT * FROM Users");
+$getPlayers->execute();
+
+$players = $getPlayers->fetchAll();
+
+echo "<table>";
+echo "<tr><th>display_name</th><th>email</th><th>password</th></tr>";
+
+
+foreach( $players as $row) {
+    echo "<tr>";
+    echo "<td>".$row['display_name']."</td>";
+    echo "<td>".$row['email']."</td>";
+    echo "<td>".$row['password']."</td>";
+    echo "</tr>";
+}
+
+echo "</table>";
+exit;
+?>
 
 	<div class ="handles">
 	<ul class="handles">
