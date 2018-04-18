@@ -63,7 +63,7 @@
 	  <p class="shadow">Welcome User</p>
 	  <p class ="button"> <a href = "userinfo.html"><input type="button" value="User Info"></p>
 	  <p class ="button"> <a href = "userpics.html"><input type="button" value="Your pics"></p>
-	  <p class ="button"> <a href = "editinfo.html"><input type="button" value="Edit Your Info"</p>
+	  <p class ="button"> <a href = "editinfo.html"><input type="button" value="Edit Your Info"></p>
 	</div>
 
 	<div class = "footer">
