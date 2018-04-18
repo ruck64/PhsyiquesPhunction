@@ -55,13 +55,9 @@
     <li>
         <ul>
             <li>main item 1</li>
-            <li>main item 1</li>
-            <li>main item 1</li>
-            <li>main item 1
+
                 <ul>
-                    <li>Sub Item 1</li>
-                    <li>Sub Item 1</li>
-                    <li>Sub Item 1 </li>
+                    <li>form 1</li>
                 </ul>
             </li>
         </ul>
@@ -69,12 +65,8 @@
     <li>
         <ul>
             <li>main item2</li>
-            <li>main item2</li>
-            <li>main item2
                 <ul>
-                    <li>Sub Item 2</li>
-                    <li>Sub Item 2 </li>
-                    <li>Sub Item 2</li>
+                    <li>form 2</li>
                 </ul>
             </li>
         </ul>
@@ -82,25 +74,8 @@
 		<li>
 			<ul>
 				<li>main item3</li>
-				<li>main item3</li>
-				<li>main item3
 					<ul>
-						<li>Sub Item 3</li>
-						<li>Sub Item 3 </li>
-						<li>Sub Item 3</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>main item4</li>
-				<li>main item4</li>
-				<li>main item4
-					<ul>
-						<li>Sub Item 4</li>
-						<li>Sub Item 4 </li>
-						<li>Sub Item 4</li>
+						<li>form 3</li>
 					</ul>
 				</li>
 			</ul>

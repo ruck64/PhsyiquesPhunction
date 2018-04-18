@@ -16,10 +16,11 @@ ul {
     position:relative;
 }
 ul.list {
-	
-    float:left;
-    width:450px;
-    margin:20px;
+	margin-left: auto;
+    width: 450px;
+    margin: 20px;
+    margin-right: auto;
+    display: inline-block;
 }
 ul.list li {
     width:150px;
