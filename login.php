@@ -7,12 +7,12 @@
 	require_once "comments.php";
 	require_once "Users.php";
 
-	if (isset($_SESSION['message'])) { ?>
+	if (isset($_SESSION['messages'])) { ?>
 		<div id="message"><?php
-		foreach ($_SESSION['message'] as $message) {
+		foreach ($_SESSION['messages'] as $message) {
 			echo "<span id='close'>X</span><div>" . $message . "</div>";
 		}
-		unset($_SESSION['message']); ?>
+		unset($_SESSION['messages']); ?>
 		</div>
 	<?php } 
 	
