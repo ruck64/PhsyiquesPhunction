@@ -55,7 +55,7 @@
 	<form method="post" action = "handlerinfo.php" method = "POST" enctype = "multipart/form-data">
 		<li>
 			<ul>
-				<li></li>
+				<li>First Name</li>
 					<ul>
 						<li><input value = "<?php echo isset($presets['firstname']) ? $presets['firstname'] : ''; ?>" type="text" placeholder="Enter First Name" id = "firstname" name = "firstname"></li>
 					</ul>
