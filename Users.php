@@ -40,40 +40,11 @@ class Users {
 		$this->logger->logDebug(__FUNCTION__ . " display_name=[{$display_name}] email=[{$email}] password[{$password}]");
 		$query->execute();
     }
-  
-	public function getDisplay_Name () {
-		$conn = $this->getConnection();
-		$query = $conn->prepare("select display_name from Users");
-		$query->setFetchMode(PDO::FETCH_ASSOC);
-		$query->execute();
-		$results = $query->fetch();
-		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-		return $results;
-    }
-	
-		public function getEmail () {
-		$conn = $this->getConnection();
-		$query = $conn->prepare("select email from Users");
-		$query->setFetchMode(PDO::FETCH_ASSOC);
-		$query->execute();
-		$results = $query->fetch();
-		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-		return $results;
-    }
-	
-		public function getPassword () {
-		$conn = $this->getConnection();
-		$query = $conn->prepare("select password from Users");
-		$query->setFetchMode(PDO::FETCH_ASSOC);
-		$query->execute();
-		$results = $query->fetch();
-		$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-		return $results;
-    }
-	
 			
 		public function saveUserInfo ($firstname, $lastname, $age, $weight, $bodytye) {
 			$conn = $this->getConnection();
+			echo "firstname " . $firstname;
+			exit;
 			$query = $conn->prepare("INSERT INTO UserInfo (firstname, lastname, age, weight, bodytype) VALUES (:firstname, :lastname, :age , :weight, :bodytype)");
 			$query->bindParam(':firstname', $firstname);
 			$query->bindParam(':lastrname', $lastname);
