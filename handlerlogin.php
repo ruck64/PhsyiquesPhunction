@@ -41,7 +41,7 @@
 
 	$query = $conn->prepare("SELECT password FROM Users WHERE email='$email'");
 	$query->execute(array($_POST['email']));
-	$passcheck = $query->fetchColumn();
+	$passcheck = $query->fetch();
 	
 	$salt = '1basket69';
 	$password = $salt . $_POST['password'];
