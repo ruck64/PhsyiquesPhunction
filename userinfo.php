@@ -8,6 +8,8 @@
 		header("Location:login.php");
 		exit;
 		}
+		
+		$firstname = getFirstName($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +58,7 @@
 			<ul>
 				<li>First Name</li>
 					<ul>
-						<li><?php echo getFirstName($_SESSION['id']) ?></li>
+						<li><?php echo firstname; ?></li>
 					</ul>
 				</li>
 			</ul>
