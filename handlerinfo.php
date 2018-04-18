@@ -17,7 +17,7 @@
 	$valid = true;
 	$messages = array(); 
 	
-	if(empty($firstname) {
+	if(empty($firstname)) {
 		$messages[] = "PLEASE ENTER A FIRST NAME";
 		$valid = false;
 	}
