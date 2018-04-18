@@ -14,7 +14,8 @@
 		echo "original id " . $_SESSION['id'];
 		$getUser = $db->prepare("SELECT * FROM UserInfo");
 		$getUser->execute();
-		$users = $getUsers->fetchAll();
+		$users = $getUsers->fetchAll();?>
+		
 
 <table>
     <tr>
