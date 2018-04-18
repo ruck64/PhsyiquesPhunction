@@ -17,10 +17,9 @@
 		}
 		
 		echo "original id " . $_SESSION['id'];
-		echo "really in userinfo.php";
 		$getUser = $conn->prepare("SELECT * FROM UserInfo");
 		$getUser->execute();
-		$users = $getUsers->fetchAll();
+		$users = $getUser->fetchAll();
 		?>
 		
 
