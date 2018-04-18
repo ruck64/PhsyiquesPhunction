@@ -1,4 +1,5 @@
 <?php 
+	echo "staring page";
 	session_start();
 	
 	require_once 'Users.php';
@@ -22,7 +23,8 @@
 		echo "really in userinfo.php";
 		$getUser = $conn->prepare("SELECT * FROM UserInfo");
 		$getUser->execute();
-		$users = $getUsers->fetchAll();?>
+		$users = $getUsers->fetchAll();
+		?>
 		
 
 <table>
