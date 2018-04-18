@@ -16,7 +16,11 @@
       <title> Edit Your Info </title>
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
-	  <link rel = "stylesheet" type= "text/css" href = "info.css">
+	  <link rel = "stylesheet" type= "text/css" href = "info.css">    
+	  <link rel="stylesheet" href="styles/normalize.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="styles/jquery.FloatLabel.css">
 	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     </head>
 
@@ -51,61 +55,56 @@
 
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 
-	<ul class="list">
-	<form method="post" action = "handlerinfo.php" method = "POST" enctype = "multipart/form-data">
-		<li>
-			<ul>
-				<li>First Name</li>
-					<ul>
-						<li><input value = "<?php echo isset($presets['firstname']) ? $presets['firstname'] : ''; ?>" type="text" placeholder="Enter First Name" id = "firstname" name = "firstname"></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>Last Name</li>
-					<ul>
-						<li><input value = "<?php echo isset($presets['lastname']) ? $presets['lastname'] : ''; ?>" type="text" placeholder="Enter Last Name" id = "lastname" name = "lastname"></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>Age</li>
-					<ul>
-						<li><input value = "<?php echo isset($presets['age']) ? $presets['age'] : ''; ?>" type="text" placeholder="Enter Your Age" id = "age" name = "age"></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>Weight</li>
-					<ul>
-						<li><input value = "<?php echo isset($presets['weight']) ? $presets['weight'] : ''; ?>" type="text" placeholder="Enter Your Weight" id = "weight" name = "weight"></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>Body Type</li>
-					<ul>
-						<li><select  name ="bodytype">
-							<option value ="Ectomorph">Ectomorph</option>
-							<option value ="Endomorg">Endomorph</option>
-							<option value ="Mesomorph">Mesomorph</option>
-							</select>
-						</li>
-					</ul>
-					<p><input type="submit" value="Submit"></p>
-				</li>
-			</ul>
-		</li>
-		</form>
-	</ul>
+        <div class="wrapper">
+
+            <h1>FloatLabel.js</h1>
+
+            <form id="demoForm" action="handlerinfo">
+                
+                <div class="js-float-label-wrapper">
+                    <label for="FirstName">First name</label>
+                    <input id="firstname" type="text" name="firstname/>
+                </div>
+
+                <div class="js-float-label-wrapper">
+                    <label for="lastname">Last Name</label>
+                    <input id="lastname" type="text" name = "lastname"/>
+                </div>
+
+                <div class="js-float-label-wrapper">
+                    <label for="age">Age</label>
+                    <textarea id="age" type="text" name = "age"></textarea>
+                </div>
+
+				
+	           <div class="js-float-label-wrapper">
+                    <label for="weight">Weight</label>
+                    <textarea id="weight" type="text" name = "weight"></textarea>
+                </div>
+				
+				<select name="bodytype">
+					<option value="Ectomorph">Ectomorph</option>
+					<option value = "Endomorph">Endomorph</option>
+					<option value - "Mesomorph">Mesomorph</option>
+				</select>
+				
+                <input type="submit" value="Save" />
+
+            </form>
+
+            <p class="attributes">
+                <a href="https://github.com/m10l/FloatLabel.js">FloatLabel.js</a> by <a href="https://twitter.com/innernets" target="_blank">Mike Mitchell</a>
+                <br />
+                Based on <a href="http://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction?list=users" target="_blank">Matt Smith's concept</a>
+            </p>
+
+        </div>
+
+        <a href="https://github.com/m10l/FloatLabel.js" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/jquery.FloatLabel.js"></script>
+        <script src="scripts/main.js"></script>
 	
 	<div class ="sideBar">
 	  <p class = "shadow">Welcome <?php echo $_SESSION['display_name'] ?></p>
