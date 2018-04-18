@@ -11,7 +11,7 @@
 		exit;
 		}
 		
-		$firstname = $User->getFirstName($_SESSION['id']);
+		$firstname = $Users->getFirstName($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>
