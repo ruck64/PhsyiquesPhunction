@@ -92,15 +92,7 @@
 
             </form>
 
-            <p class="attributes">
-                <a href="https://github.com/m10l/FloatLabel.js">FloatLabel.js</a> by <a href="https://twitter.com/innernets" target="_blank">Mike Mitchell</a>
-                <br />
-                Based on <a href="http://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction?list=users" target="_blank">Matt Smith's concept</a>
-            </p>
-
         </div>
-
-        <a href="https://github.com/m10l/FloatLabel.js" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
         <script src="scripts/jquery.js"></script>
         <script src="scripts/jquery.FloatLabel.js"></script>
