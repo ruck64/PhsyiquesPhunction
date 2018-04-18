@@ -12,6 +12,7 @@
 		}
 		
 		echo "original id " . $_SESSION['id'];
+		echo "really in userinfo.php";
 		$getUser = $db->prepare("SELECT * FROM UserInfo");
 		$getUser->execute();
 		$users = $getUsers->fetchAll();?>
@@ -30,8 +31,8 @@
 <?php } ?>
 </table>
 
-		
-		$firstname = $Users->getFirstName($_SESSION['id']);
+<?php		
+		//$firstname = $Users->getFirstName($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>
