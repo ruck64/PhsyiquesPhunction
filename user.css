@@ -10,8 +10,8 @@ input[type=text] {
 	
 }
 
-.submit {
-	text-align:center;
+.select {
+	padding:10px 20px;
 }
 
 div.forms {

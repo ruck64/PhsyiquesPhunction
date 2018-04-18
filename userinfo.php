@@ -100,7 +100,7 @@
 							</select>
 						</li>
 					</ul>
-					<p class="submit"><input type="submit" value="Submit"></p>
+					<p class="select"><input type="submit" value="Submit"></p>
 				</li>
 			</ul>
 		</li>
