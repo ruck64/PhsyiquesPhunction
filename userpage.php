@@ -38,7 +38,7 @@
 	<li class = "subMenu"><a class = "subMenu"  href = "purpose.php">Purpose of PhsyquiesPhunction</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "regimens.php">Regimens/Diet</a></li> 
 	<li class = "subMenu"><a class = "subMenu"  href = "https://www.twitch.tv/">Twitch</a></li> 
-	<li class = "subMenu"><a class = "subMenu"  href = "contact.">Contact</a></li> 
+	<li class = "subMenu"><a class = "subMenu"  href = "contact.php">Contact</a></li> 
 	<li class = "subMenu"><?php if(isset($_SESSION['id'])){ ?> <a class="subMenu active" href="userpage.php">Your Page</a>
 	<li class = "subMenu"><a class = "subMenu" href="logout.php">Logout</a>
 		<?php }else{ ?>

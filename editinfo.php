@@ -17,12 +17,10 @@
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	  <link rel="stylesheet" type="text/css" href="user.css">
 	  <link rel = "stylesheet" type= "text/css" href = "info.css">    
-	  <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/main.css">
-      <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" href="styles/jquery.FloatLabel.css">
-	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
-    </head>
+	  <link rel="stylesheet" href="../../style.css">
+	  <link rel="stylesheet" href="../../fort.css">
+	  <script src="../../fort.js"></script>
+	</head>
 
     <h1 class = "title"> Edit Your Info </h1>
 
@@ -54,50 +52,39 @@
 		</div>
 
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
-
-        <div class="wrapper">
-
-            <h1>FloatLabel.js</h1>
-
-            <form id="demoForm" action="handlerinfo">
-                
-                <div class="js-float-label-wrapper">
-                    <label for="FirstName">First name</label>
-                    <input id="firstname" type="text" name="firstname/>
-                </div>
-
-                <div class="js-float-label-wrapper">
-                    <label for="lastname">Last Name</label>
-                    <input id="lastname" type="text" name = "lastname"/>
-                </div>
-
-                <div class="js-float-label-wrapper">
-                    <label for="age">Age</label>
-                    <textarea id="age" type="text" name = "age"></textarea>
-                </div>
-
-				
-	           <div class="js-float-label-wrapper">
-                    <label for="weight">Weight</label>
-                    <textarea id="weight" type="text" name = "weight"></textarea>
-                </div>
-				
+	  
+	  <div class="form-wrapper">
+	<h1 class="h1h">Fort.js</h1>
+	<form name="form" action="handlerinfo.php">
+		<div class="form">
+			<div class="form-item">
+				<input type="text" name="firstname" required="required" placeholder="First Name" autocomplete="on">
+			</div>
+			<div class="form-item">
+				<input type="text" name="lastname" required="required" placeholder="Last Name" autocomplete="on">
+			</div>
+			<div class="form-item">
+				<input type="text" name="age" required="required" placeholder="Age" autocomplete="on">
+			</div>
+			<div class="form-item">
+				<input type="text" name="weight" required="required" placeholder="Weight" autocomplete="on">
+			</div>
+			<div class = "form-item">
 				<select name="bodytype">
-					<option value="Ectomorph">Ectomorph</option>
-					<option value = "Endomorph">Endomorph</option>
-					<option value - "Mesomorph">Mesomorph</option>
+					<option value = "enctomorph">Ectomorph</option>
+					<option value = "endomorph">Endomorph</option>
+					<option value = "mesomorph">Mesomorph</option>
 				</select>
+			</div>
+			<div class="button-panel">
+				<input type="submit" class="button" title="Sign In" value="Test It Out">
 				
-                <input type="submit" value="Save" />
+			</div>
+		</div>
+	</form>
+</div>
 
-            </form>
 
-        </div>
-
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/jquery.FloatLabel.js"></script>
-        <script src="scripts/main.js"></script>
-	
 	<div class ="sideBar">
 	  <p class = "shadow">Welcome <?php echo $_SESSION['display_name'] ?></p>
 	  <p class ="button"> <a href = "userinfo.php"><input type="button" value="User Info"></p>
@@ -106,16 +93,7 @@
 	</div>
 
 	<div class = "footer">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes_classic.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes.min.js"></script>
-
-	<div class="social-likes">
-		<div class="facebook" title="Share link on Facebook">Facebook</div>
-		<div class="twitter" title="Share link on Twitter">Twitter</div>
-		<div class="plusone" title="Share link on Google+">Google+</div>
-	</div>	
+		This is the footer
 	</div>
 	  
   </html>
