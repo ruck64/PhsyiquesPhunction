@@ -58,16 +58,16 @@
 	<form name="form" action="handlerinfo.php">
 		<div class="form">
 			<div class="form-item">
-				<input type="text" name="firstname" required="required" placeholder="First Name" autocomplete="on">
+				<input type="text" name="firstname" required="required" value = "firstname" placeholder="First Name" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="lastname" required="required" placeholder="Last Name" autocomplete="on">
+				<input type="text" name="lastname" required="required" value = "lastname" placeholder="Last Name" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="age" required="required" placeholder="Age" autocomplete="on">
+				<input type="text" name="age" required="required" value = "age" placeholder="Age" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="weight" required="required" placeholder="Weight" autocomplete="on">
+				<input type="text" name="weight" required="required" value = "weight" placeholder="Weight" autocomplete="on">
 			</div>
 			<div class = "form-item">
 				<select name="bodytype">
@@ -77,7 +77,7 @@
 				</select>
 			</div>
 			<div class="button-panel">
-				<input type="submit" class="button" title="Sign In" value="Test It Out">
+				<input type="submit" class="button" title="Sign In" value="Submit">
 				
 			</div>
 		</div>
