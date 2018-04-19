@@ -156,6 +156,9 @@ p.basic {
 }
 
 .sideBar {
+	position:absolute;
+	right:3%;
+	top:20%;
 	text-align:center;
 	float: right;
 	width: 200px;
@@ -183,6 +186,7 @@ p.basic {
 }
 
 .button , .button > a {
+	padding:3px;
 	border:red;
 	color:white;
 	text-align: center;

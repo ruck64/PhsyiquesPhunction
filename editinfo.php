@@ -6,10 +6,24 @@
 	require_once "comments.php";
 	require_once "Users.php";
 	
+	if (isset($_SESSION['messages'])) { ?>
+		<div id="message"><?php
+		foreach ($_SESSION['messages'] as $message) {
+			echo "<span id='close'>X</span><div>" . $message . "</div>";
+		}
+		unset($_SESSION['messages']); ?>
+	</div>
+	<?php
 	if(!isset($_SESSION['id'])) {
 		header("Location:login.php");
 		exit;
 	}
+		$presets = array();
+    if (isset($_SESSION['presets'])) {
+       $presets = array_shift($_SESSION['presets']);
+    }
+    unset($_SESSION['presets']);
+    unset($_SESSION['messages']);
 ?>
   <html>
     <head>
@@ -58,16 +72,16 @@
 	<form name="form" action="handlerinfo.php">
 		<div class="form">
 			<div class="form-item">
-				<input type="text" name="firstname" required="required" value = "firstname" placeholder="First Name" autocomplete="on">
+				<input type="text" name="firstname" required="required" value = "<?php echo isset($presets['firstname']) ? $presets['fristname'] : ''; ?>" placeholder="First Name" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="lastname" required="required" value = "lastname" placeholder="Last Name" autocomplete="on">
+				<input type="text" name="lastname" required="required" value = "<?php echo isset($presets['lastname']) ? $presets['lastname'] : ''; ?>" placeholder="Last Name" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="age" required="required" value = "age" placeholder="Age" autocomplete="on">
+				<input type="text" name="age" required="required" value = "<?php echo isset($presets['age']) ? $presets['age'] : ''; ?>" placeholder="Age" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="weight" required="required" value = "weight" placeholder="Weight" autocomplete="on">
+				<input type="text" name="weight" required="required" value = "<?php echo isset($presets['weight']) ? $presets['weight'] : ''; ?>"  placeholder="Weight" autocomplete="on">
 			</div>
 			<div class = "form-item">
 				<select name="bodytype">
