@@ -68,7 +68,6 @@
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 	  
 	  <div class="form-wrapper">
-	<h1 class="h1h">Fort.js</h1>
 	<form name="form" action="handlerinfo.php">
 		<div class="form">
 			<div class="form-item">
