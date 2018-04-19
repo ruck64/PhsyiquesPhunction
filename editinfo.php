@@ -13,7 +13,7 @@
 		}
 		unset($_SESSION['messages']); ?>
 	</div>
-	<?php
+	<?php }
 	if(!isset($_SESSION['id'])) {
 		header("Location:login.php");
 		exit;
