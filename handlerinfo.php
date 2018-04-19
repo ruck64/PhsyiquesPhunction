@@ -1,11 +1,12 @@
 <?php
-
+	
 	session_start();
 	require_once 'Users.php';
 	require_once 'userinfo.php';
 	$Users = new Users();
 	
 	$firstname = htmlspecialchars($_POST['firstname']);
+	echo "first name" . $firstname;
 	$lastname = htmlspecialchars($_POST['lastname']);
 	$id = $_SESSION['id'];
 	$age = $_POST['age'];
