@@ -11,6 +11,8 @@
 	$age = $_POST['age'];
 	$weight = $_POST['weight'];
 	$bodytype = $_POST['bodytype'];	
+	echo "first name " . $firstname;
+	exit;
 	
 	$_SESSION['presets'] = array($_POST);
 	
