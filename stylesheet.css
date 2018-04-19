@@ -27,7 +27,6 @@ ul.subMenu {
 	width:100%;
 	background-color:transparent;
 	height:100%;
-	overflow:auto;
 }
 
 li.subMenu {
@@ -104,7 +103,6 @@ ul.handles {
 	width:100%;
 	background-color:transparent;
 	height:100%;
-	overflow:auto;
 }
 
 li.handles {
