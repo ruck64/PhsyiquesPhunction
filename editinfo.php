@@ -72,19 +72,19 @@
 	<form name="form" action="handlerinfo.php">
 		<div class="form">
 			<div class="form-item">
-				<input type="text" name="firstname" required="required" value = "<?php echo isset($presets['firstname']) ? $presets['fristname'] : ''; ?>" placeholder="First Name" autocomplete="on">
+				<input type="text" name="firstname" id = "firstname" required="required" value = "<?php echo isset($presets['firstname']) ? $presets['fristname'] : ''; ?>" placeholder="First Name" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="lastname" required="required" value = "<?php echo isset($presets['lastname']) ? $presets['lastname'] : ''; ?>" placeholder="Last Name" autocomplete="on">
+				<input type="text" name="lastname" id= "lastname" required="required" value = "<?php echo isset($presets['lastname']) ? $presets['lastname'] : ''; ?>" placeholder="Last Name" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="age" required="required" value = "<?php echo isset($presets['age']) ? $presets['age'] : ''; ?>" placeholder="Age" autocomplete="on">
+				<input type="text" name="age" id= "age" required="required" value = "<?php echo isset($presets['age']) ? $presets['age'] : ''; ?>" placeholder="Age" autocomplete="on">
 			</div>
 			<div class="form-item">
-				<input type="text" name="weight" required="required" value = "<?php echo isset($presets['weight']) ? $presets['weight'] : ''; ?>"  placeholder="Weight" autocomplete="on">
+				<input type="text" name="weight" id = "weight" required="required" value = "<?php echo isset($presets['weight']) ? $presets['weight'] : ''; ?>"  placeholder="Weight" autocomplete="on">
 			</div>
 			<div class = "form-item">
-				<select name="bodytype">
+				<select name="bodytype" id = "bodytype">
 					<option value = "enctomorph">Ectomorph</option>
 					<option value = "endomorph">Endomorph</option>
 					<option value = "mesomorph">Mesomorph</option>
