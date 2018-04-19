@@ -68,7 +68,7 @@
       <h2> <?php echo $_SESSION['display_name'] . " info" ?> </h2>
 	  
 	  <div class="form-wrapper">
-	<form name="form" action="handlerinfo.php">
+	<form name="form" form method = "post" action="handlerinfo.php">
 		<div class="form">
 			<div class="form-item">
 				<input type="text" name="firstname" id = "firstname" required="required" value = "<?php echo isset($presets['firstname']) ? $presets['fristname'] : ''; ?>" placeholder="First Name" autocomplete="on">

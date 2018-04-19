@@ -6,7 +6,6 @@
 	$Users = new Users();
 	
 	$firstname = htmlspecialchars($_POST['firstname']);
-	echo "first name" . $firstname;
 	$lastname = htmlspecialchars($_POST['lastname']);
 	$id = $_SESSION['id'];
 	$age = $_POST['age'];
@@ -19,7 +18,6 @@
 	$messages = array(); 
 	
 	if(empty($firstname)) {
-		echo "firstname " . $firstname;
 		$messages[] = "PLEASE ENTER A FIRST NAME";
 		$valid = false;
 	}
